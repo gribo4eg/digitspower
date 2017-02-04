@@ -812,84 +812,164 @@ namespace DigitsPower
 
         public static BigInteger WindowLR(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
         {
+            bool mont = GetMontgomery;
             Stopwatch stw = new Stopwatch();
-
-            found = found % mod;
-            stw.Start();
-
-            MyList<BigInteger> table = new MyList<BigInteger>();
-            table.Add(found);
-
-            int count = (1 << w) - 2;
-            for (BigInteger i = 0; i < count; i++)
-                table.Add((table[i] * found) % mod);
-            
-            stw.Stop();
-
-            table_time = stw.Elapsed.TotalMilliseconds;
             BigInteger res = 1;
 
+            found = found % mod;
+            MyList<BigInteger> table = new MyList<BigInteger>();
             List<string> bins = windows(ConvToBinary(pow), w);
 
-            for (int i = 0; i < bins.Count; i++)
+            if (mont)
             {
-                for (int k = 0; k < w; k++)
-                    res = mul(res, res, mod);
+                MyList <BigInteger> parameters = MontgomeryMethods.toMontgomeryDomain(ref found, ref res, mod);
 
-                int c = Convert.ToInt32(bins[i], 2);
-                if (c != 0) res = mul(res, table[c - 1], mod);
+                stw.Start();
+
+                table.Add(found);
+
+                int count = (1 << w) - 2;
+                for (BigInteger i = 0; i < count; i++)
+                    table.Add(MontgomeryMultDomain(table[i], found, mod, parameters));
+
+                stw.Stop();
+
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+                for (int i = 0; i < bins.Count; i++)
+                {
+                    for (int k = 0; k < w; k++)
+                        res = MontgomeryMultDomain(res, res, mod, parameters);
+
+                    int c = Convert.ToInt32(bins[i], 2);
+                    if (c != 0) res = MontgomeryMultDomain(res, table[c - 1], mod, parameters);
+                }
+
+                res = outMontgomeryDomain(res, mod, parameters);
+            }
+            else
+            {
+                stw.Start();
+
+                table.Add(found);
+
+                int count = (1 << w) - 2;
+                for (BigInteger i = 0; i < count; i++)
+                    table.Add((table[i] * found) % mod);
+
+                stw.Stop();
+
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+                for (int i = 0; i < bins.Count; i++)
+                {
+                    for (int k = 0; k < w; k++)
+                        res = mul(res, res, mod);
+
+                    int c = Convert.ToInt32(bins[i], 2);
+                    if (c != 0) res = mul(res, table[c - 1], mod);
+                }
             }
             return res;
         }
 
         public static BigInteger WindowLR_Dic(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
         {
+            bool mont = GetMontgomery;
             Stopwatch stw = new Stopwatch();
             found = found % mod;
 
-            stw.Start();
-            Dictionary < string, BigInteger> table = new Dictionary<string, BigInteger>();
+            BigInteger res = 1;
 
             string temp;
             BigInteger temp_value;
             int temp_size = (1 << w) - 1;
 
+            string pow_bin = ConvToBinary(pow);
+            string str_null = "";
+            Dictionary < string, BigInteger> table = new Dictionary<string, BigInteger>();
             temp = ConvToBinary(1);
-            while (temp.Length != w)
-                temp = "0" + temp;
-            table.Add(temp, found);
-            temp_value = found;
-            for (int i = 2; i <= temp_size; i++)
+
+            if(mont)
             {
-                temp = ConvToBinary(i);
+                MyList <BigInteger> parameters = MontgomeryMethods.toMontgomeryDomain(ref found, ref res, mod);
+
+                stw.Start();
+
                 while (temp.Length != w)
                     temp = "0" + temp;
-                temp_value = temp_value * found % mod;
-                table.Add(temp, temp_value);
+
+                table.Add(temp, found);
+                temp_value = found;
+
+                for (int i = 2; i <= temp_size; i++)
+                {
+                    temp = ConvToBinary(i);
+                    while (temp.Length != w)
+                        temp = "0" + temp;
+                    temp_value = MontgomeryMultDomain(temp_value, found, mod, parameters);
+                    table.Add(temp, temp_value);
+                }
+
+                stw.Stop();
+
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+                while (pow_bin.Length % w != 0)
+                    pow_bin = "0" + pow_bin;
+
+                for (int i = 0; i < w; i++)
+                    str_null = "0" + str_null;
+
+                for (int i = 0; i < pow_bin.Length; i = i + w)
+                {
+                    for (int k = 0; k < w; k++)
+                        res = MontgomeryMultDomain(res, res, mod, parameters);
+
+                    string subs = pow_bin.Substring(i, w);
+                    if (subs != str_null) res = MontgomeryMultDomain(res, table[subs], mod, parameters);
+                }
+
+                res = outMontgomeryDomain(res, mod, parameters);
             }
-
-            stw.Stop();
-
-            table_time = stw.Elapsed.TotalMilliseconds;
-            BigInteger res = 1;
-
-            string pow_bin = ConvToBinary(pow);
-            while (pow_bin.Length % w != 0)
-                pow_bin = "0" + pow_bin;
-
-            string str_null = "";
-            for (int i = 0; i < w; i++)
-                str_null = "0" + str_null;
-
-            for (int i = 0; i < pow_bin.Length; i = i + w)
+            else
             {
-                for (int k = 0; k < w; k++)
-                    res = res * res % mod;
+                stw.Start();
 
-                string subs = pow_bin.Substring(i, w);
-                if (subs != str_null) res = res * table[subs] % mod;
+                while (temp.Length != w)
+                    temp = "0" + temp;
+
+                table.Add(temp, found);
+                temp_value = found;
+
+                for (int i = 2; i <= temp_size; i++)
+                {
+                    temp = ConvToBinary(i);
+                    while (temp.Length != w)
+                        temp = "0" + temp;
+                    temp_value = temp_value * found % mod;
+                    table.Add(temp, temp_value);
+                }
+
+                stw.Stop();
+
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+                while (pow_bin.Length % w != 0)
+                    pow_bin = "0" + pow_bin;
+
+                for (int i = 0; i < w; i++)
+                    str_null = "0" + str_null;
+
+                for (int i = 0; i < pow_bin.Length; i = i + w)
+                {
+                    for (int k = 0; k < w; k++)
+                        res = res * res % mod;
+
+                    string subs = pow_bin.Substring(i, w);
+                    if (subs != str_null) res = res * table[subs] % mod;
+                }
             }
-
             return res;
 
         }
