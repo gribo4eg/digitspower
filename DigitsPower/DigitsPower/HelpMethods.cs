@@ -760,9 +760,9 @@ namespace DigitsPower
                     if (OperationsList.CheckedIndices[i] == 3) { OperationsResult.Items.Add("Window RL Dic\t\t: " + (PowFunctions.WindowRL_Dic(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
                     if (OperationsList.CheckedIndices[i] == 4) { OperationsResult.Items.Add("Window LR\t\t: " + (PowFunctions.WindowLR(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
                     if (OperationsList.CheckedIndices[i] == 5) { OperationsResult.Items.Add("Window LR Dic\t\t: " + (PowFunctions.WindowLR_Dic(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
-                    if (OperationsList.CheckedIndices[i] == 6) { OperationsResult.Items.Add("Slide RL\t\t: " + (PowFunctions.SlideRL(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
+                    if (OperationsList.CheckedIndices[i] == 6) { OperationsResult.Items.Add("Slide RL\t\t\t: " + (PowFunctions.SlideRL(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
                     if (OperationsList.CheckedIndices[i] == 7) { OperationsResult.Items.Add("Slide RL Dic\t\t: " + (PowFunctions.SlideRL_Dic(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
-                    if (OperationsList.CheckedIndices[i] == 8) { OperationsResult.Items.Add("Slide LR\t\t: " + (PowFunctions.SlideLR(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
+                    if (OperationsList.CheckedIndices[i] == 8) { OperationsResult.Items.Add("Slide LR\t\t\t: " + (PowFunctions.SlideLR(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
                     if (OperationsList.CheckedIndices[i] == 9) { OperationsResult.Items.Add("Slide LR Dic\t\t: " + (PowFunctions.SlideLR_Dic(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
                     if (OperationsList.CheckedIndices[i] == 12) { if (nsd != 1) { nsdMethods = true; methodNumber +=" "+ (OperationsList.CheckedIndices[i]-3); continue; }
                         OperationsResult.Items.Add("NAF Slide RL\t\t: " + (PowFunctions.NAFSlideRL(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
