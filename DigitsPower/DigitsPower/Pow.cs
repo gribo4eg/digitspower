@@ -585,9 +585,11 @@ namespace DigitsPower
 
         public static BigInteger WindowRL(BigInteger found, BigInteger pow,  BigInteger mod, int w, out double table_time)
         {
-            bool mont = GetMontgomery;
             // 3.1
+            bool mont = GetMontgomery;
             found = found % mod;
+            Stopwatch stw = new Stopwatch();
+
 
             int i;
             int count_elem = 1 << w;
@@ -602,8 +604,10 @@ namespace DigitsPower
             {
                 MyList <BigInteger> parameters = MontgomeryMethods.toMontgomeryDomain(ref a, ref res, mod);
 
+                stw.Start();
                 for (i = 1; i <= count_elem; i++)
                     table.Add(res);
+                stw.Stop();
 
                 int index;
                 for (i = bins.Count - 1; i > -1; i--)
@@ -616,8 +620,7 @@ namespace DigitsPower
                     for (int k = 0; k < w; k++)
                         a = MontgomeryMultDomain(a, a, mod, parameters);
                 }
-
-                Stopwatch stw = new Stopwatch();
+                                
                 stw.Start();
                 for (i = count_elem - 1; i > 0; i--)
                 {
@@ -632,8 +635,10 @@ namespace DigitsPower
             }
             else
             {
+                stw.Start();
                 for (i = 1; i <= count_elem; i++)
                     table.Add(1);
+                stw.Stop();
 
                 int index;
                 for (i = bins.Count - 1; i > -1; i--)
@@ -647,7 +652,6 @@ namespace DigitsPower
                         a = a * a % mod;
                 }
 
-                Stopwatch stw = new Stopwatch();
                 stw.Start();
                 for (i = count_elem - 1; i > 0; i--)
                 {
@@ -713,6 +717,7 @@ namespace DigitsPower
             {
                 MyList <BigInteger> parameters = MontgomeryMethods.toMontgomeryDomain(ref a, ref res, mod);
 
+                stw.Start();
                 for (i = 1; i < count_elem; i++)
                 {
                     temp = ConvToBinary(i);
@@ -720,6 +725,7 @@ namespace DigitsPower
                         temp = "0" + temp;
                     table.Add(temp, res);
                 }
+                stw.Stop();
 
                 while (pow_bin.Length % w != 0)
                     pow_bin = "0" + pow_bin;
@@ -762,6 +768,7 @@ namespace DigitsPower
             }
             else
             {
+                stw.Start();
                 for (i = 1; i < count_elem; i++)
                 {
                     temp = ConvToBinary(i);
@@ -769,6 +776,7 @@ namespace DigitsPower
                         temp = "0" + temp;
                     table.Add(temp, 1);
                 }
+                stw.Stop();
 
                 while (pow_bin.Length % w != 0)
                     pow_bin = "0" + pow_bin;
@@ -974,6 +982,7 @@ namespace DigitsPower
 
         }
 
+        #region Не актуальні методи
         public static BigInteger WindowLRMod1(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
         {
             int i, t, powLen;
@@ -1436,57 +1445,6 @@ namespace DigitsPower
             return res;
         }
 
-        public static BigInteger WindowLRMod1_Upgrade(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
-        {
-            int i, t, powLen;
-            Stopwatch stw;
-            BigInteger res;
-            List<BigInteger> table;
-            var pow_bin = ConvToBinary(pow);
-
-            stw = new Stopwatch();
-            found = found % mod;
-            stw.Start();
-            table = new List<BigInteger>();
-            table.Add(found);
-            for (i = 1; i < w; i++)
-                table.Add((table[i - 1] * table[i - 1]) % mod);
-
-            stw.Stop();
-            table_time = stw.Elapsed.TotalMilliseconds;
-
-            res = 1;
-            i = (int)(Math.Log((double)pow, 2));
-	        powLen = i + 1;
-            while (i >= 0)
-            {
-                res = (res * res) % mod;
-                if ('1' == pow_bin[powLen - 1 - (int)i])
-                {
-                    if (0 < i && '0' == pow_bin[powLen - (int)i - 1])
-                    {
-                        t = 1;
-                        while (t < w
-                            && t < i
-                            && '0' == pow_bin[powLen - (int)i - t])
-                        {
-                            t++;
-                        }
-                        for (int j = 1; j <= t; j++)
-                            res = res * res % mod;
-                        res = (res * table[t - 1]) % mod;
-                        i = i - t + 1;
-                    }
-                    else
-                    {
-                        res = (res * found) % mod;
-                    }
-                }
-                --i;
-            }
-            return res;
-        }
-
         public static BigInteger WindowLRMod2_Upgrade(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
         {
             int i, t, powLen;
@@ -1858,6 +1816,58 @@ namespace DigitsPower
             }
             return res;
         }
+        #endregion
+        
+        public static BigInteger WindowLRMod1_Upgrade(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
+        {
+            int i, t, powLen;
+            Stopwatch stw;
+            BigInteger res;
+            List<BigInteger> table;
+            var pow_bin = ConvToBinary(pow);
+
+            stw = new Stopwatch();
+            found = found % mod;
+            stw.Start();
+            table = new List<BigInteger>();
+            table.Add(found);
+            for (i = 1; i < w; i++)
+                table.Add((table[i - 1] * table[i - 1]) % mod);
+
+            stw.Stop();
+            table_time = stw.Elapsed.TotalMilliseconds;
+
+            res = 1;
+            i = (int)(Math.Log((double)pow, 2));
+            powLen = i + 1;
+            while (i >= 0)
+            {
+                res = (res * res) % mod;
+                if ('1' == pow_bin[powLen - 1 - (int)i])
+                {
+                    if (0 < i && '0' == pow_bin[powLen - (int)i - 1])
+                    {
+                        t = 1;
+                        while (t < w
+                            && t < i
+                            && '0' == pow_bin[powLen - (int)i - t])
+                        {
+                            t++;
+                        }
+                        for (int j = 1; j <= t; j++)
+                            res = res * res % mod;
+                        res = (res * table[t - 1]) % mod;
+                        i = i - t + 1;
+                    }
+                    else
+                    {
+                        res = (res * found) % mod;
+                    }
+                }
+                --i;
+            }
+            return res;
+        }
 
         public static BigInteger WindowLRMod2_Final(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
         {
@@ -2112,8 +2122,10 @@ namespace DigitsPower
             {
                 MyList <BigInteger> parameters = MontgomeryMethods.toMontgomeryDomain(ref a, ref res, mod);
 
+                stw.Start();
                 for (i = 1; i <= count_elem; i++)
                     table.Add(res);
+                stw.Stop();
 
                 i = pow_length - 1;
                 while (i >= 0)
@@ -2161,8 +2173,10 @@ namespace DigitsPower
             }
             else
             {
+                stw.Start();
                 for (i = 1; i <= count_elem; i++)
                     table.Add(1);
+                stw.Stop();
 
                 i = pow_length - 1;
                 while (i >= 0)
@@ -2285,11 +2299,13 @@ namespace DigitsPower
             {
                 MyList<BigInteger> parameters = toMontgomeryDomain(ref a, ref res, mod);
 
+                stw.Start();
                 for (i = 1; i <= count_temp; i = i + 2)
                 {
                     temp = ConvToBinary(i);
                     table.Add(temp, res);
                 }
+                stw.Stop();
 
                 i = pow_length - 1;
                 while (i >= 0)
@@ -2336,11 +2352,13 @@ namespace DigitsPower
             }
             else
             {
+                stw.Start();
                 for (i = 1; i <= count_temp; i = i + 2)
                 {
                     temp = ConvToBinary(i);
                     table.Add(temp, 1);
                 }
+                stw.Stop();
 
                 i = pow_length - 1;
                 while (i >= 0)
@@ -2395,7 +2413,6 @@ namespace DigitsPower
             MyList<BigInteger> table = new MyList<BigInteger>(); ;
 
             string temp;
-            BigInteger temp_value = found;
             int temp_size = (1 << w) - 1;
 
             int i;
@@ -2409,6 +2426,7 @@ namespace DigitsPower
             if (mont)
             {
                 MyList<BigInteger> parameters = toMontgomeryDomain(ref found, ref res, mod);
+                BigInteger temp_value = found;
                 BigInteger sqr_found = MontgomeryMultDomain(found, found, mod, parameters);
                 stw.Start();
 
@@ -2461,6 +2479,7 @@ namespace DigitsPower
             }
             else
             {
+                BigInteger temp_value = found;
                 BigInteger sqr_found = found * found % mod;
 
                 stw.Start();
@@ -2524,7 +2543,6 @@ namespace DigitsPower
             Dictionary<string, BigInteger> table = new Dictionary<string, BigInteger>();
 
             string temp;
-            BigInteger temp_value = found;
             int temp_size = (1 << w) - 1;
 
             int i;
@@ -2536,6 +2554,7 @@ namespace DigitsPower
             if (mont)
             {
                 MyList<BigInteger> parameters = toMontgomeryDomain(ref found, ref res, mod);
+                BigInteger temp_value = found;
                 BigInteger sqr_found = MontgomeryMultDomain(found, found, mod, parameters);
 
                 stw.Start();
@@ -2588,6 +2607,7 @@ namespace DigitsPower
             else
             {
                 BigInteger sqr_found = found * found % mod;
+                BigInteger temp_value = found;
                 stw.Start();
 
                 for (i = 3; i <= temp_size; i = i + 2)
@@ -2677,6 +2697,7 @@ namespace DigitsPower
         public static BigInteger NAFSlideRL(BigInteger found, BigInteger power, BigInteger mod, int w, out double table_time)
         {
             bool mont = GetMontgomery;
+            Stopwatch stw = new Stopwatch();
 
             BigInteger res = 1;
             MyList<int> x = ToNAF(power);
@@ -2701,6 +2722,7 @@ namespace DigitsPower
             {
                 MyList <BigInteger> parameters = MontgomeryMethods.toMontgomeryDomain(ref a, ref res, mod);
 
+                stw.Start();
                 table.Add(res);
                 table_inv.Add(res);
 
@@ -2709,6 +2731,7 @@ namespace DigitsPower
                     table.Add(res);
                     table_inv.Add(res);
                 }
+                stw.Stop();
 
                 for (int i = 0; i < x.Count;)
                 {
@@ -2738,7 +2761,6 @@ namespace DigitsPower
                     i = i + max[1];
                 }
 
-                Stopwatch stw = new Stopwatch();
                 int count_elem = table.Count;
                 BigInteger temp_val;
 
@@ -2757,13 +2779,13 @@ namespace DigitsPower
                 table_time = stw.Elapsed.TotalMilliseconds;
 
                 res = MontgomeryMultDomain(table[0], MontgomeryInverse(mod, table_inv[0], parameters), mod, parameters);
-
                 res = outMontgomeryDomain(res, mod, parameters);
 
                 return res;
             }
             else
             {
+                stw.Start();
                 table.Add(1);
                 table_inv.Add(1);
 
@@ -2772,6 +2794,7 @@ namespace DigitsPower
                     table.Add(1);
                     table_inv.Add(1);
                 }
+                stw.Stop();
 
                 for (int i = 0; i < x.Count;)
                 {
@@ -2802,7 +2825,6 @@ namespace DigitsPower
                 }
 
 
-                Stopwatch stw = new Stopwatch();
                 int count_elem = table.Count;
                 BigInteger temp_val;
 
@@ -3093,18 +3115,18 @@ namespace DigitsPower
 
             int temp;
             BigInteger a = found;
-
-            int count_elem = table.Count;
             BigInteger temp_val;
 
             if (mont)
             {
+                stw.Start();
                 MyList<BigInteger> parameters = toMontgomeryDomain(ref a, ref res, mod);
                 for (BigInteger i = 0; i < count; i++)
                 {
                     table.Add(res);
                     table_inv.Add(res);
                 }
+                stw.Stop();
 
                 for (int i = x.Count - 1; i > -1; i--)
                 {
@@ -3122,7 +3144,8 @@ namespace DigitsPower
                     a = MontgomeryMultDomain(a, a, mod, parameters);
                 }
 
-                for (int i = count_elem - 1; i > 0; i--)
+                stw.Start();
+                for (int i = count - 1; i > 0; i--)
                 {
                     table[i - 1] = MontgomeryMultDomain(table[i - 1], table[i], mod, parameters);
                     temp_val = MontgomeryMultDomain(table[i], table[i], mod, parameters);
@@ -3141,11 +3164,13 @@ namespace DigitsPower
             }
             else
             {
+                stw.Start();
                 for (BigInteger i = 0; i < count; i++)
                 {
                     table.Add(1);
                     table_inv.Add(1);
                 }
+                stw.Stop();
 
                 for (int i = x.Count - 1; i > -1; i--)
                 {
@@ -3163,7 +3188,8 @@ namespace DigitsPower
                     a = a * a % mod;
                 }
 
-                for (int i = count_elem - 1; i > 0; i--)
+                stw.Start();
+                for (int i = count - 1; i > 0; i--)
                 {
                     table[i - 1] = table[i - 1] * table[i] % mod;
                     temp_val = table[i] * table[i] % mod;

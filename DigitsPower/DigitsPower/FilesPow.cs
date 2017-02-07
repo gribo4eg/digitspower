@@ -94,22 +94,22 @@ namespace DigitsPower
             string[] degrees = Directory.GetFiles(path + "\\Exponent\\" + Degree);
             string[] mods = Directory.GetFiles(path + "\\Modulus\\" + Mod);
 
-            var mont = AdditionalParameters.montFlag ? "Mont" : "";
+            var mont = AdditionalParameters.montFlag ? "Mont_" : "";
             DirectoryInfo di;
             switch (Choice)
             {
                 case "Base":
-                    di = Directory.CreateDirectory($"{path}\\Results\\{Name()}_{Mod.Split('#')[0]}_{Found.Split('#')[0]}+_{Degree.Split('#')[0]}{mont}#{DateTime.Now.ToLocalTime().ToString().Replace(':', '-')}");
+                    di = Directory.CreateDirectory($"{path}\\Results\\{mont}{Name()}_{Mod.Split('#')[0]}_{Found.Split('#')[0]}+_{Degree.Split('#')[0]}#{DateTime.Now.ToLocalTime().ToString().Replace(':', '-')}");
                     Gen(founds, degrees, mods, path, di.FullName, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                     break;
                 case "Exponent":
-                    di = Directory.CreateDirectory(String.Format("{0}\\{1}\\{2}_{3}_{4}_{5}+{7}#{6}",
+                    di = Directory.CreateDirectory(String.Format("{0}\\{1}\\{7}{2}_{3}_{4}_{5}#{6}",
                                                    path, "Results", Name(), Mod.Split('#')[0], Found.Split('#')[0], 
                                                    Degree.Split('#')[0], DateTime.Now.ToLocalTime().ToString().Replace(':', '-'), mont));
                     Gen(degrees, founds, mods, path, di.FullName, "Exponent\\" + Degree, "Base\\" + Found, "Modulus\\" + Mod);
                     break;
                 case "Modulus":
-                    di = Directory.CreateDirectory(String.Format("{0}\\{1}\\{2}_{3}+_{4}_{5}{7}#{6}",
+                    di = Directory.CreateDirectory(String.Format("{0}\\{1}\\{7}{2}_{3}+_{4}_{5}#{6}",
                                                    path, "Results", Name(), Mod.Split('#')[0], Found.Split('#')[0], 
                                                    Degree.Split('#')[0], DateTime.Now.ToLocalTime().ToString().Replace(':', '-'), mont));
                     Gen(mods, founds, degrees, path, di.FullName, "Modulus\\" + Mod, "Base\\" + Found, "Exponent\\" + Degree);
@@ -117,7 +117,7 @@ namespace DigitsPower
                 default:
                     try
                     {
-                        di = Directory.CreateDirectory(String.Format("{0}\\{1}\\{2}_{3}_{4}+_{5}{7}#{6}",
+                        di = Directory.CreateDirectory(String.Format("{0}\\{1}\\{7}{2}_{3}_{4}+_{5}#{6}",
                                                        path, "Results", Name(), Mod.Split('#')[0], Found.Split('#')[0], 
                                                        Degree.Split('#')[0], DateTime.Now.ToLocalTime().ToString().Replace(':', '-'), mont));
                         Gen(founds, degrees, mods, path, di.FullName, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);

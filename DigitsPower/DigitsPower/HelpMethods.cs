@@ -698,7 +698,7 @@ namespace DigitsPower
             int pow2_w_1 = 1 << (w - 1);
             while (k >= 1)
             {
-                temp = (int)k & 1; // k % 2
+                temp = (int)(k & 1); // k % 2
                 if (temp != 0)
                 {
                     r = (int)(k & mask); // k % pow2_w

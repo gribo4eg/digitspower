@@ -9,15 +9,7 @@ namespace DigitsPower
 {
     public static class MontgomeryMethods
     {
-        public static BigInteger MontgomeryMultDomain(BigInteger a, BigInteger b, BigInteger N, MyList<BigInteger> parameters)
-        {
-            BigInteger result = a * b;
-            result = (result + ((result * parameters[0]) & parameters[1]) * N) >> (int)parameters[2];
-            if (result >= N)
-                result -= N;
 
-            return result;
-        }
         public static MyList<BigInteger> toMontgomeryDomain(ref BigInteger a, ref BigInteger b, BigInteger N)
         {
             String n_str = ConvToBinary(N);
@@ -31,8 +23,6 @@ namespace DigitsPower
             result.Add(n_shtrih);
             result.Add(b_module);
             result.Add(m);
-            //result.Add(r_inv);
-
 
             /*
             // обчислення a_Montgomery (a = a * r % N)
@@ -40,7 +30,6 @@ namespace DigitsPower
             // обчислення b_Montgomery (b = b * r % N)
             b = b * r % N;
             */
-
 
             BigInteger r_sqr = r * r % N;
             result.Add(r_sqr * r % N);
@@ -56,17 +45,27 @@ namespace DigitsPower
 
         public static BigInteger outMontgomeryDomain(BigInteger result, BigInteger N, MyList<BigInteger> parameters)
         {
+            return MontgomeryReduction(result, N, parameters);
+        }
+
+        public static BigInteger MontgomeryReduction(BigInteger result, BigInteger N, MyList<BigInteger> parameters)
+        {
             result = (result + ((result * parameters[0]) & parameters[1]) * N) >> (int)parameters[2];
             if (result >= N)
                 result -= N;
 
             return result;
         }
+        
+        public static BigInteger MontgomeryMultDomain(BigInteger a, BigInteger b, BigInteger N, MyList<BigInteger> parameters)
+        {
+            return MontgomeryReduction(a * b, N, parameters);
+        }
 
         public static BigInteger MontgomeryInverse(BigInteger mod, BigInteger found, MyList<BigInteger> parameters)
         {
             BigInteger inv = Euclid_2_1(mod, found);
-            return MontgomeryMethods.MontgomeryMultDomain(inv, parameters[3], mod, parameters); // inv домножити на r^3 використовуючи множення Монтгомері
+            return MontgomeryMultDomain(inv, parameters[3], mod, parameters); // inv домножити на r^3 використовуючи множення Монтгомері
         }
 
         /*
