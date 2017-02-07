@@ -305,15 +305,15 @@ namespace DigitsPower
             pow_bin = ConvToBinary(pow);
             res = 1;
             t = found;
+            powLen = pow_bin.Length;
             if (mont)
             {
 
                 MyList <BigInteger> parameters = MontgomeryMethods.toMontgomeryDomain(ref t, ref res, mod);
 
-                powLen = (int) (Log((double) pow, 2) + 1);
-                for (int i = 0; i < powLen; i++)
+                for (int i = powLen - 1; i >= 0; i--)
                 {
-                    if ('1' == pow_bin[powLen - (int) i - 1])
+                    if ('1' == pow_bin[i])
                     {
                         res = MontgomeryMethods.MontgomeryMultDomain(res, res, mod, parameters);
                         res = MontgomeryMethods.MontgomeryMultDomain(res, t, mod, parameters);
@@ -328,7 +328,7 @@ namespace DigitsPower
             }
             else
             {
-                powLen = pow_bin.Length;
+
                 for (int i = powLen - 1; i >= 0; i--)
                 {
                     if (pow_bin[i] == '1')
@@ -358,14 +358,14 @@ namespace DigitsPower
             pow_bin = ConvToBinary(pow);
             t = found;
             res = 1;
+            powLen = pow_bin.Length;
             if(mont)
             {
                 MyList <BigInteger> parameters = MontgomeryMethods.toMontgomeryDomain(ref t, ref res, mod);
 
-                powLen = (int)(Log((double)pow, 2));
-                for (int i = powLen; 0 <= i; i--)
+                for (int i = 0; i < powLen; i++)
                 {
-                    if (pow_bin[powLen - (int)i] == '0')
+                    if (pow_bin[i] == '0')
                     {
                         t = MontgomeryMethods.MontgomeryMultDomain(t, res, mod, parameters);
                         res = MontgomeryMethods.MontgomeryMultDomain(res, res, mod, parameters);
@@ -380,7 +380,7 @@ namespace DigitsPower
             }
             else
             {
-                powLen = pow_bin.Length;
+
                 for (int i = 0; i < powLen; i++)
                 {
                     if (pow_bin[i] == '0')
