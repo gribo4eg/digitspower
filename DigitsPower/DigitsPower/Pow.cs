@@ -1820,245 +1820,142 @@ namespace DigitsPower
         
         public static BigInteger WindowLRMod1_Upgrade(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
         {
+            bool mont = GetMontgomery;
             int i, t, powLen;
             Stopwatch stw;
             BigInteger res;
             List<BigInteger> table;
             var pow_bin = ConvToBinary(pow);
 
+            table = new List<BigInteger>();
             stw = new Stopwatch();
             found = found % mod;
-            stw.Start();
-            table = new List<BigInteger>();
-            table.Add(found);
-            for (i = 1; i < w; i++)
-                table.Add((table[i - 1] * table[i - 1]) % mod);
-
-            stw.Stop();
-            table_time = stw.Elapsed.TotalMilliseconds;
-
             res = 1;
-            i = (int)(Math.Log((double)pow, 2));
-            powLen = i + 1;
-            while (i >= 0)
+
+            if (mont)
             {
-                res = (res * res) % mod;
-                if ('1' == pow_bin[powLen - 1 - (int)i])
+                MyList<BigInteger> parameters = toMontgomeryDomain(ref found, ref res, mod);
+
+                stw.Start();
+                table.Add(found);
+                for (i = 1; i < w; i++)
+                    table.Add(MontgomeryMultDomain(table[i - 1], table[i - 1], mod, parameters));
+
+                stw.Stop();
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+                i = (int)(Math.Log((double)pow, 2));
+                powLen = i + 1;
+                while (i >= 0)
                 {
-                    if (0 < i && '0' == pow_bin[powLen - (int)i - 1])
+                    res = MontgomeryMultDomain(res, res, mod, parameters);
+                    if ('1' == pow_bin[powLen - 1 - i])
                     {
-                        t = 1;
-                        while (t < w
-                            && t < i
-                            && '0' == pow_bin[powLen - (int)i - t])
+                        if (0 < i && '0' == pow_bin[powLen - i - 1])
                         {
-                            t++;
+                            t = 1;
+                            while (t < w
+                                   && t < i
+                                   && '0' == pow_bin[powLen - i - t])
+                            {
+                                t++;
+                            }
+                            for (int j = 1; j <= t; j++)
+                                res = MontgomeryMultDomain(res, res, mod, parameters);
+                            res = MontgomeryMultDomain(res, table[t - 1], mod, parameters);
+                            i = i - t + 1;
                         }
-                        for (int j = 1; j <= t; j++)
-                            res = res * res % mod;
-                        res = (res * table[t - 1]) % mod;
-                        i = i - t + 1;
+                        else
+                        {
+                            res = MontgomeryMultDomain(res, found, mod, parameters);
+                        }
                     }
-                    else
-                    {
-                        res = (res * found) % mod;
-                    }
+                    --i;
                 }
-                --i;
+
+                res = outMontgomeryDomain(res, mod, parameters);
+            }
+            else
+            {
+                stw.Start();
+                table.Add(found);
+                for (i = 1; i < w; i++)
+                    table.Add((table[i - 1] * table[i - 1]) % mod);
+
+                stw.Stop();
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+                i = (int)(Math.Log((double)pow, 2));
+                powLen = i + 1;
+                while (i >= 0)
+                {
+                    res = res * res % mod;
+                    if ('1' == pow_bin[powLen - 1 - (int) i])
+                    {
+                        if (0 < i && '0' == pow_bin[powLen - (int) i - 1])
+                        {
+                            t = 1;
+                            while (t < w
+                                   && t < i
+                                   && '0' == pow_bin[powLen - (int) i - t])
+                            {
+                                t++;
+                            }
+                            for (int j = 1; j <= t; j++)
+                                res = res * res % mod;
+                            res = (res * table[t - 1]) % mod;
+                            i = i - t + 1;
+                        }
+                        else
+                        {
+                            res = (res * found) % mod;
+                        }
+                    }
+                    --i;
+                }
             }
             return res;
         }
 
         public static BigInteger WindowLRMod2_Final(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
         {
-            int i, j, t, powLen;
+            bool mont = GetMontgomery;
+            int i, j, t, powLen, ind;
             Stopwatch stw;
             BigInteger res, temp;
             List<BigInteger> table;
             string pow_bin = ConvToBinary(pow);
+            table = new List<BigInteger>();
 
             found = found % mod;
             stw = new Stopwatch();
-            temp = found;
-            stw.Start();
-            table = new List<BigInteger>();
-            table.Add(found);
-            for (i = 2; i <= w; i++)  // нульовий елемент саме число, далі 11, 111, ...
+
+            res = 1;
+            powLen = pow_bin.Length;
+
+            if (mont)
             {
-                found = found * found % mod;
-                found = found * temp % mod;
+                MyList<BigInteger> parameters = toMontgomeryDomain(ref found, ref res, mod);
+                temp = found;
+                stw.Start();
+
                 table.Add(found);
-            }
-            stw.Stop();
-            table_time = stw.Elapsed.TotalMilliseconds;
-
-            res = 1;
-            powLen = pow_bin.Length;
-            int ind;
-            i = 0;
-            while (i < powLen)
-            {
-                res = res * res % mod;
-                if (pow_bin[i] == '1')
+                for (i = 2; i <= w; i++) // нульовий елемент саме число, далі 11, 111, ...
                 {
-                    t = 1;  // кількість одиниць
-                    ind = i + t;
-                    while (t < w && ind < powLen && pow_bin[ind] == '1')
-                    {
-                        t++;
-                        ind++;
-                    }
-
-                    for (j = 1; j < t; j++)
-                        res = res * res % mod;
-                    res = res * table[t - 1] % mod;
-                    i = i + t;
+                    found = MontgomeryMultDomain(found, found, mod, parameters);
+                    found = MontgomeryMultDomain(found, temp, mod, parameters);
+                    table.Add(found);
                 }
-                else
-                    i++;
-            }
-            return res;
-        }
+                stw.Stop();
+                table_time = stw.Elapsed.TotalMilliseconds;
 
-        public static BigInteger WindowLRMod3_Final(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
-        {
-            int i, j, t, powLen;
-            Stopwatch stw;
-            BigInteger res, temp;
-            List<BigInteger> table;
-            string pow_bin = ConvToBinary(pow);
-
-            found = found % mod;
-            stw = new Stopwatch();
-            stw.Start();
-
-            table = new List<BigInteger>();
-            table.Add(found);
-            temp = found;
-            for (i = 2; i <= w; i++)   // нульовий елемент саме число, далі 11, 101, 1001, ...
-            {
-                found = found * found % mod;
-                table.Add(found * temp % mod);
-            }
-
-            stw.Stop();
-            table_time = stw.Elapsed.TotalMilliseconds;
-
-            res = 1;
-            i = 0;
-            powLen = pow_bin.Length;
-            int ind;
-            int count_zero_limit = w - 2;
-            while (i < powLen)
-            {
-                res = res * res % mod;
-                if (pow_bin[i] == '1')
+                i = 0;
+                while (i < powLen)
                 {
-                    i++;
-                    t = 0; // кількість нулів
-                    ind = i;
-                    while (t <= count_zero_limit && ind < powLen && pow_bin[ind] == '0')
+                    res = MontgomeryMultDomain(res, res, mod, parameters);
+                    if (pow_bin[i] == '1')
                     {
-                        t++;
-                        ind++;
-                    }
-
-                    if (t > count_zero_limit || ind == powLen)
-                        t = -1;
-
-                    if (t >= 0)
-                    {
-                        for (j = 0; j <= t; j++)
-                            res = res * res % mod;
-                        res = res * table[t + 1] % mod;
-                        i = i + t + 1;
-                    }
-                    else
-                        res = res * table[0] % mod;
-                }
-                else
-                    i++;
-            }
-            return res;
-        }
-
-        public static BigInteger WindowLRMod_Final(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
-        {
-            int i, j, t, powLen;
-            Stopwatch stw;
-            BigInteger res, temp, found2;
-            string pow_bin;
-            BigInteger[] table1, table2;
-
-            found = found % mod;
-            stw = new Stopwatch();
-            stw.Start();
-            table1 = new BigInteger[w]; // нульовий елемент саме число, далі 11, 111, ...
-            table2 = new BigInteger[w-1]; // нульовий елемент саме число, далі 101, 1001, ...
-            temp = table1[0] = table2[0] = found;
-            found2 = found;
-
-            BigInteger sqr_found = found * found % mod;
-            found = sqr_found * temp % mod;
-
-            table1[1] = found; // записати 11 у двіковій системі
-
-            if (w > 2)
-            {
-                table2[1] = table1[1] * sqr_found % mod; // 101
-                table1[2] = table2[1] * sqr_found % mod; // 111
-            }
-
-            for (i = 4; i <= w; i++)
-            {
-                table2[i-2] = table1[i-2] * sqr_found % mod;
-
-                table1[i-1] = table1[i - 2] * table1[i - 2] % mod;
-                table1[i-1] = table1[i-1] * temp % mod;
-            }
-            stw.Stop();
-            table_time = stw.Elapsed.TotalMilliseconds;
-
-            pow_bin = ConvToBinary(pow);
-            res = 1;
-            powLen = pow_bin.Length;
-            i = 0;
-            int ind;
-            int count_zero_limit = w - 2;
-            while (i < powLen)
-            {
-                if (pow_bin[i] == '1')
-                {
-                    i++;
-                    if ((i == powLen - 1) || (i < powLen - 1 && pow_bin[i] == '0'))
-                    {
-                        t = 1; // кількість нулів
-                        ind = i + t;
-                        while (t <= count_zero_limit && ind < powLen && pow_bin[ind] == '0')
-                        {
-                            t++;
-                            ind++;
-                        }
-
-                        if (t > count_zero_limit || ind == powLen)
-                            t = 0;
-
-                        if (t > 0)
-                        {
-                            for (j = 1; j <= t + 2; j++)
-                                res = res * res % mod;
-                            res = res * table2[t] % mod;
-                            i = i + t + 1;
-                        }
-                        else
-                        {
-                            res = res * res % mod;
-                            res = res * table2[0] % mod;
-                        }
-                    }
-                    else
-                    {
-                        t = 1;  // кількість одиниць
+                        t = 1; // кількість одиниць
                         ind = i + t;
                         while (t < w && ind < powLen && pow_bin[ind] == '1')
                         {
@@ -2066,18 +1963,355 @@ namespace DigitsPower
                             ind++;
                         }
 
-                        for (j = 1; j <= t; j++)
-                            res = res * res % mod;
-                        res = res * table1[t - 1] % mod;
-                        i = i + t - 1;
+                        for (j = 1; j < t; j++)
+                            res = MontgomeryMultDomain(res, res, mod, parameters);
+                        res = MontgomeryMultDomain(res, table[t - 1], mod, parameters);
+                        i = i + t;
                     }
-                }
-                else
-                {
-                    res = res * res % mod;
-                    i++;
+                    else
+                        i++;
                 }
 
+                res = outMontgomeryDomain(res, mod, parameters);
+            }
+            else
+            {
+                temp = found;
+                stw.Start();
+                table.Add(found);
+                for (i = 2; i <= w; i++) // нульовий елемент саме число, далі 11, 111, ...
+                {
+                    found = found * found % mod;
+                    found = found * temp % mod;
+                    table.Add(found);
+                }
+                stw.Stop();
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+                i = 0;
+                while (i < powLen)
+                {
+                    res = res * res % mod;
+                    if (pow_bin[i] == '1')
+                    {
+                        t = 1; // кількість одиниць
+                        ind = i + t;
+                        while (t < w && ind < powLen && pow_bin[ind] == '1')
+                        {
+                            t++;
+                            ind++;
+                        }
+
+                        for (j = 1; j < t; j++)
+                            res = res * res % mod;
+                        res = res * table[t - 1] % mod;
+                        i = i + t;
+                    }
+                    else
+                        i++;
+                }
+            }
+            return res;
+        }
+
+        public static BigInteger WindowLRMod3_Final(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
+        {
+            bool mont = GetMontgomery;
+            int i, j, t, powLen, ind;
+            Stopwatch stw;
+            BigInteger res, temp;
+            List<BigInteger> table;
+            string pow_bin = ConvToBinary(pow);
+            int count_zero_limit = w - 2;
+
+            found = found % mod;
+            stw = new Stopwatch();
+            table = new List<BigInteger>();
+            res = 1;
+            powLen = pow_bin.Length;
+
+            if (mont)
+            {
+                MyList<BigInteger> parameters = toMontgomeryDomain(ref found, ref res, mod);
+
+                temp = found;
+                stw.Start();
+                table.Add(found);
+                for (i = 2; i <= w; i++) // нульовий елемент саме число, далі 11, 101, 1001, ...
+                {
+                    found = MontgomeryMultDomain(found, found, mod, parameters);
+                    table.Add(MontgomeryMultDomain(found, temp, mod, parameters));
+                }
+                stw.Stop();
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+
+                i = 0;
+                while (i < powLen)
+                {
+                    res = MontgomeryMultDomain(res, res, mod, parameters);
+                    if (pow_bin[i] == '1')
+                    {
+                        i++;
+                        t = 0; // кількість нулів
+                        ind = i;
+                        while (t <= count_zero_limit && ind < powLen && pow_bin[ind] == '0')
+                        {
+                            t++;
+                            ind++;
+                        }
+
+                        if (t > count_zero_limit || ind == powLen)
+                            t = -1;
+
+                        if (t >= 0)
+                        {
+                            for (j = 0; j <= t; j++)
+                                res = MontgomeryMultDomain(res, res, mod, parameters);
+                            res = MontgomeryMultDomain(res, table[t + 1], mod, parameters);
+                            i = i + t + 1;
+                        }
+                        else
+                            res = MontgomeryMultDomain(res, table[0], mod, parameters);
+                    }
+                    else
+                        i++;
+                }
+
+                res = outMontgomeryDomain(res, mod, parameters);
+            }
+            else
+            {
+                temp = found;
+                stw.Start();
+                table.Add(found);
+                for (i = 2; i <= w; i++) // нульовий елемент саме число, далі 11, 101, 1001, ...
+                {
+                    found = found * found % mod;
+                    table.Add(found * temp % mod);
+                }
+                stw.Stop();
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+
+                i = 0;
+                while (i < powLen)
+                {
+                    res = res * res % mod;
+                    if (pow_bin[i] == '1')
+                    {
+                        i++;
+                        t = 0; // кількість нулів
+                        ind = i;
+                        while (t <= count_zero_limit && ind < powLen && pow_bin[ind] == '0')
+                        {
+                            t++;
+                            ind++;
+                        }
+
+                        if (t > count_zero_limit || ind == powLen)
+                            t = -1;
+
+                        if (t >= 0)
+                        {
+                            for (j = 0; j <= t; j++)
+                                res = res * res % mod;
+                            res = res * table[t + 1] % mod;
+                            i = i + t + 1;
+                        }
+                        else
+                            res = res * table[0] % mod;
+                    }
+                    else
+                        i++;
+                }
+            }
+            return res;
+        }
+
+        public static BigInteger WindowLRMod_Final(BigInteger found, BigInteger pow, BigInteger mod, int w, out double table_time)
+        {
+            bool mont = GetMontgomery;
+            int i, j, t, powLen, ind;
+            Stopwatch stw;
+            BigInteger res, temp;
+            string pow_bin;
+            BigInteger[] table1, table2;
+            int count_zero_limit = w - 2;
+
+            found = found % mod;
+            stw = new Stopwatch();
+            pow_bin = ConvToBinary(pow);
+            res = 1;
+            powLen = pow_bin.Length;
+
+            table1 = new BigInteger[w]; // нульовий елемент саме число, далі 11, 111, ...
+            table2 = new BigInteger[w-1]; // нульовий елемент саме число, далі 101, 1001, ...
+
+            if (mont)
+            {
+                MyList<BigInteger> parameters = toMontgomeryDomain(ref found, ref res, mod);
+                BigInteger sqr_found = MontgomeryMultDomain(found, found, mod, parameters);
+
+                stw.Start();
+                temp = table1[0] = table2[0] = found;
+                found = MontgomeryMultDomain(sqr_found, temp, mod, parameters);
+                table1[1] = found; // записати 11 у двіковій системі
+
+                if (w > 2)
+                {
+                    table2[1] = MontgomeryMultDomain(table1[1], sqr_found, mod, parameters); // 101
+                    table1[2] = MontgomeryMultDomain(table2[1], sqr_found, mod, parameters); // 111
+                }
+
+                for (i = 4; i <= w; i++)
+                {
+                    table2[i - 2] = MontgomeryMultDomain(table1[i - 2], sqr_found, mod, parameters);
+
+                    table1[i - 1] = MontgomeryMultDomain(table1[i - 2], table1[i - 2], mod, parameters);
+                    table1[i - 1] = MontgomeryMultDomain(table1[i - 1], temp, mod, parameters);
+                }
+                stw.Stop();
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+                i = 0;
+                while (i < powLen)
+                {
+                    if (pow_bin[i] == '1')
+                    {
+                        i++;
+                        if ((i == powLen - 1) || (i < powLen - 1 && pow_bin[i] == '0'))
+                        {
+                            t = 1; // кількість нулів
+                            ind = i + t;
+                            while (t <= count_zero_limit && ind < powLen && pow_bin[ind] == '0')
+                            {
+                                t++;
+                                ind++;
+                            }
+
+                            if (t > count_zero_limit || ind == powLen)
+                                t = 0;
+
+                            if (t > 0)
+                            {
+                                for (j = 1; j <= t + 2; j++)
+                                    res = MontgomeryMultDomain(res, res, mod, parameters);
+                                res = MontgomeryMultDomain(res, table2[t], mod, parameters);
+                                i = i + t + 1;
+                            }
+                            else
+                            {
+                                res = MontgomeryMultDomain(res, res, mod, parameters);
+                                res = MontgomeryMultDomain(res, table2[0], mod, parameters);
+                            }
+                        }
+                        else
+                        {
+                            t = 1; // кількість одиниць
+                            ind = i + t;
+                            while (t < w && ind < powLen && pow_bin[ind] == '1')
+                            {
+                                t++;
+                                ind++;
+                            }
+
+                            for (j = 1; j <= t; j++)
+                                res = MontgomeryMultDomain(res, res, mod, parameters);
+                            res = MontgomeryMultDomain(res, table1[t - 1], mod, parameters);
+                            i = i + t - 1;
+                        }
+                    }
+                    else
+                    {
+                        res = MontgomeryMultDomain(res, res, mod, parameters);
+                        i++;
+                    }
+
+                }
+
+                res = outMontgomeryDomain(res, mod, parameters);
+            }
+            else
+            {
+                BigInteger sqr_found = found * found % mod;
+
+                stw.Start();
+                temp = table1[0] = table2[0] = found;
+                found = sqr_found * temp % mod;
+                table1[1] = found; // записати 11 у двіковій системі
+
+                if (w > 2)
+                {
+                    table2[1] = table1[1] * sqr_found % mod; // 101
+                    table1[2] = table2[1] * sqr_found % mod; // 111
+                }
+
+                for (i = 4; i <= w; i++)
+                {
+                    table2[i - 2] = table1[i - 2] * sqr_found % mod;
+
+                    table1[i - 1] = table1[i - 2] * table1[i - 2] % mod;
+                    table1[i - 1] = table1[i - 1] * temp % mod;
+                }
+                stw.Stop();
+                table_time = stw.Elapsed.TotalMilliseconds;
+
+                i = 0;
+                while (i < powLen)
+                {
+                    if (pow_bin[i] == '1')
+                    {
+                        i++;
+                        if ((i == powLen - 1) || (i < powLen - 1 && pow_bin[i] == '0'))
+                        {
+                            t = 1; // кількість нулів
+                            ind = i + t;
+                            while (t <= count_zero_limit && ind < powLen && pow_bin[ind] == '0')
+                            {
+                                t++;
+                                ind++;
+                            }
+
+                            if (t > count_zero_limit || ind == powLen)
+                                t = 0;
+
+                            if (t > 0)
+                            {
+                                for (j = 1; j <= t + 2; j++)
+                                    res = res * res % mod;
+                                res = res * table2[t] % mod;
+                                i = i + t + 1;
+                            }
+                            else
+                            {
+                                res = res * res % mod;
+                                res = res * table2[0] % mod;
+                            }
+                        }
+                        else
+                        {
+                            t = 1; // кількість одиниць
+                            ind = i + t;
+                            while (t < w && ind < powLen && pow_bin[ind] == '1')
+                            {
+                                t++;
+                                ind++;
+                            }
+
+                            for (j = 1; j <= t; j++)
+                                res = res * res % mod;
+                            res = res * table1[t - 1] % mod;
+                            i = i + t - 1;
+                        }
+                    }
+                    else
+                    {
+                        res = res * res % mod;
+                        i++;
+                    }
+
+                }
             }
             return res;
         }
