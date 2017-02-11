@@ -197,6 +197,13 @@ namespace DigitsPower
                 MessageBox.Show("You must select two different axis!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            string modsDir = ModsDir.SelectedItem.ToString();
+            if (MontgomeryChecked && (modsDir.Contains("Random number") ||
+                                      modsDir.Contains("Exponent of 2")))
+            {
+                MessageBox.Show("Обраний файл з модулями не підходить для обробки монтгомері!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string choice = binAxis.Text;
             string choicew = $"{Axis1Box.SelectedItem} {Axis2Box.SelectedItem}";
             string choiceb = $"{binAxis_1.SelectedItem} {binAxis_2.SelectedItem} {binAxis_3.SelectedItem}";

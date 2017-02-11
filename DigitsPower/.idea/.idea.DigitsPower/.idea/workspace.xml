@@ -15,10 +15,10 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Pow.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Pow.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DigitsPower/Pow.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="472">
+            <state relative-caret-position="9376">
               <caret line="586" column="64" lean-forward="false" selection-start-line="586" selection-start-column="64" selection-end-line="586" selection-end-column="64" />
               <folding>
                 <marker date="1486669872397" expanded="true" signature="6:268" ph="..." />
@@ -459,75 +459,76 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Form1.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Form1.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/DigitsPower/Form1.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="409">
-              <caret line="427" column="29" lean-forward="false" selection-start-line="427" selection-start-column="29" selection-end-line="427" selection-end-column="29" />
+            <state relative-caret-position="285">
+              <caret line="201" column="73" lean-forward="true" selection-start-line="201" selection-start-column="73" selection-end-line="201" selection-end-column="73" />
               <folding>
-                <marker date="1486335628000" expanded="true" signature="6:285" ph="..." />
-                <marker date="1486335628000" expanded="true" signature="308:22103" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="315:807" ph="/* 1.Binary RL ... */" />
-                <marker date="1486335628000" expanded="true" signature="853:21291" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="885:1096" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="1106:3952" ph="InitializeMethods" />
-                <marker date="1486335628000" expanded="true" signature="1172:2270" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="1258:2095" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="1718:1802" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="1850:1935" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="1981:2064" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="2129:2260" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="2314:3933" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="2340:3758" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="2623:2845" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="3041:3266" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="3458:3675" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="3792:3923" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="3962:6780" ph="GenerationMethods" />
-                <marker date="1486335628000" expanded="true" signature="4112:5345" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="4252:5135" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="4544:5121" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="4839:5070" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="4930:5048" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="5169:5300" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="5410:5559" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="5625:5783" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="5846:6761" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="5890:6738" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="6790:19405" ph="CalculateMethods" />
-                <marker date="1486335628000" expanded="true" signature="6883:8041" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="7127:7308" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="7595:8031" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="7648:7966" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="8050:8157" ph="/// / ... " />
-                <marker date="1486335628000" expanded="true" signature="8208:18023" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="8381:8612" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="8412:8598" ph="/* AdditionalParameters.mul = MontgomeryMultDomain; ... */" />
-                <marker date="1486335628000" expanded="true" signature="8685:17658" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="8791:11096" ph="Binary" />
-                <marker date="1486335628000" expanded="true" signature="11114:17643" ph="Window" />
-                <marker date="1486335628000" expanded="true" signature="13167:13494" ph="/* if (OperCheckList.CheckedIndices[i] == 16) { (new wNAFSlideRL(p.found, p.degree, p.mod, p.choicew, p.winMode,  ... */" />
-                <marker date="1486335628000" expanded="true" signature="18133:18520" ph="/* public void ChangeStatus(string method) ... */" />
-                <marker date="1486335628000" expanded="true" signature="18530:18694" ph="/// Calculatebuttons the click. ... " />
-                <marker date="1486335628000" expanded="true" signature="18765:19386" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="19423:20412" ph="CheckButtons" />
-                <marker date="1486335628000" expanded="true" signature="19513:19684" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="19588:19674" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="19750:19918" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="19824:19908" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="19990:20161" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="20065:20151" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="20225:20392" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="20299:20382" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="20422:20888" ph="OpenDirectories" />
-                <marker date="1486335628000" expanded="true" signature="20514:20585" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="20657:20729" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="20800:20868" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="20963:20984" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="21062:21136" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="21211:21285" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="21319:21572" ph="{...}" />
-                <marker date="1486335628000" expanded="true" signature="21618:22101" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="6:285" ph="..." />
+                <marker date="1486841439632" expanded="true" signature="308:22520" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="315:807" ph="/* 1.Binary RL ... */" />
+                <marker date="1486841439632" expanded="true" signature="853:21708" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="885:1096" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="1106:3952" ph="InitializeMethods" />
+                <marker date="1486841439632" expanded="true" signature="1172:2270" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="1258:2095" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="1718:1802" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="1850:1935" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="1981:2064" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="2129:2260" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="2314:3933" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="2340:3758" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="2623:2845" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="3041:3266" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="3458:3675" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="3792:3923" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="3962:6780" ph="GenerationMethods" />
+                <marker date="1486841439632" expanded="true" signature="4112:5345" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="4252:5135" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="4544:5121" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="4839:5070" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="4930:5048" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="5169:5300" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="5410:5559" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="5625:5783" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="5846:6761" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="5890:6738" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="6790:19822" ph="CalculateMethods" />
+                <marker date="1486841439632" expanded="true" signature="6883:8458" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="7127:7308" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="7519:7725" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="8012:8448" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="8065:8383" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="8467:8574" ph="/// / ... " />
+                <marker date="1486841439632" expanded="true" signature="8625:18440" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="8798:9029" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="8829:9015" ph="/* AdditionalParameters.mul = MontgomeryMultDomain; ... */" />
+                <marker date="1486841439632" expanded="true" signature="9102:18075" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="9208:11513" ph="Binary" />
+                <marker date="1486841439632" expanded="true" signature="11531:18060" ph="Window" />
+                <marker date="1486841439632" expanded="true" signature="13584:13911" ph="/* if (OperCheckList.CheckedIndices[i] == 16) { (new wNAFSlideRL(p.found, p.degree, p.mod, p.choicew, p.winMode,  ... */" />
+                <marker date="1486841439632" expanded="true" signature="18550:18937" ph="/* public void ChangeStatus(string method) ... */" />
+                <marker date="1486841439632" expanded="true" signature="18947:19111" ph="/// Calculatebuttons the click. ... " />
+                <marker date="1486841439632" expanded="true" signature="19182:19803" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="19840:20829" ph="CheckButtons" />
+                <marker date="1486841439632" expanded="true" signature="19930:20101" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="20005:20091" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="20167:20335" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="20241:20325" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="20407:20578" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="20482:20568" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="20642:20809" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="20716:20799" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="20839:21305" ph="OpenDirectories" />
+                <marker date="1486841439632" expanded="true" signature="20931:21002" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="21074:21146" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="21217:21285" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="21380:21401" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="21479:21553" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="21628:21702" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="21736:21989" ph="{...}" />
+                <marker date="1486841439632" expanded="true" signature="22035:22518" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -536,251 +537,252 @@
       <file leaf-file-name="FilesPow.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DigitsPower/FilesPow.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1696">
-              <caret line="106" column="70" lean-forward="false" selection-start-line="106" selection-start-column="70" selection-end-line="106" selection-end-column="70" />
+            <state relative-caret-position="352">
+              <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
               <folding>
-                <marker date="1486506416854" expanded="true" signature="6:141" ph="..." />
-                <marker date="1486506416854" expanded="true" signature="164:100939" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="195:7822" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="544:668" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="811:943" ph="/* protected void SendStatus() ... */" />
-                <marker date="1486506416854" expanded="true" signature="993:1312" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="1102:1245" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="1454:3142" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="1660:3132" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="1877:3100" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="1971:3078" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="2171:2295" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="2416:3052" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="2591:2974" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="3187:5953" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="3621:5943" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="5165:5709" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="5751:5902" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="6041:7816" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="6288:7770" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="6389:7756" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="6559:7661" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="6686:7639" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="6885:7520" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="7030:7489" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="7854:48857" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="8168:8405" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="8574:8706" ph="/* protected void SendStatus() ... */" />
-                <marker date="1486506416854" expanded="true" signature="8756:9075" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="8865:9008" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="9138:9483" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="9273:9446" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="9571:10491" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="10277:10457" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="10642:12994" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="10912:11028" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="11098:12984" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="11267:12970" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="11461:12952" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="11754:12893" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="11954:12078" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="12199:12867" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="12374:12789" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="13146:15499" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="13416:13532" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="13602:15489" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="13762:15475" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="13990:15457" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="14259:15398" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="14459:14583" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="14704:15372" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="14879:15294" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="15651:18048" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="15921:16037" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="16107:18038" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="16267:18024" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="16488:18006" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="16785:17947" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="17000:17124" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="17245:17921" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="17428:17843" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="18199:20552" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="18469:18586" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="18647:20542" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="18841:20528" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="19044:20510" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="19312:20451" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="19512:19636" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="19757:20425" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="19932:20347" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="20705:23093" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="20975:21091" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="21152:23083" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="21337:23069" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="21565:23051" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="21833:22992" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="22042:22166" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="22296:22966" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="22473:22888" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="23246:25666" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="23516:23632" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="23693:25656" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="23878:25642" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="24101:25624" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="24392:25565" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="24608:24732" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="24862:25539" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="25046:25461" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="25819:28208" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="26089:26205" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="26266:28198" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="26460:28184" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="26654:28166" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="26947:28107" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="27156:27280" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="27411:28081" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="27588:28003" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="28253:46955" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="28704:46944" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="28786:32350" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="28896:29647" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="29769:30522" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="30641:31397" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="31516:32293" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="32449:35996" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="32555:33306" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="33428:34176" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="34295:35047" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="35166:35939" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="36094:39645" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="36200:36952" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="37075:37823" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="37942:38695" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="38814:39588" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="39740:43232" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="39846:40589" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="40712:41453" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="41575:42317" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="42436:43175" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="43327:46903" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="43433:44197" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="44320:45082" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="45204:45967" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="46086:46846" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="47077:48851" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="47312:48805" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="47413:48791" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="47583:48696" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="47710:48674" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="47909:48555" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="48054:48524" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="48888:77339" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="49347:49527" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="49699:49831" ph="/* protected void SendStatus() ... */" />
-                <marker date="1486506416854" expanded="true" signature="49879:50198" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="49988:50131" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="50339:55403" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="50684:55393" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="50853:52466" ph="/* if (Table) ... */" />
-                <marker date="1486506416854" expanded="true" signature="52633:55359" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="53081:55261" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="53186:55235" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="53470:53675" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="53852:55205" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="54102:55066" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="55547:60635" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="55891:60625" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="56037:57666" ph="/* if (Table) ... */" />
-                <marker date="1486506416854" expanded="true" signature="57833:60591" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="58281:60493" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="58386:60467" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="58696:58901" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="59079:60437" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="59333:60298" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="60780:65913" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="61125:65903" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="61294:62926" ph="/* if (Table) ... */" />
-                <marker date="1486506416854" expanded="true" signature="63092:65869" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="63548:65771" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="63653:65745" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="63963:64168" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="64346:65715" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="64600:65576" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="66014:66677" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="66714:70832" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="67134:70821" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="67227:67985" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="68096:68850" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="68960:69715" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="69826:70587" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="70946:75120" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="71423:75110" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="71516:72274" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="72385:73139" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="73249:74004" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="74115:74876" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="75238:77333" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="75534:77240" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="75635:77226" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="75834:77082" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="75961:77060" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="76197:76891" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="76342:76860" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="77345:83604" ph="Binary" />
-                <marker date="1486506416854" expanded="true" signature="77388:77726" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="77657:77720" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="77755:78073" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="78105:78442" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="78383:78436" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="78474:78788" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="78824:79144" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="79178:79506" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="79540:79868" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="79899:80218" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="80249:80568" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="80610:80962" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="81001:81344" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="81374:81690" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="81720:82036" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="82068:82827" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="82252:82307" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="82468:82525" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="82704:82821" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="82859:83589" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="83043:83098" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="83259:83316" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="83609:100937" ph="Window" />
-                <marker date="1486506416854" expanded="true" signature="83654:84097" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="84132:84580" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="84611:85054" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="85089:85537" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="85567:86007" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="86041:86486" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="86516:86956" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="86990:87435" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="87468:87917" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="87950:88399" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="88433:88885" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="88919:89371" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="89405:89857" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="89891:90343" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="90378:90826" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="90861:91309" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="91344:91792" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="91826:92271" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="92312:92778" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="92819:93285" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="93326:93792" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="93832:94295" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="94338:94810" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="94853:95325" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="95368:95840" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="95882:96351" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="96395:96869" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="96913:97388" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="97432:97907" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="97950:98422" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="98463:98931" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="98972:99438" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="99479:99945" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="99985:100448" ph="{...}" />
-                <marker date="1486506416854" expanded="true" signature="100482:100922" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="6:141" ph="..." />
+                <marker date="1486839304500" expanded="true" signature="164:100939" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="195:7822" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="544:668" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="811:943" ph="/* protected void SendStatus() ... */" />
+                <marker date="1486839304500" expanded="true" signature="813:941" ph="/* protected void SendStatus() ... */" />
+                <marker date="1486839304500" expanded="true" signature="993:1312" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="1102:1245" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="1454:3142" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="1660:3132" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="1877:3100" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="1971:3078" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="2171:2295" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="2416:3052" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="2591:2974" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="3187:5953" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="3621:5943" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="5165:5709" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="5751:5902" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="6041:7816" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="6288:7770" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="6389:7756" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="6559:7661" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="6686:7639" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="6885:7520" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="7030:7489" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="7854:48857" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="8168:8405" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="8574:8706" ph="/* protected void SendStatus() ... */" />
+                <marker date="1486839304500" expanded="true" signature="8756:9075" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="8865:9008" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="9138:9483" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="9273:9446" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="9571:10491" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="10277:10457" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="10642:12994" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="10912:11028" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="11098:12984" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="11267:12970" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="11461:12952" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="11754:12893" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="11954:12078" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="12199:12867" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="12374:12789" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="13146:15499" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="13416:13532" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="13602:15489" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="13762:15475" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="13990:15457" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="14259:15398" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="14459:14583" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="14704:15372" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="14879:15294" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="15651:18048" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="15921:16037" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="16107:18038" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="16267:18024" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="16488:18006" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="16785:17947" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="17000:17124" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="17245:17921" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="17428:17843" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="18199:20552" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="18469:18586" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="18647:20542" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="18841:20528" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="19044:20510" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="19312:20451" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="19512:19636" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="19757:20425" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="19932:20347" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="20705:23093" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="20975:21091" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="21152:23083" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="21337:23069" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="21565:23051" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="21833:22992" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="22042:22166" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="22296:22966" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="22473:22888" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="23246:25666" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="23516:23632" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="23693:25656" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="23878:25642" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="24101:25624" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="24392:25565" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="24608:24732" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="24862:25539" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="25046:25461" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="25819:28208" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="26089:26205" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="26266:28198" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="26460:28184" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="26654:28166" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="26947:28107" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="27156:27280" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="27411:28081" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="27588:28003" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="28253:46955" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="28704:46944" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="28786:32350" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="28896:29647" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="29769:30522" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="30641:31397" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="31516:32293" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="32449:35996" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="32555:33306" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="33428:34176" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="34295:35047" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="35166:35939" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="36094:39645" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="36200:36952" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="37075:37823" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="37942:38695" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="38814:39588" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="39740:43232" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="39846:40589" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="40712:41453" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="41575:42317" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="42436:43175" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="43327:46903" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="43433:44197" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="44320:45082" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="45204:45967" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="46086:46846" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="47077:48851" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="47312:48805" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="47413:48791" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="47583:48696" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="47710:48674" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="47909:48555" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="48054:48524" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="48888:77339" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="49347:49527" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="49699:49831" ph="/* protected void SendStatus() ... */" />
+                <marker date="1486839304500" expanded="true" signature="49879:50198" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="49988:50131" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="50339:55403" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="50684:55393" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="50853:52466" ph="/* if (Table) ... */" />
+                <marker date="1486839304500" expanded="true" signature="52633:55359" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="53081:55261" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="53186:55235" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="53470:53675" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="53852:55205" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="54102:55066" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="55547:60635" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="55891:60625" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="56037:57666" ph="/* if (Table) ... */" />
+                <marker date="1486839304500" expanded="true" signature="57833:60591" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="58281:60493" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="58386:60467" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="58696:58901" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="59079:60437" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="59333:60298" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="60780:65913" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="61125:65903" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="61294:62926" ph="/* if (Table) ... */" />
+                <marker date="1486839304500" expanded="true" signature="63092:65869" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="63548:65771" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="63653:65745" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="63963:64168" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="64346:65715" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="64600:65576" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="66014:66677" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="66714:70832" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="67134:70821" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="67227:67985" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="68096:68850" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="68960:69715" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="69826:70587" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="70946:75120" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="71423:75110" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="71516:72274" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="72385:73139" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="73249:74004" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="74115:74876" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="75238:77333" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="75534:77240" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="75635:77226" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="75834:77082" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="75961:77060" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="76197:76891" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="76342:76860" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="77345:83604" ph="Binary" />
+                <marker date="1486839304500" expanded="true" signature="77388:77726" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="77657:77720" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="77755:78073" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="78105:78442" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="78383:78436" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="78474:78788" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="78824:79144" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="79178:79506" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="79540:79868" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="79899:80218" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="80249:80568" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="80610:80962" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="81001:81344" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="81374:81690" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="81720:82036" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="82068:82827" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="82252:82307" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="82468:82525" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="82704:82821" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="82859:83589" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="83043:83098" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="83259:83316" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="83609:100937" ph="Window" />
+                <marker date="1486839304500" expanded="true" signature="83654:84097" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="84132:84580" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="84611:85054" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="85089:85537" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="85567:86007" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="86041:86486" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="86516:86956" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="86990:87435" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="87468:87917" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="87950:88399" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="88433:88885" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="88919:89371" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="89405:89857" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="89891:90343" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="90378:90826" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="90861:91309" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="91344:91792" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="91826:92271" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="92312:92778" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="92819:93285" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="93326:93792" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="93832:94295" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="94338:94810" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="94853:95325" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="95368:95840" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="95882:96351" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="96395:96869" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="96913:97388" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="97432:97907" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="97950:98422" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="98463:98931" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="98972:99438" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="99479:99945" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="99985:100448" ph="{...}" />
+                <marker date="1486839304500" expanded="true" signature="100482:100922" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -789,7 +791,7 @@
       <file leaf-file-name="HelpMethods.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DigitsPower/HelpMethods.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
+            <state relative-caret-position="12768">
               <caret line="798" column="106" lean-forward="false" selection-start-line="798" selection-start-column="106" selection-end-line="798" selection-end-column="106" />
               <folding>
                 <marker date="1486669939066" expanded="true" signature="6:194" ph="..." />
@@ -906,8 +908,8 @@
       <file leaf-file-name="Form1.Designer.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/DigitsPower/Form1.Designer.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6688">
-              <caret line="418" column="17" lean-forward="false" selection-start-line="418" selection-start-column="17" selection-end-line="418" selection-end-column="17" />
+            <state relative-caret-position="187">
+              <caret line="697" column="69" lean-forward="false" selection-start-line="697" selection-start-column="69" selection-end-line="697" selection-end-column="69" />
               <folding>
                 <marker date="1486335628000" expanded="true" signature="21:65403" ph="{...}" />
                 <marker date="1486335628000" expanded="true" signature="51:65401" ph="{...}" />
@@ -1066,6 +1068,7 @@
       <find>Mont</find>
       <find>Joye</find>
       <find>Final</find>
+      <find>Mod</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -1076,18 +1079,19 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/DigitsPower/Form1.Designer.cs" />
-        <option value="$PROJECT_DIR$/DigitsPower/Form1.cs" />
         <option value="$PROJECT_DIR$/DigitsPower/MontgomeryMethods.cs" />
-        <option value="$PROJECT_DIR$/DigitsPower/FilesPow.cs" />
         <option value="$PROJECT_DIR$/DigitsPower/Pow.cs" />
         <option value="$PROJECT_DIR$/DigitsPower/HelpMethods.cs" />
+        <option value="$PROJECT_DIR$/DigitsPower/FilesPow.cs" />
+        <option value="$PROJECT_DIR$/DigitsPower/Form1.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="683" />
-    <option name="width" value="683" />
-    <option name="height" value="738" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1129,7 +1133,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/GitHub.appref-ms" />
+    <property name="last_opened_file_path" value="$USER_HOME$/C#/TestAPP/TestAPP.sln" />
   </component>
   <component name="RunManager" selected=".NET Project.Default">
     <configuration default="true" type="DotNetProject" factoryName=".NET Project">
@@ -1194,12 +1198,15 @@
       <workItem from="1486508910401" duration="57000" />
       <workItem from="1486510720149" duration="948000" />
       <workItem from="1486594482014" duration="4419000" />
-      <workItem from="1486668267693" duration="1776000" />
+      <workItem from="1486668267693" duration="1989000" />
+      <workItem from="1486828387161" duration="9000" />
+      <workItem from="1486834003994" duration="1777000" />
+      <workItem from="1486840189965" duration="1471000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94926000" />
+    <option name="totallyTimeSpent" value="98396000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1211,29 +1218,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="683" y="0" width="683" height="738" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors in solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31796503" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31007752" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UnitTesting" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Change Signature" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3388306" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15885799" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32713178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3990461" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3984496" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32750398" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1242,7 +1249,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="13" />
+      <option name="time" value="16" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -6240,577 +6247,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/DigitsPower/FilesPow.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1696">
-          <caret line="106" column="70" lean-forward="false" selection-start-line="106" selection-start-column="70" selection-end-line="106" selection-end-column="70" />
-          <folding>
-            <marker date="1486506416854" expanded="true" signature="6:141" ph="..." />
-            <marker date="1486506416854" expanded="true" signature="164:100939" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="195:7822" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="544:668" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="811:943" ph="/* protected void SendStatus() ... */" />
-            <marker date="1486506416854" expanded="true" signature="993:1312" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="1102:1245" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="1454:3142" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="1660:3132" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="1877:3100" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="1971:3078" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="2171:2295" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="2416:3052" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="2591:2974" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="3187:5953" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="3621:5943" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="5165:5709" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="5751:5902" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="6041:7816" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="6288:7770" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="6389:7756" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="6559:7661" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="6686:7639" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="6885:7520" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="7030:7489" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="7854:48857" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="8168:8405" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="8574:8706" ph="/* protected void SendStatus() ... */" />
-            <marker date="1486506416854" expanded="true" signature="8756:9075" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="8865:9008" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="9138:9483" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="9273:9446" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="9571:10491" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="10277:10457" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="10642:12994" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="10912:11028" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="11098:12984" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="11267:12970" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="11461:12952" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="11754:12893" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="11954:12078" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="12199:12867" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="12374:12789" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="13146:15499" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="13416:13532" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="13602:15489" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="13762:15475" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="13990:15457" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="14259:15398" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="14459:14583" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="14704:15372" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="14879:15294" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="15651:18048" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="15921:16037" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="16107:18038" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="16267:18024" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="16488:18006" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="16785:17947" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="17000:17124" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="17245:17921" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="17428:17843" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="18199:20552" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="18469:18586" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="18647:20542" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="18841:20528" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="19044:20510" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="19312:20451" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="19512:19636" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="19757:20425" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="19932:20347" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="20705:23093" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="20975:21091" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="21152:23083" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="21337:23069" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="21565:23051" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="21833:22992" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="22042:22166" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="22296:22966" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="22473:22888" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="23246:25666" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="23516:23632" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="23693:25656" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="23878:25642" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="24101:25624" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="24392:25565" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="24608:24732" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="24862:25539" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="25046:25461" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="25819:28208" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="26089:26205" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="26266:28198" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="26460:28184" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="26654:28166" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="26947:28107" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="27156:27280" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="27411:28081" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="27588:28003" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="28253:46955" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="28704:46944" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="28786:32350" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="28896:29647" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="29769:30522" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="30641:31397" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="31516:32293" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="32449:35996" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="32555:33306" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="33428:34176" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="34295:35047" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="35166:35939" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="36094:39645" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="36200:36952" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="37075:37823" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="37942:38695" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="38814:39588" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="39740:43232" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="39846:40589" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="40712:41453" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="41575:42317" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="42436:43175" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="43327:46903" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="43433:44197" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="44320:45082" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="45204:45967" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="46086:46846" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="47077:48851" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="47312:48805" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="47413:48791" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="47583:48696" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="47710:48674" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="47909:48555" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="48054:48524" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="48888:77339" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="49347:49527" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="49699:49831" ph="/* protected void SendStatus() ... */" />
-            <marker date="1486506416854" expanded="true" signature="49879:50198" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="49988:50131" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="50339:55403" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="50684:55393" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="50853:52466" ph="/* if (Table) ... */" />
-            <marker date="1486506416854" expanded="true" signature="52633:55359" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="53081:55261" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="53186:55235" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="53470:53675" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="53852:55205" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="54102:55066" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="55547:60635" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="55891:60625" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="56037:57666" ph="/* if (Table) ... */" />
-            <marker date="1486506416854" expanded="true" signature="57833:60591" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="58281:60493" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="58386:60467" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="58696:58901" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="59079:60437" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="59333:60298" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="60780:65913" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="61125:65903" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="61294:62926" ph="/* if (Table) ... */" />
-            <marker date="1486506416854" expanded="true" signature="63092:65869" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="63548:65771" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="63653:65745" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="63963:64168" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="64346:65715" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="64600:65576" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="66014:66677" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="66714:70832" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="67134:70821" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="67227:67985" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="68096:68850" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="68960:69715" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="69826:70587" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="70946:75120" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="71423:75110" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="71516:72274" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="72385:73139" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="73249:74004" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="74115:74876" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="75238:77333" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="75534:77240" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="75635:77226" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="75834:77082" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="75961:77060" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="76197:76891" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="76342:76860" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="77345:83604" ph="Binary" />
-            <marker date="1486506416854" expanded="true" signature="77388:77726" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="77657:77720" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="77755:78073" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="78105:78442" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="78383:78436" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="78474:78788" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="78824:79144" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="79178:79506" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="79540:79868" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="79899:80218" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="80249:80568" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="80610:80962" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="81001:81344" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="81374:81690" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="81720:82036" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="82068:82827" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="82252:82307" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="82468:82525" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="82704:82821" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="82859:83589" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="83043:83098" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="83259:83316" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="83609:100937" ph="Window" />
-            <marker date="1486506416854" expanded="true" signature="83654:84097" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="84132:84580" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="84611:85054" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="85089:85537" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="85567:86007" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="86041:86486" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="86516:86956" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="86990:87435" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="87468:87917" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="87950:88399" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="88433:88885" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="88919:89371" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="89405:89857" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="89891:90343" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="90378:90826" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="90861:91309" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="91344:91792" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="91826:92271" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="92312:92778" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="92819:93285" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="93326:93792" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="93832:94295" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="94338:94810" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="94853:95325" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="95368:95840" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="95882:96351" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="96395:96869" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="96913:97388" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="97432:97907" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="97950:98422" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="98463:98931" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="98972:99438" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="99479:99945" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="99985:100448" ph="{...}" />
-            <marker date="1486506416854" expanded="true" signature="100482:100922" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DigitsPower/Form1.Designer.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6688">
-          <caret line="418" column="17" lean-forward="false" selection-start-line="418" selection-start-column="17" selection-end-line="418" selection-end-column="17" />
-          <folding>
-            <marker date="1486335628000" expanded="true" signature="21:65403" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="51:65401" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="66:142" ph="/// Required designer variable. ... " />
-            <marker date="1486335628000" expanded="true" signature="220:411" ph="/// Clean up any resources being used. ... " />
-            <marker date="1486335628000" expanded="true" signature="467:641" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="528:594" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="651:59933" ph="Windows Form Designer generated code" />
-            <marker date="1486335628000" expanded="true" signature="705:868" ph="/// Required method for Designer support - do not modify ... " />
-            <marker date="1486335628000" expanded="true" signature="911:59913" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="8112:8156" ph="/* groupBox1 ... */" />
-            <marker date="1486335628000" expanded="true" signature="8564:8615" ph="/* OperationsResult ... */" />
-            <marker date="1486335628000" expanded="true" signature="8951:8995" ph="/* groupBox4 ... */" />
-            <marker date="1486335628000" expanded="true" signature="9525:9575" ph="/* CheckNonebutton ... */" />
-            <marker date="1486335628000" expanded="true" signature="10063:10112" ph="/* CheckAllbutton ... */" />
-            <marker date="1486335628000" expanded="true" signature="10589:10638" ph="/* OperationsList ... */" />
-            <marker date="1486335628000" expanded="true" signature="10810:12791" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="13059:13103" ph="/* groupBox3 ... */" />
-            <marker date="1486335628000" expanded="true" signature="14003:14050" ph="/* montFlagTest ... */" />
-            <marker date="1486335628000" expanded="true" signature="14586:14631" ph="/* WindowText ... */" />
-            <marker date="1486335628000" expanded="true" signature="14919:14960" ph="/* label9 ... */" />
-            <marker date="1486335628000" expanded="true" signature="15270:15314" ph="/* PowerText ... */" />
-            <marker date="1486335628000" expanded="true" signature="15596:15637" ph="/* label5 ... */" />
-            <marker date="1486335628000" expanded="true" signature="15948:15998" ph="/* Calculatebutton ... */" />
-            <marker date="1486335628000" expanded="true" signature="16483:16524" ph="/* label6 ... */" />
-            <marker date="1486335628000" expanded="true" signature="16834:16876" ph="/* modText ... */" />
-            <marker date="1486335628000" expanded="true" signature="17146:17187" ph="/* label7 ... */" />
-            <marker date="1486335628000" expanded="true" signature="17575:17620" ph="/* NumberText ... */" />
-            <marker date="1486335628000" expanded="true" signature="17907:17953" ph="/* tabControl1 ... */" />
-            <marker date="1486335628000" expanded="true" signature="18423:18465" ph="/* FilePow ... */" />
-            <marker date="1486335628000" expanded="true" signature="19363:19409" ph="/* statusLabel ... */" />
-            <marker date="1486335628000" expanded="true" signature="19902:19946" ph="/* aMontFlag ... */" />
-            <marker date="1486335628000" expanded="true" signature="20452:20494" ph="/* label24 ... */" />
-            <marker date="1486335628000" expanded="true" signature="20830:20875" ph="/* groupBox12 ... */" />
-            <marker date="1486335628000" expanded="true" signature="21391:21433" ph="/* label15 ... */" />
-            <marker date="1486335628000" expanded="true" signature="21756:21798" ph="/* binAxis ... */" />
-            <marker date="1486335628000" expanded="true" signature="21903:21971" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="22245:22290" ph="/* groupBox14 ... */" />
-            <marker date="1486335628000" expanded="true" signature="23209:23251" ph="/* label34 ... */" />
-            <marker date="1486335628000" expanded="true" signature="23580:23624" ph="/* binAxis_3 ... */" />
-            <marker date="1486335628000" expanded="true" signature="23733:23841" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="24131:24173" ph="/* label14 ... */" />
-            <marker date="1486335628000" expanded="true" signature="24506:24548" ph="/* label33 ... */" />
-            <marker date="1486335628000" expanded="true" signature="24881:24925" ph="/* binAxis_2 ... */" />
-            <marker date="1486335628000" expanded="true" signature="25034:25142" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="25433:25477" ph="/* binAxis_1 ... */" />
-            <marker date="1486335628000" expanded="true" signature="25586:25694" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="25981:26023" ph="/* label28 ... */" />
-            <marker date="1486335628000" expanded="true" signature="26340:26383" ph="/* textBmax ... */" />
-            <marker date="1486335628000" expanded="true" signature="26663:26705" ph="/* label29 ... */" />
-            <marker date="1486335628000" expanded="true" signature="27022:27065" ph="/* textAmax ... */" />
-            <marker date="1486335628000" expanded="true" signature="27345:27390" ph="/* groupBox11 ... */" />
-            <marker date="1486335628000" expanded="true" signature="28188:28230" ph="/* label27 ... */" />
-            <marker date="1486335628000" expanded="true" signature="28584:28626" ph="/* label18 ... */" />
-            <marker date="1486335628000" expanded="true" signature="28958:29000" ph="/* WinMode ... */" />
-            <marker date="1486335628000" expanded="true" signature="29282:29325" ph="/* Axis2Box ... */" />
-            <marker date="1486335628000" expanded="true" signature="29432:29522" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="29812:29854" ph="/* label12 ... */" />
-            <marker date="1486335628000" expanded="true" signature="30179:30221" ph="/* label19 ... */" />
-            <marker date="1486335628000" expanded="true" signature="30552:30596" ph="/* TableWith ... */" />
-            <marker date="1486335628000" expanded="true" signature="31096:31139" ph="/* Axis1Box ... */" />
-            <marker date="1486335628000" expanded="true" signature="31246:31336" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="31626:31674" ph="/* ResultsButton ... */" />
-            <marker date="1486335628000" expanded="true" signature="32221:32266" ph="/* groupBox10 ... */" />
-            <marker date="1486335628000" expanded="true" signature="32791:32835" ph="/* CheckNone ... */" />
-            <marker date="1486335628000" expanded="true" signature="33269:33311" ph="/* button2 ... */" />
-            <marker date="1486335628000" expanded="true" signature="33724:33772" ph="/* OperCheckList ... */" />
-            <marker date="1486335628000" expanded="true" signature="34000:36047" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="36310:36354" ph="/* groupBox9 ... */" />
-            <marker date="1486335628000" expanded="true" signature="37028:37070" ph="/* label23 ... */" />
-            <marker date="1486335628000" expanded="true" signature="37397:37439" ph="/* label13 ... */" />
-            <marker date="1486335628000" expanded="true" signature="37763:37805" ph="/* label22 ... */" />
-            <marker date="1486335628000" expanded="true" signature="38133:38177" ph="/* DegreeDir ... */" />
-            <marker date="1486335628000" expanded="true" signature="38473:38515" ph="/* ModsDir ... */" />
-            <marker date="1486335628000" expanded="true" signature="38799:38842" ph="/* FoundDir ... */" />
-            <marker date="1486335628000" expanded="true" signature="39131:39176" ph="/* FileCreate ... */" />
-            <marker date="1486335628000" expanded="true" signature="39723:39767" ph="/* groupBox7 ... */" />
-            <marker date="1486335628000" expanded="true" signature="40449:40491" ph="/* label21 ... */" />
-            <marker date="1486335628000" expanded="true" signature="40969:41011" ph="/* label20 ... */" />
-            <marker date="1486335628000" expanded="true" signature="41488:41530" ph="/* label17 ... */" />
-            <marker date="1486335628000" expanded="true" signature="42004:42047" ph="/* ModsList ... */" />
-            <marker date="1486335628000" expanded="true" signature="42337:42383" ph="/* DegreesList ... */" />
-            <marker date="1486335628000" expanded="true" signature="42691:42741" ph="/* FoundationsList ... */" />
-            <marker date="1486335628000" expanded="true" signature="43072:43116" ph="/* groupBox6 ... */" />
-            <marker date="1486335628000" expanded="true" signature="43682:43724" ph="/* label16 ... */" />
-            <marker date="1486335628000" expanded="true" signature="44183:44227" ph="/* groupBox5 ... */" />
-            <marker date="1486335628000" expanded="true" signature="44967:45011" ph="/* comboBox3 ... */" />
-            <marker date="1486335628000" expanded="true" signature="45120:45162" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="45449:45491" ph="/* label26 ... */" />
-            <marker date="1486335628000" expanded="true" signature="45809:45853" ph="/* GenDegree ... */" />
-            <marker date="1486335628000" expanded="true" signature="46283:46324" ph="/* label4 ... */" />
-            <marker date="1486335628000" expanded="true" signature="46631:46673" ph="/* label11 ... */" />
-            <marker date="1486335628000" expanded="true" signature="46988:47035" ph="/* DegreeLenght ... */" />
-            <marker date="1486335628000" expanded="true" signature="47338:47384" ph="/* DegreeCount ... */" />
-            <marker date="1486335628000" expanded="true" signature="47677:47721" ph="/* groupBox2 ... */" />
-            <marker date="1486335628000" expanded="true" signature="48453:48497" ph="/* comboBox2 ... */" />
-            <marker date="1486335628000" expanded="true" signature="48606:48648" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="48934:48976" ph="/* label25 ... */" />
-            <marker date="1486335628000" expanded="true" signature="49294:49337" ph="/* GenFound ... */" />
-            <marker date="1486335628000" expanded="true" signature="49758:49799" ph="/* label8 ... */" />
-            <marker date="1486335628000" expanded="true" signature="50106:50148" ph="/* label10 ... */" />
-            <marker date="1486335628000" expanded="true" signature="50463:50509" ph="/* FoundLenght ... */" />
-            <marker date="1486335628000" expanded="true" signature="50806:50851" ph="/* FoundCount ... */" />
-            <marker date="1486335628000" expanded="true" signature="51138:51182" ph="/* groupBox8 ... */" />
-            <marker date="1486335628000" expanded="true" signature="52021:52065" ph="/* comboBox4 ... */" />
-            <marker date="1486335628000" expanded="true" signature="52174:52216" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="52504:52546" ph="/* label32 ... */" />
-            <marker date="1486335628000" expanded="true" signature="52864:52906" ph="/* ModType ... */" />
-            <marker date="1486335628000" expanded="true" signature="53011:53124" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="53406:53447" ph="/* label3 ... */" />
-            <marker date="1486335628000" expanded="true" signature="53753:53794" ph="/* GenMod ... */" />
-            <marker date="1486335628000" expanded="true" signature="54197:54238" ph="/* label1 ... */" />
-            <marker date="1486335628000" expanded="true" signature="54545:54586" ph="/* label2 ... */" />
-            <marker date="1486335628000" expanded="true" signature="54894:54938" ph="/* ModLenght ... */" />
-            <marker date="1486335628000" expanded="true" signature="55223:55266" ph="/* ModCount ... */" />
-            <marker date="1486335628000" expanded="true" signature="55541:55579" ph="/* Pow ... */" />
-            <marker date="1486335628000" expanded="true" signature="56152:56197" ph="/* groupBox13 ... */" />
-            <marker date="1486335628000" expanded="true" signature="56768:56810" ph="/* label30 ... */" />
-            <marker date="1486335628000" expanded="true" signature="57122:57162" ph="/* textB ... */" />
-            <marker date="1486335628000" expanded="true" signature="57419:57461" ph="/* label31 ... */" />
-            <marker date="1486335628000" expanded="true" signature="57773:57813" ph="/* textA ... */" />
-            <marker date="1486335628000" expanded="true" signature="58070:58113" ph="/* MainForm ... */" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DigitsPower/Form1.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="409">
-          <caret line="427" column="29" lean-forward="false" selection-start-line="427" selection-start-column="29" selection-end-line="427" selection-end-column="29" />
-          <folding>
-            <marker date="1486335628000" expanded="true" signature="6:285" ph="..." />
-            <marker date="1486335628000" expanded="true" signature="308:22103" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="315:807" ph="/* 1.Binary RL ... */" />
-            <marker date="1486335628000" expanded="true" signature="853:21291" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="885:1096" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="1106:3952" ph="InitializeMethods" />
-            <marker date="1486335628000" expanded="true" signature="1172:2270" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="1258:2095" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="1718:1802" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="1850:1935" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="1981:2064" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="2129:2260" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="2314:3933" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="2340:3758" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="2623:2845" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="3041:3266" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="3458:3675" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="3792:3923" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="3962:6780" ph="GenerationMethods" />
-            <marker date="1486335628000" expanded="true" signature="4112:5345" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="4252:5135" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="4544:5121" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="4839:5070" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="4930:5048" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="5169:5300" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="5410:5559" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="5625:5783" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="5846:6761" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="5890:6738" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="6790:19405" ph="CalculateMethods" />
-            <marker date="1486335628000" expanded="true" signature="6883:8041" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="7127:7308" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="7595:8031" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="7648:7966" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="8050:8157" ph="/// / ... " />
-            <marker date="1486335628000" expanded="true" signature="8208:18023" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="8381:8612" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="8412:8598" ph="/* AdditionalParameters.mul = MontgomeryMultDomain; ... */" />
-            <marker date="1486335628000" expanded="true" signature="8685:17658" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="8791:11096" ph="Binary" />
-            <marker date="1486335628000" expanded="true" signature="11114:17643" ph="Window" />
-            <marker date="1486335628000" expanded="true" signature="13167:13494" ph="/* if (OperCheckList.CheckedIndices[i] == 16) { (new wNAFSlideRL(p.found, p.degree, p.mod, p.choicew, p.winMode,  ... */" />
-            <marker date="1486335628000" expanded="true" signature="18133:18520" ph="/* public void ChangeStatus(string method) ... */" />
-            <marker date="1486335628000" expanded="true" signature="18530:18694" ph="/// Calculatebuttons the click. ... " />
-            <marker date="1486335628000" expanded="true" signature="18765:19386" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="19423:20412" ph="CheckButtons" />
-            <marker date="1486335628000" expanded="true" signature="19513:19684" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="19588:19674" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="19750:19918" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="19824:19908" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="19990:20161" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="20065:20151" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="20225:20392" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="20299:20382" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="20422:20888" ph="OpenDirectories" />
-            <marker date="1486335628000" expanded="true" signature="20514:20585" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="20657:20729" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="20800:20868" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="20963:20984" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="21062:21136" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="21211:21285" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="21319:21572" ph="{...}" />
-            <marker date="1486335628000" expanded="true" signature="21618:22101" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/DigitsPower/HelpMethods.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="798" column="106" lean-forward="false" selection-start-line="798" selection-start-column="106" selection-end-line="798" selection-end-column="106" />
-          <folding>
-            <marker date="1486669939066" expanded="true" signature="6:194" ph="..." />
-            <marker date="1486669939066" expanded="true" signature="216:34445" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="247:20592" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="262:447" ph="MultiplyMethods" />
-            <marker date="1486669939066" expanded="true" signature="375:427" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="456:15301" ph="BinaryMethods" />
-            <marker date="1486669939066" expanded="true" signature="486:745" ph="/* public static BigInteger Point_Multiplication_Affine_Coord_21(BigInteger found, BigInteger pow, BigInteger mod ... */" />
-            <marker date="1486669939066" expanded="true" signature="757:1259" ph="/* for (int i = 0; i &lt; mas_k.Count; i++) ... */" />
-            <marker date="1486669939066" expanded="true" signature="1352:2245" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="1564:1916" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="2039:2208" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="2338:3369" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="2586:3039" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="3163:3332" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="3462:4655" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="3890:4367" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="4247:4353" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="4748:8254" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="4977:5399" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="5199:5297" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="5441:6080" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="5590:5809" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="5660:5791" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="5854:6066" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="6224:6802" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="6533:6600" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="6628:6720" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="6841:6896" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="7070:7122" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="7178:7413" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="7335:7399" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="7430:7506" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="7760:7836" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="7853:7929" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="8078:8133" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="8324:8403" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="8476:8725" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="8830:9596" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="8867:9586" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="9024:9091" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="9122:9196" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="9387:9454" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="9475:9572" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="9675:10863" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="9891:10101" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="10207:10827" ph="/* BigInteger u, v, A, B, C, D, y, t1, t2, t3, q, d, inv; ... */" />
-            <marker date="1486669939066" expanded="true" signature="10935:11500" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="11154:11448" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="11557:11754" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="11651:11717" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="11812:12031" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="11886:11990" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="12087:13168" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="12264:12697" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="12453:12578" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="12737:13158" ph="/* MyList&lt;int&gt; res = new MyList&lt;int&gt;(); ... */" />
-            <marker date="1486669939066" expanded="true" signature="13230:14217" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="13363:14185" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="13490:13579" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="13651:13740" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="13848:14096" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="13902:14016" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="14279:15281" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="14478:15249" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="14564:14656" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="14729:14821" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="14984:15235" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="15038:15155" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="15312:20586" ph="WindowsMethods" />
-            <marker date="1486669939066" expanded="true" signature="15411:16182" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="15434:15573" ph="/* виділяємо вікно в масиві х від молодшого індексу і до старших індексів ... */" />
-            <marker date="1486669939066" expanded="true" signature="15760:16015" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="15902:16001" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="16258:18009" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="16281:16420" ph="/* виділяємо вікно в масиві х від старшого індексу і до молодших індексів ... */" />
-            <marker date="1486669939066" expanded="true" signature="16670:17084" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="16715:17024" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="16782:16916" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="17254:17999" ph="/* int j = i; ... */" />
-            <marker date="1486669939066" expanded="true" signature="18121:18318" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="18429:18626" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="18739:18996" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="19109:19366" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="19427:19726" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="19792:20567" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="20055:20533" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="20146:20432" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="20634:34443" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="20634:34445" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="20732:34437" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="20732:34443" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="21065:33804" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="21104:24638" ph="Binary" />
-            <marker date="1486669939066" expanded="true" signature="21569:21833" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="21898:22163" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="22228:22487" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="22552:22811" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="24660:33786" ph="Window" />
-            <marker date="1486669939066" expanded="true" signature="26463:26745" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="26810:27092" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="27157:27435" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="27500:27778" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="27799:28340" ph="/* if (OperationsList.CheckedIndices[i] == 16 &amp;&amp; nsd == 1) { if (nsd == 1) { nsdMethods = true; continue; } Opera ... */" />
-            <marker date="1486669939066" expanded="true" signature="33805:34437" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="33849:34196" ph="{...}" />
-            <marker date="1486669939066" expanded="true" signature="34227:34427" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/DigitsPower/Pow.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="472">
+        <state relative-caret-position="9376">
           <caret line="586" column="64" lean-forward="false" selection-start-line="586" selection-start-column="64" selection-end-line="586" selection-end-column="64" />
           <folding>
             <marker date="1486669872397" expanded="true" signature="6:268" ph="..." />
@@ -7246,6 +6685,576 @@
             <marker date="1486669872397" expanded="true" signature="137301:137510" ph="{...}" />
             <marker date="1486669872397" expanded="true" signature="137639:137872" ph="{...}" />
             <marker date="1486669872397" expanded="true" signature="137701:137854" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DigitsPower/HelpMethods.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12768">
+          <caret line="798" column="106" lean-forward="false" selection-start-line="798" selection-start-column="106" selection-end-line="798" selection-end-column="106" />
+          <folding>
+            <marker date="1486669939066" expanded="true" signature="6:194" ph="..." />
+            <marker date="1486669939066" expanded="true" signature="216:34445" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="247:20592" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="262:447" ph="MultiplyMethods" />
+            <marker date="1486669939066" expanded="true" signature="375:427" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="456:15301" ph="BinaryMethods" />
+            <marker date="1486669939066" expanded="true" signature="486:745" ph="/* public static BigInteger Point_Multiplication_Affine_Coord_21(BigInteger found, BigInteger pow, BigInteger mod ... */" />
+            <marker date="1486669939066" expanded="true" signature="757:1259" ph="/* for (int i = 0; i &lt; mas_k.Count; i++) ... */" />
+            <marker date="1486669939066" expanded="true" signature="1352:2245" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="1564:1916" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="2039:2208" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="2338:3369" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="2586:3039" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="3163:3332" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="3462:4655" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="3890:4367" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="4247:4353" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="4748:8254" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="4977:5399" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="5199:5297" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="5441:6080" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="5590:5809" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="5660:5791" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="5854:6066" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="6224:6802" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="6533:6600" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="6628:6720" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="6841:6896" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="7070:7122" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="7178:7413" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="7335:7399" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="7430:7506" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="7760:7836" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="7853:7929" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="8078:8133" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="8324:8403" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="8476:8725" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="8830:9596" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="8867:9586" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="9024:9091" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="9122:9196" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="9387:9454" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="9475:9572" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="9675:10863" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="9891:10101" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="10207:10827" ph="/* BigInteger u, v, A, B, C, D, y, t1, t2, t3, q, d, inv; ... */" />
+            <marker date="1486669939066" expanded="true" signature="10935:11500" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="11154:11448" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="11557:11754" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="11651:11717" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="11812:12031" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="11886:11990" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="12087:13168" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="12264:12697" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="12453:12578" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="12737:13158" ph="/* MyList&lt;int&gt; res = new MyList&lt;int&gt;(); ... */" />
+            <marker date="1486669939066" expanded="true" signature="13230:14217" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="13363:14185" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="13490:13579" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="13651:13740" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="13848:14096" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="13902:14016" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="14279:15281" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="14478:15249" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="14564:14656" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="14729:14821" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="14984:15235" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="15038:15155" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="15312:20586" ph="WindowsMethods" />
+            <marker date="1486669939066" expanded="true" signature="15411:16182" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="15434:15573" ph="/* виділяємо вікно в масиві х від молодшого індексу і до старших індексів ... */" />
+            <marker date="1486669939066" expanded="true" signature="15760:16015" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="15902:16001" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="16258:18009" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="16281:16420" ph="/* виділяємо вікно в масиві х від старшого індексу і до молодших індексів ... */" />
+            <marker date="1486669939066" expanded="true" signature="16670:17084" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="16715:17024" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="16782:16916" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="17254:17999" ph="/* int j = i; ... */" />
+            <marker date="1486669939066" expanded="true" signature="18121:18318" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="18429:18626" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="18739:18996" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="19109:19366" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="19427:19726" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="19792:20567" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="20055:20533" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="20146:20432" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="20634:34443" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="20634:34445" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="20732:34437" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="20732:34443" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="21065:33804" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="21104:24638" ph="Binary" />
+            <marker date="1486669939066" expanded="true" signature="21569:21833" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="21898:22163" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="22228:22487" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="22552:22811" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="24660:33786" ph="Window" />
+            <marker date="1486669939066" expanded="true" signature="26463:26745" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="26810:27092" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="27157:27435" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="27500:27778" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="27799:28340" ph="/* if (OperationsList.CheckedIndices[i] == 16 &amp;&amp; nsd == 1) { if (nsd == 1) { nsdMethods = true; continue; } Opera ... */" />
+            <marker date="1486669939066" expanded="true" signature="33805:34437" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="33849:34196" ph="{...}" />
+            <marker date="1486669939066" expanded="true" signature="34227:34427" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DigitsPower/FilesPow.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="31" column="10" lean-forward="false" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
+          <folding>
+            <marker date="1486839304500" expanded="true" signature="6:141" ph="..." />
+            <marker date="1486839304500" expanded="true" signature="164:100939" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="195:7822" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="544:668" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="811:943" ph="/* protected void SendStatus() ... */" />
+            <marker date="1486839304500" expanded="true" signature="813:941" ph="/* protected void SendStatus() ... */" />
+            <marker date="1486839304500" expanded="true" signature="993:1312" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="1102:1245" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="1454:3142" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="1660:3132" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="1877:3100" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="1971:3078" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="2171:2295" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="2416:3052" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="2591:2974" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="3187:5953" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="3621:5943" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="5165:5709" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="5751:5902" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="6041:7816" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="6288:7770" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="6389:7756" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="6559:7661" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="6686:7639" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="6885:7520" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="7030:7489" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="7854:48857" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="8168:8405" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="8574:8706" ph="/* protected void SendStatus() ... */" />
+            <marker date="1486839304500" expanded="true" signature="8756:9075" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="8865:9008" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="9138:9483" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="9273:9446" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="9571:10491" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="10277:10457" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="10642:12994" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="10912:11028" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="11098:12984" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="11267:12970" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="11461:12952" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="11754:12893" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="11954:12078" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="12199:12867" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="12374:12789" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="13146:15499" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="13416:13532" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="13602:15489" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="13762:15475" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="13990:15457" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="14259:15398" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="14459:14583" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="14704:15372" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="14879:15294" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="15651:18048" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="15921:16037" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="16107:18038" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="16267:18024" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="16488:18006" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="16785:17947" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="17000:17124" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="17245:17921" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="17428:17843" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="18199:20552" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="18469:18586" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="18647:20542" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="18841:20528" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="19044:20510" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="19312:20451" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="19512:19636" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="19757:20425" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="19932:20347" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="20705:23093" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="20975:21091" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="21152:23083" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="21337:23069" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="21565:23051" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="21833:22992" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="22042:22166" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="22296:22966" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="22473:22888" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="23246:25666" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="23516:23632" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="23693:25656" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="23878:25642" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="24101:25624" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="24392:25565" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="24608:24732" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="24862:25539" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="25046:25461" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="25819:28208" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="26089:26205" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="26266:28198" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="26460:28184" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="26654:28166" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="26947:28107" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="27156:27280" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="27411:28081" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="27588:28003" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="28253:46955" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="28704:46944" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="28786:32350" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="28896:29647" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="29769:30522" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="30641:31397" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="31516:32293" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="32449:35996" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="32555:33306" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="33428:34176" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="34295:35047" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="35166:35939" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="36094:39645" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="36200:36952" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="37075:37823" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="37942:38695" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="38814:39588" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="39740:43232" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="39846:40589" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="40712:41453" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="41575:42317" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="42436:43175" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="43327:46903" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="43433:44197" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="44320:45082" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="45204:45967" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="46086:46846" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="47077:48851" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="47312:48805" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="47413:48791" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="47583:48696" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="47710:48674" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="47909:48555" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="48054:48524" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="48888:77339" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="49347:49527" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="49699:49831" ph="/* protected void SendStatus() ... */" />
+            <marker date="1486839304500" expanded="true" signature="49879:50198" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="49988:50131" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="50339:55403" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="50684:55393" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="50853:52466" ph="/* if (Table) ... */" />
+            <marker date="1486839304500" expanded="true" signature="52633:55359" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="53081:55261" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="53186:55235" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="53470:53675" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="53852:55205" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="54102:55066" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="55547:60635" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="55891:60625" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="56037:57666" ph="/* if (Table) ... */" />
+            <marker date="1486839304500" expanded="true" signature="57833:60591" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="58281:60493" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="58386:60467" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="58696:58901" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="59079:60437" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="59333:60298" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="60780:65913" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="61125:65903" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="61294:62926" ph="/* if (Table) ... */" />
+            <marker date="1486839304500" expanded="true" signature="63092:65869" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="63548:65771" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="63653:65745" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="63963:64168" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="64346:65715" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="64600:65576" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="66014:66677" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="66714:70832" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="67134:70821" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="67227:67985" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="68096:68850" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="68960:69715" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="69826:70587" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="70946:75120" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="71423:75110" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="71516:72274" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="72385:73139" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="73249:74004" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="74115:74876" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="75238:77333" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="75534:77240" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="75635:77226" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="75834:77082" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="75961:77060" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="76197:76891" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="76342:76860" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="77345:83604" ph="Binary" />
+            <marker date="1486839304500" expanded="true" signature="77388:77726" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="77657:77720" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="77755:78073" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="78105:78442" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="78383:78436" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="78474:78788" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="78824:79144" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="79178:79506" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="79540:79868" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="79899:80218" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="80249:80568" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="80610:80962" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="81001:81344" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="81374:81690" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="81720:82036" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="82068:82827" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="82252:82307" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="82468:82525" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="82704:82821" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="82859:83589" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="83043:83098" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="83259:83316" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="83609:100937" ph="Window" />
+            <marker date="1486839304500" expanded="true" signature="83654:84097" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="84132:84580" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="84611:85054" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="85089:85537" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="85567:86007" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="86041:86486" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="86516:86956" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="86990:87435" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="87468:87917" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="87950:88399" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="88433:88885" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="88919:89371" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="89405:89857" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="89891:90343" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="90378:90826" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="90861:91309" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="91344:91792" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="91826:92271" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="92312:92778" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="92819:93285" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="93326:93792" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="93832:94295" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="94338:94810" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="94853:95325" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="95368:95840" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="95882:96351" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="96395:96869" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="96913:97388" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="97432:97907" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="97950:98422" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="98463:98931" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="98972:99438" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="99479:99945" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="99985:100448" ph="{...}" />
+            <marker date="1486839304500" expanded="true" signature="100482:100922" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DigitsPower/Form1.Designer.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="697" column="69" lean-forward="false" selection-start-line="697" selection-start-column="69" selection-end-line="697" selection-end-column="69" />
+          <folding>
+            <marker date="1486335628000" expanded="true" signature="21:65403" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="51:65401" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="66:142" ph="/// Required designer variable. ... " />
+            <marker date="1486335628000" expanded="true" signature="220:411" ph="/// Clean up any resources being used. ... " />
+            <marker date="1486335628000" expanded="true" signature="467:641" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="528:594" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="651:59933" ph="Windows Form Designer generated code" />
+            <marker date="1486335628000" expanded="true" signature="705:868" ph="/// Required method for Designer support - do not modify ... " />
+            <marker date="1486335628000" expanded="true" signature="911:59913" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="8112:8156" ph="/* groupBox1 ... */" />
+            <marker date="1486335628000" expanded="true" signature="8564:8615" ph="/* OperationsResult ... */" />
+            <marker date="1486335628000" expanded="true" signature="8951:8995" ph="/* groupBox4 ... */" />
+            <marker date="1486335628000" expanded="true" signature="9525:9575" ph="/* CheckNonebutton ... */" />
+            <marker date="1486335628000" expanded="true" signature="10063:10112" ph="/* CheckAllbutton ... */" />
+            <marker date="1486335628000" expanded="true" signature="10589:10638" ph="/* OperationsList ... */" />
+            <marker date="1486335628000" expanded="true" signature="10810:12791" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="13059:13103" ph="/* groupBox3 ... */" />
+            <marker date="1486335628000" expanded="true" signature="14003:14050" ph="/* montFlagTest ... */" />
+            <marker date="1486335628000" expanded="true" signature="14586:14631" ph="/* WindowText ... */" />
+            <marker date="1486335628000" expanded="true" signature="14919:14960" ph="/* label9 ... */" />
+            <marker date="1486335628000" expanded="true" signature="15270:15314" ph="/* PowerText ... */" />
+            <marker date="1486335628000" expanded="true" signature="15596:15637" ph="/* label5 ... */" />
+            <marker date="1486335628000" expanded="true" signature="15948:15998" ph="/* Calculatebutton ... */" />
+            <marker date="1486335628000" expanded="true" signature="16483:16524" ph="/* label6 ... */" />
+            <marker date="1486335628000" expanded="true" signature="16834:16876" ph="/* modText ... */" />
+            <marker date="1486335628000" expanded="true" signature="17146:17187" ph="/* label7 ... */" />
+            <marker date="1486335628000" expanded="true" signature="17575:17620" ph="/* NumberText ... */" />
+            <marker date="1486335628000" expanded="true" signature="17907:17953" ph="/* tabControl1 ... */" />
+            <marker date="1486335628000" expanded="true" signature="18423:18465" ph="/* FilePow ... */" />
+            <marker date="1486335628000" expanded="true" signature="19363:19409" ph="/* statusLabel ... */" />
+            <marker date="1486335628000" expanded="true" signature="19902:19946" ph="/* aMontFlag ... */" />
+            <marker date="1486335628000" expanded="true" signature="20452:20494" ph="/* label24 ... */" />
+            <marker date="1486335628000" expanded="true" signature="20830:20875" ph="/* groupBox12 ... */" />
+            <marker date="1486335628000" expanded="true" signature="21391:21433" ph="/* label15 ... */" />
+            <marker date="1486335628000" expanded="true" signature="21756:21798" ph="/* binAxis ... */" />
+            <marker date="1486335628000" expanded="true" signature="21903:21971" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="22245:22290" ph="/* groupBox14 ... */" />
+            <marker date="1486335628000" expanded="true" signature="23209:23251" ph="/* label34 ... */" />
+            <marker date="1486335628000" expanded="true" signature="23580:23624" ph="/* binAxis_3 ... */" />
+            <marker date="1486335628000" expanded="true" signature="23733:23841" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="24131:24173" ph="/* label14 ... */" />
+            <marker date="1486335628000" expanded="true" signature="24506:24548" ph="/* label33 ... */" />
+            <marker date="1486335628000" expanded="true" signature="24881:24925" ph="/* binAxis_2 ... */" />
+            <marker date="1486335628000" expanded="true" signature="25034:25142" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="25433:25477" ph="/* binAxis_1 ... */" />
+            <marker date="1486335628000" expanded="true" signature="25586:25694" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="25981:26023" ph="/* label28 ... */" />
+            <marker date="1486335628000" expanded="true" signature="26340:26383" ph="/* textBmax ... */" />
+            <marker date="1486335628000" expanded="true" signature="26663:26705" ph="/* label29 ... */" />
+            <marker date="1486335628000" expanded="true" signature="27022:27065" ph="/* textAmax ... */" />
+            <marker date="1486335628000" expanded="true" signature="27345:27390" ph="/* groupBox11 ... */" />
+            <marker date="1486335628000" expanded="true" signature="28188:28230" ph="/* label27 ... */" />
+            <marker date="1486335628000" expanded="true" signature="28584:28626" ph="/* label18 ... */" />
+            <marker date="1486335628000" expanded="true" signature="28958:29000" ph="/* WinMode ... */" />
+            <marker date="1486335628000" expanded="true" signature="29282:29325" ph="/* Axis2Box ... */" />
+            <marker date="1486335628000" expanded="true" signature="29432:29522" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="29812:29854" ph="/* label12 ... */" />
+            <marker date="1486335628000" expanded="true" signature="30179:30221" ph="/* label19 ... */" />
+            <marker date="1486335628000" expanded="true" signature="30552:30596" ph="/* TableWith ... */" />
+            <marker date="1486335628000" expanded="true" signature="31096:31139" ph="/* Axis1Box ... */" />
+            <marker date="1486335628000" expanded="true" signature="31246:31336" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="31626:31674" ph="/* ResultsButton ... */" />
+            <marker date="1486335628000" expanded="true" signature="32221:32266" ph="/* groupBox10 ... */" />
+            <marker date="1486335628000" expanded="true" signature="32791:32835" ph="/* CheckNone ... */" />
+            <marker date="1486335628000" expanded="true" signature="33269:33311" ph="/* button2 ... */" />
+            <marker date="1486335628000" expanded="true" signature="33724:33772" ph="/* OperCheckList ... */" />
+            <marker date="1486335628000" expanded="true" signature="34000:36047" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="36310:36354" ph="/* groupBox9 ... */" />
+            <marker date="1486335628000" expanded="true" signature="37028:37070" ph="/* label23 ... */" />
+            <marker date="1486335628000" expanded="true" signature="37397:37439" ph="/* label13 ... */" />
+            <marker date="1486335628000" expanded="true" signature="37763:37805" ph="/* label22 ... */" />
+            <marker date="1486335628000" expanded="true" signature="38133:38177" ph="/* DegreeDir ... */" />
+            <marker date="1486335628000" expanded="true" signature="38473:38515" ph="/* ModsDir ... */" />
+            <marker date="1486335628000" expanded="true" signature="38799:38842" ph="/* FoundDir ... */" />
+            <marker date="1486335628000" expanded="true" signature="39131:39176" ph="/* FileCreate ... */" />
+            <marker date="1486335628000" expanded="true" signature="39723:39767" ph="/* groupBox7 ... */" />
+            <marker date="1486335628000" expanded="true" signature="40449:40491" ph="/* label21 ... */" />
+            <marker date="1486335628000" expanded="true" signature="40969:41011" ph="/* label20 ... */" />
+            <marker date="1486335628000" expanded="true" signature="41488:41530" ph="/* label17 ... */" />
+            <marker date="1486335628000" expanded="true" signature="42004:42047" ph="/* ModsList ... */" />
+            <marker date="1486335628000" expanded="true" signature="42337:42383" ph="/* DegreesList ... */" />
+            <marker date="1486335628000" expanded="true" signature="42691:42741" ph="/* FoundationsList ... */" />
+            <marker date="1486335628000" expanded="true" signature="43072:43116" ph="/* groupBox6 ... */" />
+            <marker date="1486335628000" expanded="true" signature="43682:43724" ph="/* label16 ... */" />
+            <marker date="1486335628000" expanded="true" signature="44183:44227" ph="/* groupBox5 ... */" />
+            <marker date="1486335628000" expanded="true" signature="44967:45011" ph="/* comboBox3 ... */" />
+            <marker date="1486335628000" expanded="true" signature="45120:45162" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="45449:45491" ph="/* label26 ... */" />
+            <marker date="1486335628000" expanded="true" signature="45809:45853" ph="/* GenDegree ... */" />
+            <marker date="1486335628000" expanded="true" signature="46283:46324" ph="/* label4 ... */" />
+            <marker date="1486335628000" expanded="true" signature="46631:46673" ph="/* label11 ... */" />
+            <marker date="1486335628000" expanded="true" signature="46988:47035" ph="/* DegreeLenght ... */" />
+            <marker date="1486335628000" expanded="true" signature="47338:47384" ph="/* DegreeCount ... */" />
+            <marker date="1486335628000" expanded="true" signature="47677:47721" ph="/* groupBox2 ... */" />
+            <marker date="1486335628000" expanded="true" signature="48453:48497" ph="/* comboBox2 ... */" />
+            <marker date="1486335628000" expanded="true" signature="48606:48648" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="48934:48976" ph="/* label25 ... */" />
+            <marker date="1486335628000" expanded="true" signature="49294:49337" ph="/* GenFound ... */" />
+            <marker date="1486335628000" expanded="true" signature="49758:49799" ph="/* label8 ... */" />
+            <marker date="1486335628000" expanded="true" signature="50106:50148" ph="/* label10 ... */" />
+            <marker date="1486335628000" expanded="true" signature="50463:50509" ph="/* FoundLenght ... */" />
+            <marker date="1486335628000" expanded="true" signature="50806:50851" ph="/* FoundCount ... */" />
+            <marker date="1486335628000" expanded="true" signature="51138:51182" ph="/* groupBox8 ... */" />
+            <marker date="1486335628000" expanded="true" signature="52021:52065" ph="/* comboBox4 ... */" />
+            <marker date="1486335628000" expanded="true" signature="52174:52216" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="52504:52546" ph="/* label32 ... */" />
+            <marker date="1486335628000" expanded="true" signature="52864:52906" ph="/* ModType ... */" />
+            <marker date="1486335628000" expanded="true" signature="53011:53124" ph="{...}" />
+            <marker date="1486335628000" expanded="true" signature="53406:53447" ph="/* label3 ... */" />
+            <marker date="1486335628000" expanded="true" signature="53753:53794" ph="/* GenMod ... */" />
+            <marker date="1486335628000" expanded="true" signature="54197:54238" ph="/* label1 ... */" />
+            <marker date="1486335628000" expanded="true" signature="54545:54586" ph="/* label2 ... */" />
+            <marker date="1486335628000" expanded="true" signature="54894:54938" ph="/* ModLenght ... */" />
+            <marker date="1486335628000" expanded="true" signature="55223:55266" ph="/* ModCount ... */" />
+            <marker date="1486335628000" expanded="true" signature="55541:55579" ph="/* Pow ... */" />
+            <marker date="1486335628000" expanded="true" signature="56152:56197" ph="/* groupBox13 ... */" />
+            <marker date="1486335628000" expanded="true" signature="56768:56810" ph="/* label30 ... */" />
+            <marker date="1486335628000" expanded="true" signature="57122:57162" ph="/* textB ... */" />
+            <marker date="1486335628000" expanded="true" signature="57419:57461" ph="/* label31 ... */" />
+            <marker date="1486335628000" expanded="true" signature="57773:57813" ph="/* textA ... */" />
+            <marker date="1486335628000" expanded="true" signature="58070:58113" ph="/* MainForm ... */" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/DigitsPower/Form1.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="201" column="73" lean-forward="true" selection-start-line="201" selection-start-column="73" selection-end-line="201" selection-end-column="73" />
+          <folding>
+            <marker date="1486841439632" expanded="true" signature="6:285" ph="..." />
+            <marker date="1486841439632" expanded="true" signature="308:22520" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="315:807" ph="/* 1.Binary RL ... */" />
+            <marker date="1486841439632" expanded="true" signature="853:21708" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="885:1096" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="1106:3952" ph="InitializeMethods" />
+            <marker date="1486841439632" expanded="true" signature="1172:2270" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="1258:2095" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="1718:1802" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="1850:1935" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="1981:2064" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="2129:2260" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="2314:3933" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="2340:3758" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="2623:2845" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="3041:3266" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="3458:3675" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="3792:3923" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="3962:6780" ph="GenerationMethods" />
+            <marker date="1486841439632" expanded="true" signature="4112:5345" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="4252:5135" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="4544:5121" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="4839:5070" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="4930:5048" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="5169:5300" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="5410:5559" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="5625:5783" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="5846:6761" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="5890:6738" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="6790:19822" ph="CalculateMethods" />
+            <marker date="1486841439632" expanded="true" signature="6883:8458" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="7127:7308" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="7519:7725" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="8012:8448" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="8065:8383" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="8467:8574" ph="/// / ... " />
+            <marker date="1486841439632" expanded="true" signature="8625:18440" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="8798:9029" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="8829:9015" ph="/* AdditionalParameters.mul = MontgomeryMultDomain; ... */" />
+            <marker date="1486841439632" expanded="true" signature="9102:18075" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="9208:11513" ph="Binary" />
+            <marker date="1486841439632" expanded="true" signature="11531:18060" ph="Window" />
+            <marker date="1486841439632" expanded="true" signature="13584:13911" ph="/* if (OperCheckList.CheckedIndices[i] == 16) { (new wNAFSlideRL(p.found, p.degree, p.mod, p.choicew, p.winMode,  ... */" />
+            <marker date="1486841439632" expanded="true" signature="18550:18937" ph="/* public void ChangeStatus(string method) ... */" />
+            <marker date="1486841439632" expanded="true" signature="18947:19111" ph="/// Calculatebuttons the click. ... " />
+            <marker date="1486841439632" expanded="true" signature="19182:19803" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="19840:20829" ph="CheckButtons" />
+            <marker date="1486841439632" expanded="true" signature="19930:20101" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="20005:20091" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="20167:20335" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="20241:20325" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="20407:20578" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="20482:20568" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="20642:20809" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="20716:20799" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="20839:21305" ph="OpenDirectories" />
+            <marker date="1486841439632" expanded="true" signature="20931:21002" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="21074:21146" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="21217:21285" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="21380:21401" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="21479:21553" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="21628:21702" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="21736:21989" ph="{...}" />
+            <marker date="1486841439632" expanded="true" signature="22035:22518" ph="{...}" />
           </folding>
         </state>
       </provider>
