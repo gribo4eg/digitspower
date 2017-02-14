@@ -209,14 +209,14 @@
             "3.2 Window RL_Dic",
             "4.1 Window LR",
             "4.2 Window LR_Dic",
-            "5.1 Slide Window RL",
-            "5.2 Slide Window RL_Dic",
-            "6.1 Slide Window LR",
-            "6.2 Slide Window LR_Dic",
+            "5.1 Sliding Window RL",
+            "5.2 Sliding Window RL_Dic",
+            "6.1 Sliding Window LR",
+            "6.2 Sliding Window LR_Dic",
             "7. NAF Binary RL (only for base coprime mod)",
             "8. NAF Binary LR (only for base coprime mod)",
-            "9. NAF Slide RL (only for base coprime mod)",
-            "10. NAF Slide LR (only for base coprime mod)",
+            "9. NAF Sliding RL (only for base coprime mod)",
+            "10. NAF Sliding LR (only for base coprime mod)",
             "11. wNAF RL (NAF Window RL, only for base coprime mod)",
             "12. wNAF LR (NAF Window LR, only for base coprime mod)",
             "15. Add Sub RL (only for base coprime mod)",
@@ -252,7 +252,10 @@
             "43. Pow C#",
             "44. Bonus1",
             "45. Bonus2",
-            "46. Bonus Window"});
+            "46. Bonus Window",//49
+            "47. Sliding Prime with_11_11",
+            "48. Sliding Prime",
+            "49. Adaptive"});
             this.OperationsList.Location = new System.Drawing.Point(5, 19);
             this.OperationsList.Name = "OperationsList";
             this.OperationsList.Size = new System.Drawing.Size(399, 184);
@@ -741,14 +744,14 @@
             "3.2 Window RL_Dic",
             "4.1 Window LR",
             "4.2 Window LR_Dic",
-            "5.1 Slide Window RL",
-            "5.2 Slide Window RL_Dic",
-            "6.1 Slide Window LR",
-            "6.2 Slide Window LR_Dic",
+            "5.1 Sliding Window RL",
+            "5.2 Sliding Window RL_Dic",
+            "6.1 Sliding Window LR",
+            "6.2 Sliding Window LR_Dic",
             "7. NAF Binary RL (only for base coprime mod)",
             "8. NAF Binary LR (only for base coprime mod)",
-            "9. NAF Slide RL (only for base coprime mod)",
-            "10. NAF Slide LR (only for base coprime mod)",
+            "9. NAF Sliding RL (only for base coprime mod)",
+            "10. NAF Sliding LR (only for base coprime mod)",
             "11. wNAF RL (NAF Window RL, only for base coprime mod)",
             "12. wNAF LR (NAF Window LR, only for base coprime mod)",
             "15. Add Sub RL (only for base coprime mod)",
@@ -784,7 +787,10 @@
             "45. Pow C#",
             "46. Bonus 1",
             "47. Bonus 2",
-            "48. Bonus Window"});
+            "48. Bonus Window",//49
+                "49. Sliding Prime with_11_11",
+                "50. Sliding Prime",
+                "51. Adaptive"});
             this.OperCheckList.Location = new System.Drawing.Point(6, 17);
             this.OperCheckList.Name = "OperCheckList";
             this.OperCheckList.Size = new System.Drawing.Size(235, 124);

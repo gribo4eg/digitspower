@@ -1701,53 +1701,53 @@ namespace DigitsPower
         public override string Name() { return "WindowLR_Dic"; }
         protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.WindowLR_Dic(found, pow, mod, w, out TableTime); }
     }
-    class SlideRL : WindowPow
+    class SlidingRL : WindowPow
     {
-        public SlideRL(string found, string degree, string mod, string by, string window, bool table) :
+        public SlidingRL(string found, string degree, string mod, string by, string window, bool table) :
                    base(found, degree, mod, by, window, table) { }
 
-        public override string Name() { return "SlideRL"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.SlideRL(found, pow, mod, w, out TableTime); }
+        public override string Name() { return "SlidingRL"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.SlidingRL(found, pow, mod, w, out TableTime); }
     }
-    class SlideRL_Dic : WindowPow
+    class SlidingRL_Dic : WindowPow
     {
-        public SlideRL_Dic(string found, string degree, string mod, string by, string window, bool table) :
+        public SlidingRL_Dic(string found, string degree, string mod, string by, string window, bool table) :
             base(found, degree, mod, by, window, table) { }
 
-        public override string Name() { return "SlideRL_Dic"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.SlideRL_Dic(found, pow, mod, w, out TableTime); }
+        public override string Name() { return "SlidingRL_Dic"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.SlidingRL_Dic(found, pow, mod, w, out TableTime); }
     }
-    class SlideLR : WindowPow
+    class SlidingLR : WindowPow
     {
-        public SlideLR(string found, string degree, string mod, string by, string window, bool table) :
+        public SlidingLR(string found, string degree, string mod, string by, string window, bool table) :
                    base(found, degree, mod, by, window, table) { }
 
-        public override string Name() { return "SlideLR"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.SlideLR(found, pow, mod, w, out TableTime); }
+        public override string Name() { return "SlidingLR"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.SlidingLR(found, pow, mod, w, out TableTime); }
     }
-    class SlideLR_Dic : WindowPow
+    class SlidingLR_Dic : WindowPow
     {
-        public SlideLR_Dic(string found, string degree, string mod, string by, string window, bool table) :
+        public SlidingLR_Dic(string found, string degree, string mod, string by, string window, bool table) :
             base(found, degree, mod, by, window, table) { }
 
-        public override string Name() { return "SlideLR_Dic"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.SlideLR_Dic(found, pow, mod, w, out TableTime); }
+        public override string Name() { return "SlidingLR_Dic"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.SlidingLR_Dic(found, pow, mod, w, out TableTime); }
     }
-    class NAFSlideRL : WindowPow
+    class NAFSlidingRL : WindowPow
     {
-        public NAFSlideRL(string found, string degree, string mod, string by, string window, bool table) :
+        public NAFSlidingRL(string found, string degree, string mod, string by, string window, bool table) :
                    base(found, degree, mod, by, window, table) { }
 
-        public override string Name() { return "NAFSlideRL"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.NAFSlideRL(found, pow, mod, w, out TableTime); }
+        public override string Name() { return "NAFSlidingRL"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.NAFSlidingRL(found, pow, mod, w, out TableTime); }
     }
-    class NAFSlideLR : WindowPow
+    class NAFSlidingLR : WindowPow
     {
-        public NAFSlideLR(string found, string degree, string mod, string by, string window, bool table) :
+        public NAFSlidingLR(string found, string degree, string mod, string by, string window, bool table) :
                    base(found, degree, mod, by, window, table) { }
 
-        public override string Name() { return "NAFSlideLR"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.NAFSlideLR(found, pow, mod, w, out TableTime); }
+        public override string Name() { return "NAFSlidingLR"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.NAFSlidingLR(found, pow, mod, w, out TableTime); }
     }
     class NAFWindowRL : WindowPow
     {
@@ -1765,21 +1765,21 @@ namespace DigitsPower
         public override string Name() { return "NAFWindowLR"; }
         protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.NAFWindowLR(found, pow, mod, w, out TableTime); }
     }
-    class wNAFSlideRL : WindowPow
+    class wNAFSlidingRL : WindowPow
     {
-        public wNAFSlideRL(string found, string degree, string mod, string by, string window, bool table) :
+        public wNAFSlidingRL(string found, string degree, string mod, string by, string window, bool table) :
                    base(found, degree, mod, by, window, table) { }
 
-        public override string Name() { return "wNAFSlideRL"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.wNAFSlideRL(found, pow, mod, w, out TableTime); }
+        public override string Name() { return "wNAFSlidingRL"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.wNAFSlidingRL(found, pow, mod, w, out TableTime); }
     }
-    class wNAFSlideLR : WindowPow
+    class wNAFSlidingLR : WindowPow
     {
-        public wNAFSlideLR(string found, string degree, string mod, string by, string window, bool table) :
+        public wNAFSlidingLR(string found, string degree, string mod, string by, string window, bool table) :
                    base(found, degree, mod, by, window, table) { }
 
-        public override string Name() { return "wNAFSlideLR"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.wNAFSlideLR(found, pow, mod, w, out TableTime); }
+        public override string Name() { return "wNAFSlidingLR"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.wNAFSlidingLR(found, pow, mod, w, out TableTime); }
     }
     class WindowLRMod1 : WindowPow
     {
@@ -1940,6 +1940,30 @@ namespace DigitsPower
 
         public override string Name() { return "WindowLRMod_Final"; }
         protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.WindowLRMod_Final(found, pow, mod, w, out TableTime); }
+    }
+    class Sliding_Prime_with_11_11 : WindowPow
+    {
+        public Sliding_Prime_with_11_11(string found, string degree, string mod, string by, string window, bool table) :
+            base(found, degree, mod, by, window, table) { }
+
+        public override string Name() { return "Sliding_Prime_with_11_11"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.Sliding_Prime_with_11_11(found, pow, mod, w, out TableTime); }
+    }
+    class Sliding_Prime : WindowPow
+    {
+        public Sliding_Prime(string found, string degree, string mod, string by, string window, bool table) :
+            base(found, degree, mod, by, window, table) { }
+
+        public override string Name() { return "Sliding_Prime"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.Sliding_Prime(found, pow, mod, w, out TableTime); }
+    }
+    class Adaptive : WindowPow
+    {
+        public Adaptive(string found, string degree, string mod, string by, string window, bool table) :
+            base(found, degree, mod, by, window, table) { }
+
+        public override string Name() { return "Adaptive"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.Adaptive(found, pow, mod, w, out TableTime); }
     }
     class BonusWindow : WindowPow
     {

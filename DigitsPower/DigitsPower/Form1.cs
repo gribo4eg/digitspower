@@ -15,17 +15,17 @@ namespace DigitsPower
     //2.Binary LR
     //3.Window RL
     //4.Window LR
-    //5.Slide Window RL
-    //6.Slide Window LR
+    //5.Sliding Window RL
+    //6.Sliding Window LR
     //7.1.NAF Binary RL
     //7.2.NAF Binary RL_2
     //8.NAF Binary LR
-    //9.NAF Slide RL
-    //10.NAF Slide LR
+    //9.NAF Sliding RL
+    //10.NAF Sliding LR
     //11.NAF Window RL
     //12.NAF Window LR
-    //13.wNAF Slide RL
-    //14.wNAF Slide LR
+    //13.wNAF Sliding RL
+    //14.wNAF Sliding LR
     //15.Add Sub RL
     //16.Add Sub LR
     //17.Joye double & add
@@ -188,7 +188,6 @@ namespace DigitsPower
         #region CalculateMethods
         private void ResultsButton_Click(object sender, EventArgs e)
         {
-            //ResultsButton.Enabled = false;
             AdditionalParameters.diapA = textAmax.Text;
             AdditionalParameters.diapB = textBmax.Text;
             
@@ -224,16 +223,9 @@ namespace DigitsPower
 
             FuncParam p = (parameters as FuncParam);
             AdditionalParameters.montFlag = aMontFlag.Checked;
-            if(AdditionalParameters.montFlag)
-            {
-                //AdditionalParameters.mul = MontgomeryMultDomain;
-                //AdditionalParameters.outRes = outMontgomeryDomain;
-                //AdditionalParameters.inRes = toMontgomeryDomain;
-            }
+
             for (int i = 0; i < OperCheckList.CheckedIndices.Count; i++)
             {
-                //DateTime.Now.ToLocalTime().ToString().Replace(':', '-')
-
                 #region Binary
                 if (OperCheckList.CheckedIndices[i] == 0)  { (new    BinaryRL(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 1)  { (new    BinaryLR(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
@@ -256,16 +248,16 @@ namespace DigitsPower
                 if (OperCheckList.CheckedIndices[i] == 3) { (new WindowRL_Dic(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 4) { (new WindowLR(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 5) { (new WindowLR_Dic(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 6) { (new  SlideRL(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 7) { (new  SlideRL_Dic(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 8) { (new  SlideLR(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 9) { (new  SlideLR_Dic(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 12) { (new NAFSlideRL(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 13) { (new NAFSlideLR(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 6) { (new  SlidingRL(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 7) { (new  SlidingRL_Dic(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 8) { (new  SlidingLR(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 9) { (new  SlidingLR_Dic(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 12) { (new NAFSlidingRL(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 13) { (new NAFSlidingLR(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 14) { (new NAFWindowRL(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 15) { (new NAFWindowLR(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                //if (OperCheckList.CheckedIndices[i] == 16) { (new wNAFSlideRL(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                //if (OperCheckList.CheckedIndices[i] == 17) { (new wNAFSlideLR(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                //if (OperCheckList.CheckedIndices[i] == 16) { (new wNAFSlidingRL(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                //if (OperCheckList.CheckedIndices[i] == 17) { (new wNAFSlidingLR(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 26) { (new WindowLRMod1(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 27) { (new WindowLRMod2(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 28) { (new WindowLRMod3(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
@@ -290,6 +282,9 @@ namespace DigitsPower
                 if (OperCheckList.CheckedIndices[i] == 47) { (new Bonus1(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 48) { (new Bonus2(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 49) { (new BonusWindow(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 50) { (new Sliding_Prime_with_11_11(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 51) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 52) { (new Adaptive(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
 
                 #endregion
 
@@ -337,7 +332,14 @@ namespace DigitsPower
             double table = 0;
             OperationsResult.Items.Clear();
 
-            if (OperationsList.CheckedIndices.Count > 0)
+            bool montCondition = mod % 2 == 0 && montFlagTest.Checked;
+
+            if (montCondition)
+            {
+                MessageBox.Show("Методи з Монтгомері працюють лише для непарних модулів",
+                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else if (OperationsList.CheckedIndices.Count > 0)
                 Show(num, pow, mod, window, table);
         }
         #endregion

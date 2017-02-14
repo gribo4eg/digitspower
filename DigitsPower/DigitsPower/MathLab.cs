@@ -232,14 +232,14 @@
 //                #region Window
 //                if (OperCheckList.CheckedIndices[i] == 2) { (new WindowRL()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
 //                if (OperCheckList.CheckedIndices[i] == 3) { (new WindowLR()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
-//                if (OperCheckList.CheckedIndices[i] == 4) { (new SlideRL()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
-//                if (OperCheckList.CheckedIndices[i] == 5) { (new SlideRL()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
-//                if (OperCheckList.CheckedIndices[i] == 8) { (new NAFSlideRL()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
-//                if (OperCheckList.CheckedIndices[i] == 9) { (new NAFSlideLR()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
+//                if (OperCheckList.CheckedIndices[i] == 4) { (new SlidingRL()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
+//                if (OperCheckList.CheckedIndices[i] == 5) { (new SlidingRL()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
+//                if (OperCheckList.CheckedIndices[i] == 8) { (new NAFSlidingRL()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
+//                if (OperCheckList.CheckedIndices[i] == 9) { (new NAFSlidingLR()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
 //                if (OperCheckList.CheckedIndices[i] == 10) { (new NAFWindowRL()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
 //                if (OperCheckList.CheckedIndices[i] == 11) { (new NAFWindowLR()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
-//                if (OperCheckList.CheckedIndices[i] == 12) { (new wNAFSlideRL()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
-//                if (OperCheckList.CheckedIndices[i] == 13) { (new wNAFSlideLR()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
+//                if (OperCheckList.CheckedIndices[i] == 12) { (new wNAFSlidingRL()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
+//                if (OperCheckList.CheckedIndices[i] == 13) { (new wNAFSlidingLR()).Create_Result(FoundDir.SelectedItem.ToString(), DegreeDir.SelectedItem.ToString(), ModsDir.SelectedItem.ToString(), choicew, WinMode.Text, TableWith.Checked); }
 //                #endregion
 
 //            }
@@ -274,16 +274,16 @@
 //                    if (OperationsList.CheckedIndices[i] == 1) { OperationsResult.Items.Add("Binary LR\t: " + (PowFunctions.BinaryLR(num, pow, mod)).ToString()); OperationsResult.Update(); }
 //                    if (OperationsList.CheckedIndices[i] == 2) { OperationsResult.Items.Add("Window RL\t: " + (PowFunctions.WindowRL(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
 //                    if (OperationsList.CheckedIndices[i] == 3) { OperationsResult.Items.Add("Window LR\t: " + (PowFunctions.WindowLR(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
-//                    if (OperationsList.CheckedIndices[i] == 4) { OperationsResult.Items.Add("Slide RL\t\t: " + (PowFunctions.SlideRL(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
-//                    if (OperationsList.CheckedIndices[i] == 5) { OperationsResult.Items.Add("Slide LR\t\t: " + (PowFunctions.SlideLR(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
+//                    if (OperationsList.CheckedIndices[i] == 4) { OperationsResult.Items.Add("Slide RL\t\t: " + (PowFunctions.SlidingRL(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
+//                    if (OperationsList.CheckedIndices[i] == 5) { OperationsResult.Items.Add("Slide LR\t\t: " + (PowFunctions.SlidingLR(num, pow, mod, window, out table)).ToString()); OperationsResult.Update(); }
 //                    if (OperationsList.CheckedIndices[i] == 6) { OperationsResult.Items.Add("NAF Binary RL\t: " + (PowFunctions.NAFBinaryRL(num, pow, mod).ToString())); OperationsResult.Update(); }
 //                    if (OperationsList.CheckedIndices[i] == 7) { OperationsResult.Items.Add("NAF Binary LR\t: " + (PowFunctions.NAFBinaryLR(num, pow, mod).ToString())); OperationsResult.Update(); }
-//                    if (OperationsList.CheckedIndices[i] == 8) { OperationsResult.Items.Add("NAF Slide RL\t: " + (PowFunctions.NAFSlideRL(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
-//                    if (OperationsList.CheckedIndices[i] == 9) { OperationsResult.Items.Add("NAF Slide LR\t: " + (PowFunctions.NAFSlideLR(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
+//                    if (OperationsList.CheckedIndices[i] == 8) { OperationsResult.Items.Add("NAF Slide RL\t: " + (PowFunctions.NAFSlidingRL(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
+//                    if (OperationsList.CheckedIndices[i] == 9) { OperationsResult.Items.Add("NAF Slide LR\t: " + (PowFunctions.NAFSlidingLR(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
 //                    if (OperationsList.CheckedIndices[i] == 10) { OperationsResult.Items.Add("NAF Window RL\t: " + (PowFunctions.NAFWindowRL(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
 //                    if (OperationsList.CheckedIndices[i] == 11) { OperationsResult.Items.Add("NAF Window LR\t: " + (PowFunctions.NAFWindowLR(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
-//                    if (OperationsList.CheckedIndices[i] == 12) { OperationsResult.Items.Add("wNAF Slide RL\t: " + (PowFunctions.wNAFSlideRL(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
-//                    if (OperationsList.CheckedIndices[i] == 13) { OperationsResult.Items.Add("wNAF Slide RL\t: " + (PowFunctions.wNAFSlideLR(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
+//                    if (OperationsList.CheckedIndices[i] == 12) { OperationsResult.Items.Add("wNAF Slide RL\t: " + (PowFunctions.wNAFSlidingRL(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
+//                    if (OperationsList.CheckedIndices[i] == 13) { OperationsResult.Items.Add("wNAF Slide RL\t: " + (PowFunctions.wNAFSlidingLR(num, pow, mod, window, out table).ToString())); OperationsResult.Update(); }
 //                    if (OperationsList.CheckedIndices[i] == 14) { OperationsResult.Items.Add("Add Sub RL\t: " + (PowFunctions.AddSubRL(num, pow, mod).ToString())); OperationsResult.Update(); }
 //                    if (OperationsList.CheckedIndices[i] == 15) { OperationsResult.Items.Add("Add Sub LR\t: " + (PowFunctions.AddSubLR(num, pow, mod).ToString())); OperationsResult.Update(); }
 //                    if (OperationsList.CheckedIndices[i] == 16) { OperationsResult.Items.Add("Joye_double_and_add\t: " + (PowFunctions.Joye_double_and_add(num, pow, mod).ToString())); OperationsResult.Update(); }
