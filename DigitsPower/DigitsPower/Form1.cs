@@ -190,6 +190,7 @@ namespace DigitsPower
         {
             AdditionalParameters.diapA = textAmax.Text;
             AdditionalParameters.diapB = textBmax.Text;
+            AdditionalParameters.montFlag = aMontFlag.Checked;
             
             if (Axis1Box.SelectedItem == Axis2Box.SelectedItem)
             {
@@ -197,7 +198,7 @@ namespace DigitsPower
                 return;
             }
             string modsDir = ModsDir.SelectedItem.ToString();
-            if (MontgomeryChecked && (modsDir.Contains("Random number") ||
+            if (AdditionalParameters.montFlag && (modsDir.Contains("Random number") ||
                                       modsDir.Contains("Exponent of 2")))
             {
                 MessageBox.Show("Обраний файл з модулями не підходить для обробки монтгомері!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -222,7 +223,6 @@ namespace DigitsPower
         {
 
             FuncParam p = (parameters as FuncParam);
-            AdditionalParameters.montFlag = aMontFlag.Checked;
 
             for (int i = 0; i < OperCheckList.CheckedIndices.Count; i++)
             {
@@ -282,8 +282,8 @@ namespace DigitsPower
                 if (OperCheckList.CheckedIndices[i] == 47) { (new Bonus1(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 48) { (new Bonus2(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 49) { (new BonusWindow(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 50) { (new Sliding_Prime_with_11_11(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 51) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 50) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked, true)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 51) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked, false)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 52) { (new Adaptive(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
 
                 #endregion
@@ -297,8 +297,6 @@ namespace DigitsPower
                                          MessageBoxIcon.Information);
             
         }
-
-        public bool MontgomeryChecked{ get { return montFlagTest.Checked || aMontFlag.Checked; } }
 
         /*public void ChangeStatus(string method)
         {
@@ -323,6 +321,7 @@ namespace DigitsPower
         {
             AdditionalParameters.A = Int64.Parse(textA.Text);
             AdditionalParameters.B = Int64.Parse(textB.Text);
+            AdditionalParameters.montFlag = aMontFlag.Checked;
 
             BigInteger mod = BigInteger.Parse(modText.Text);
             BigInteger pow = BigInteger.Parse(PowerText.Text);

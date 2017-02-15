@@ -1941,21 +1941,17 @@ namespace DigitsPower
         public override string Name() { return "WindowLRMod_Final"; }
         protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.WindowLRMod_Final(found, pow, mod, w, out TableTime); }
     }
-    class Sliding_Prime_with_11_11 : WindowPow
-    {
-        public Sliding_Prime_with_11_11(string found, string degree, string mod, string by, string window, bool table) :
-            base(found, degree, mod, by, window, table) { }
-
-        public override string Name() { return "Sliding_Prime_with_11_11"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.Sliding_Prime_with_11_11(found, pow, mod, w, out TableTime); }
-    }
     class Sliding_Prime : WindowPow
     {
-        public Sliding_Prime(string found, string degree, string mod, string by, string window, bool table) :
-            base(found, degree, mod, by, window, table) { }
+        private bool state;
+        public Sliding_Prime(string found, string degree, string mod, string by, string window, bool table, bool state) :
+            base(found, degree, mod, by, window, table)
+        {
+            this.state = state;
+        }
 
-        public override string Name() { return "Sliding_Prime"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.Sliding_Prime(found, pow, mod, w, out TableTime); }
+        public override string Name() { return state ? "Sliding_Prime_with_11_11" : "Sliding_Prime"; }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime) { BigInteger e = PowFunctions.Sliding_Prime(found, pow, mod, w, out TableTime, state); }
     }
     class Adaptive : WindowPow
     {
