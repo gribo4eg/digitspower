@@ -278,10 +278,10 @@ namespace DigitsPower
                 if (OperCheckList.CheckedIndices[i] == 43) { (new WindowLRMod2_Final(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 44) { (new WindowLRMod3_Final(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 45) { (new WindowLRMod_Final(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 46) { (new PowCSharp(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 47) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked, true)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 48) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked, false)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 49) { (new Adaptive(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 46) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked, true)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 47) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked, false)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 48) { (new Adaptive(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 49) { (new PowCSharp(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 50) { (new Bonus1(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 51) { (new Bonus2(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 52) { (new BonusWindow(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
