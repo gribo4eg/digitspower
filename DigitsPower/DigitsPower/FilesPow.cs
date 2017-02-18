@@ -200,11 +200,6 @@ namespace DigitsPower
 
         protected abstract void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, params BigInteger[] list);
 
-        /*protected void SendStatus()
-        {
-            (Application.OpenForms[0] as MainForm).ChangeStatus(GetType().Name);
-        }*/
-
         protected int[] MakeDigits(string[] mas)
         {
             int[] mas_i = new int[mas.Length]; ;
@@ -234,10 +229,10 @@ namespace DigitsPower
         {
             DirectoryInfo di;
             string path = Directory.GetCurrentDirectory();
-            di = Directory.CreateDirectory(String.Format("{0}\\{1}\\{2}_A({3}-{4})B({5}-{6})_(" + by[0][0] + "_" + by[1][0] + "_" + by[2][0] + "){8}#{7}",
+            di = Directory.CreateDirectory(String.Format("{0}\\{1}\\{8}{2}_A({3}-{4})B({5}-{6})_(" + by[0][0] + "_" + by[1][0] + "_" + by[2][0] + ")#{7}",
                                          path, "Results", Name(), aMax[0], aMax[aMax.Count - 1],
                                          bMax[0], bMax[bMax.Count - 1],
-                                         DateTime.Now.ToLocalTime().ToString().Replace(':', '-'), AdditionalParameters.montFlag ? "Mg" : ""));
+                                         DateTime.Now.ToLocalTime().ToString().Replace(':', '-'), AdditionalParameters.montFlag ? "Mont_" : ""));
 
             using (StreamWriter sw = new StreamWriter(new FileStream(di.FullName + "\\" + "Info.txt", FileMode.Create, FileAccess.Write)))
             {
@@ -1303,9 +1298,9 @@ namespace DigitsPower
             DirectoryInfo di;
             string path = Directory.GetCurrentDirectory();
             var lengts = GenFunctions.ReadString(window);
-            di = Directory.CreateDirectory(String.Format("{0}\\{1}\\{2}_{3}_{4}_{5}_Window_{6}-{7}(" + by.Split(' ')[0][0] + "_" + by.Split(' ')[1][0] + "){9}#{8}",
+            di = Directory.CreateDirectory(String.Format("{0}\\{1}\\{9}{2}_{3}_{4}_{5}_Window_{6}-{7}(" + by.Split(' ')[0][0] + "_" + by.Split(' ')[1][0] + ")#{8}",
                                          path, "Results", Name(), Mod.Split('#')[0], Found.Split('#')[0], Degree.Split('#')[0], lengts[0], lengts[lengts.Count - 1],
-                                         DateTime.Now.ToLocalTime().ToString().Replace(':', '-'), AdditionalParameters.montFlag ? "Mg" : ""));
+                                         DateTime.Now.ToLocalTime().ToString().Replace(':', '-'), AdditionalParameters.montFlag ? "Mont_" : ""));
             return di;
         }
 

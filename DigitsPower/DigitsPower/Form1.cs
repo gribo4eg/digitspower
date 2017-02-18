@@ -60,17 +60,17 @@ namespace DigitsPower
                 UpdateDirectoryList();
                 OperCheckList.SetItemChecked(0, true);
                 OperCheckList.SetItemChecked(1, true);
-                if (FoundDir.Items.Count != 0)
+                if (BaseDir.Items.Count != 0)
                 {
-                    FoundDir.SelectedIndex = 0;
+                    BaseDir.SelectedIndex = 0;
                 }
-                if (DegreeDir.Items.Count != 0)
+                if (ExponentDir.Items.Count != 0)
                 {
-                    DegreeDir.SelectedIndex = 0;
+                    ExponentDir.SelectedIndex = 0;
                 }
-                if (ModsDir.Items.Count != 0)
+                if (ModulusDir.Items.Count != 0)
                 {
-                    ModsDir.SelectedIndex = 0;
+                    ModulusDir.SelectedIndex = 0;
                 }
                 
             }
@@ -87,31 +87,31 @@ namespace DigitsPower
                 string path = Directory.GetCurrentDirectory();
                 string[] dirs = Directory.GetDirectories(path + "\\Exponent");
                 DegreesList.Items.Clear();
-                DegreeDir.Items.Clear();
+                ExponentDir.Items.Clear();
                 foreach (string s in dirs)
                 {
                     string[] dirs2 = s.Split('\\');
                     DegreesList.Items.Add(dirs2[dirs2.Length - 1]);
-                    DegreeDir.Items.Add(dirs2[dirs2.Length - 1]);
+                    ExponentDir.Items.Add(dirs2[dirs2.Length - 1]);
                 }
                 dirs = Directory.GetDirectories(path + "\\Base");
                 FoundationsList.Items.Clear();
-                FoundDir.Items.Clear();
+                BaseDir.Items.Clear();
                 foreach (string s in dirs)
                 {
                     string[] dirs2 = s.Split('\\');
                     FoundationsList.Items.Add(dirs2[dirs2.Length - 1]);
-                    FoundDir.Items.Add(dirs2[dirs2.Length - 1]);
+                    BaseDir.Items.Add(dirs2[dirs2.Length - 1]);
                 }
 
                 dirs = Directory.GetDirectories(path + "\\Modulus");
                 ModsList.Items.Clear();
-                ModsDir.Items.Clear();
+                ModulusDir.Items.Clear();
                 foreach (string s in dirs)
                 {
                     string[] dirs2 = s.Split('\\');
                     ModsList.Items.Add(dirs2[dirs2.Length - 1]);
-                    ModsDir.Items.Add(dirs2[dirs2.Length - 1]);
+                    ModulusDir.Items.Add(dirs2[dirs2.Length - 1]);
                 }
                 dirs = Directory.GetDirectories(path + "\\Results");
             }
@@ -197,7 +197,7 @@ namespace DigitsPower
                 MessageBox.Show("You must select two different axis!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            string modsDir = ModsDir.SelectedItem.ToString();
+            string modsDir = ModulusDir.SelectedItem.ToString();
             if (AdditionalParameters.montFlag && (modsDir.Contains("Random number") ||
                                       modsDir.Contains("Exponent of 2")))
             {
@@ -209,8 +209,8 @@ namespace DigitsPower
             string choiceb = $"{binAxis_1.SelectedItem} {binAxis_2.SelectedItem} {binAxis_3.SelectedItem}";
             if (OperCheckList.CheckedIndices.Count > 0)
             {
-                var p = new FuncParam { found = FoundDir.SelectedItem.ToString(), degree = DegreeDir.SelectedItem.ToString(),
-                                        mod = ModsDir.SelectedItem.ToString(), choice = choice, choiceb = choiceb, choicew = choicew, winMode = WinMode.Text,
+                var p = new FuncParam { found = BaseDir.SelectedItem.ToString(), degree = ExponentDir.SelectedItem.ToString(),
+                                        mod = ModulusDir.SelectedItem.ToString(), choice = choice, choiceb = choiceb, choicew = choicew, winMode = WinMode.Text,
                                         winChecked = TableWith.Checked };
                (new Thread(GetResults)).Start(p);
             }
@@ -279,12 +279,12 @@ namespace DigitsPower
                 if (OperCheckList.CheckedIndices[i] == 44) { (new WindowLRMod3_Final(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 45) { (new WindowLRMod_Final(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
                 if (OperCheckList.CheckedIndices[i] == 46) { (new PowCSharp(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 47) { (new Bonus1(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 48) { (new Bonus2(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 49) { (new BonusWindow(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 50) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked, true)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 51) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked, false)).Create_Result(); continue; }
-                if (OperCheckList.CheckedIndices[i] == 52) { (new Adaptive(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 47) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked, true)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 48) { (new Sliding_Prime(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked, false)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 49) { (new Adaptive(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 50) { (new Bonus1(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 51) { (new Bonus2(p.found, p.degree, p.mod, p.choice)).Create_Result(); continue; }
+                if (OperCheckList.CheckedIndices[i] == 52) { (new BonusWindow(p.found, p.degree, p.mod, p.choicew, p.winMode, p.winChecked)).Create_Result(); continue; }
 
                 #endregion
 
@@ -338,7 +338,7 @@ namespace DigitsPower
                 MessageBox.Show("Методи з Монтгомері працюють лише для непарних модулів",
                     "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            else if (OperationsList.CheckedIndices.Count > 0)
+            else if (OperationsListTest.CheckedIndices.Count > 0)
                 Show(num, pow, mod, window, table);
         }
         #endregion
@@ -346,9 +346,9 @@ namespace DigitsPower
         #region CheckButtons
         private void CheckAllbutton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < OperationsList.Items.Count; i++)
+            for (int i = 0; i < OperationsListTest.Items.Count; i++)
             {
-                 OperationsList.SetItemChecked(i, true); 
+                 OperationsListTest.SetItemChecked(i, true);
             }
         }
 
@@ -362,9 +362,9 @@ namespace DigitsPower
 
         private void CheckNonebutton_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < OperationsList.Items.Count; i++)
+            for (int i = 0; i < OperationsListTest.Items.Count; i++)
             {
-                OperationsList.SetItemChecked(i, false);
+                OperationsListTest.SetItemChecked(i, false);
 
             }
         }

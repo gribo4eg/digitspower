@@ -805,7 +805,7 @@ namespace DigitsPower
                     if (x[i] == 1)
                         res = MontgomeryMethods.MontgomeryMultDomain(res, t, mod, parameters);
                     else if (x[i] == -1)
-                        res = MontgomeryMethods.MontgomeryMultDomain(res, MontgomeryMethods.MontgomeryInverse(mod, t, parameters), mod, parameters);
+                        res = MontgomeryMethods.MontgomeryMultDomain(res, MontgomeryInverse(mod, t, parameters), mod, parameters);
                     t = MontgomeryMethods.MontgomeryMultDomain(t, t, mod, parameters);
                 }
                 res = MontgomeryMethods.outMontgomeryDomain(res, mod, parameters);
@@ -843,13 +843,15 @@ namespace DigitsPower
                 res = 1;
                 t = found;
                 MyList <BigInteger> parameters = MontgomeryMethods.toMontgomeryDomain(ref t, ref res, mod);
+
+                BigInteger inv = MontgomeryInverse(mod, t, parameters);
                 for (int i = x.Count - 1; i >= 0; i--)
                 {
                     res = MontgomeryMethods.MontgomeryMultDomain(res, res, mod, parameters);
                     if (x[i] == 1)
                         res = MontgomeryMethods.MontgomeryMultDomain(res, t, mod, parameters);
                     else if (x[i] == -1)
-                        res = MontgomeryMethods.MontgomeryMultDomain(res, MontgomeryInverse(mod, t, parameters), mod, parameters);
+                        res = MontgomeryMethods.MontgomeryMultDomain(res, inv, mod, parameters);
                 }
                 res = MontgomeryMethods.outMontgomeryDomain(res, mod, parameters);
             }
@@ -938,13 +940,14 @@ namespace DigitsPower
             {
                 MyList <BigInteger> parameters = MontgomeryMethods.toMontgomeryDomain(ref found, ref res, mod);
 
+                BigInteger inv = MontgomeryInverse(mod, found, parameters);
                 for (int i = 1; i < pow3_length; i++)
                 {
                     res = MontgomeryMultDomain(res, res, mod, parameters);
                     if (pow3_bin[i] == '1' && pow_bin[i] == '0')
                         res = MontgomeryMultDomain(res, found, mod, parameters);
                     else if (pow3_bin[i] == '0' && pow_bin[i] == '1')
-                        res = MontgomeryMultDomain(res, MontgomeryInverse(mod, found, parameters), mod, parameters);
+                        res = MontgomeryMultDomain(res, inv, mod, parameters);
                 }
 
                 res = outMontgomeryDomain(res, mod, parameters);

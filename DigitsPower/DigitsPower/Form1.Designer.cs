@@ -34,7 +34,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.CheckNonebutton = new System.Windows.Forms.Button();
             this.CheckAllbutton = new System.Windows.Forms.Button();
-            this.OperationsList = new System.Windows.Forms.CheckedListBox();
+            this.OperationsListTest = new System.Windows.Forms.CheckedListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.montFlagTest = new System.Windows.Forms.CheckBox();
             this.WindowText = new System.Windows.Forms.TextBox();
@@ -83,9 +83,9 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.DegreeDir = new System.Windows.Forms.ListBox();
-            this.ModsDir = new System.Windows.Forms.ListBox();
-            this.FoundDir = new System.Windows.Forms.ListBox();
+            this.ExponentDir = new System.Windows.Forms.ListBox();
+            this.ModulusDir = new System.Windows.Forms.ListBox();
+            this.BaseDir = new System.Windows.Forms.ListBox();
             this.FileCreate = new System.Windows.Forms.TabPage();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.label21 = new System.Windows.Forms.Label();
@@ -170,7 +170,7 @@
             // 
             this.groupBox4.Controls.Add(this.CheckNonebutton);
             this.groupBox4.Controls.Add(this.CheckAllbutton);
-            this.groupBox4.Controls.Add(this.OperationsList);
+            this.groupBox4.Controls.Add(this.OperationsListTest);
             this.groupBox4.Location = new System.Drawing.Point(510, 12);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(416, 251);
@@ -198,11 +198,11 @@
             this.CheckAllbutton.UseVisualStyleBackColor = true;
             this.CheckAllbutton.Click += new System.EventHandler(this.CheckAllbutton_Click);
             // 
-            // OperationsList
+            // OperationsListTest
             // 
-            this.OperationsList.CheckOnClick = true;
-            this.OperationsList.FormattingEnabled = true;
-            this.OperationsList.Items.AddRange(new object[] {
+            this.OperationsListTest.CheckOnClick = true;
+            this.OperationsListTest.FormattingEnabled = true;
+            this.OperationsListTest.Items.AddRange(new object[] {
             "1. Binary RL",
             "2. Binary LR",
             "3.1 Window RL",
@@ -250,16 +250,16 @@
             "41. Window LR3 (Final)",
             "42. Window LR (Final)",
             "43. Pow C#",
-            "44. Bonus1",
-            "45. Bonus2",
-            "46. Bonus Window",//49
-            "47. Sliding Prime with_11_11",
-            "48. Sliding Prime",
-            "49. Adaptive"});
-            this.OperationsList.Location = new System.Drawing.Point(5, 19);
-            this.OperationsList.Name = "OperationsList";
-            this.OperationsList.Size = new System.Drawing.Size(399, 184);
-            this.OperationsList.TabIndex = 4;
+            "44. Sliding Prime with_11_11",
+            "45. Sliding Prime",
+            "46. Adaptive",
+            "47. Bonus1",
+            "48. Bonus2",
+            "49. Bonus Window"});
+            this.OperationsListTest.Location = new System.Drawing.Point(5, 19);
+            this.OperationsListTest.Name = "OperationsListTest";
+            this.OperationsListTest.Size = new System.Drawing.Size(399, 184);
+            this.OperationsListTest.TabIndex = 4;
             // 
             // groupBox3
             // 
@@ -667,6 +667,8 @@
             // TableWith
             // 
             this.TableWith.AutoSize = true;
+            this.TableWith.Checked = true;
+            this.TableWith.CheckState = System.Windows.Forms.CheckState.Checked;
             this.TableWith.Location = new System.Drawing.Point(123, 152);
             this.TableWith.Name = "TableWith";
             this.TableWith.Size = new System.Drawing.Size(97, 17);
@@ -785,12 +787,12 @@
             "43. Window LRMod3 (Final)",
             "44. Window LRMod  (Final)",
             "45. Pow C#",
-            "46. Bonus 1",
-            "47. Bonus 2",
-            "48. Bonus Window",//49
-                "49. Sliding Prime with_11_11",
-                "50. Sliding Prime",
-                "51. Adaptive"});
+            "46. Sliding Prime with_11_11",
+            "47. Sliding Prime",
+            "48. Adaptive",
+            "49. Bonus 1",
+            "50. Bonus 2",
+            "51. Bonus Window"});
             this.OperCheckList.Location = new System.Drawing.Point(6, 17);
             this.OperCheckList.Name = "OperCheckList";
             this.OperCheckList.Size = new System.Drawing.Size(235, 124);
@@ -801,9 +803,9 @@
             this.groupBox9.Controls.Add(this.label23);
             this.groupBox9.Controls.Add(this.label13);
             this.groupBox9.Controls.Add(this.label22);
-            this.groupBox9.Controls.Add(this.DegreeDir);
-            this.groupBox9.Controls.Add(this.ModsDir);
-            this.groupBox9.Controls.Add(this.FoundDir);
+            this.groupBox9.Controls.Add(this.ExponentDir);
+            this.groupBox9.Controls.Add(this.ModulusDir);
+            this.groupBox9.Controls.Add(this.BaseDir);
             this.groupBox9.Location = new System.Drawing.Point(6, 243);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(918, 267);
@@ -838,29 +840,29 @@
             this.label22.TabIndex = 33;
             this.label22.Text = "Exponent directory";
             // 
-            // DegreeDir
+            // ExponentDir
             // 
-            this.DegreeDir.FormattingEnabled = true;
-            this.DegreeDir.Location = new System.Drawing.Point(325, 44);
-            this.DegreeDir.Name = "DegreeDir";
-            this.DegreeDir.Size = new System.Drawing.Size(280, 212);
-            this.DegreeDir.TabIndex = 6;
+            this.ExponentDir.FormattingEnabled = true;
+            this.ExponentDir.Location = new System.Drawing.Point(325, 44);
+            this.ExponentDir.Name = "ExponentDir";
+            this.ExponentDir.Size = new System.Drawing.Size(280, 212);
+            this.ExponentDir.TabIndex = 6;
             // 
-            // ModsDir
+            // ModulusDir
             // 
-            this.ModsDir.FormattingEnabled = true;
-            this.ModsDir.Location = new System.Drawing.Point(637, 44);
-            this.ModsDir.Name = "ModsDir";
-            this.ModsDir.Size = new System.Drawing.Size(268, 212);
-            this.ModsDir.TabIndex = 3;
+            this.ModulusDir.FormattingEnabled = true;
+            this.ModulusDir.Location = new System.Drawing.Point(637, 44);
+            this.ModulusDir.Name = "ModulusDir";
+            this.ModulusDir.Size = new System.Drawing.Size(268, 212);
+            this.ModulusDir.TabIndex = 3;
             // 
-            // FoundDir
+            // BaseDir
             // 
-            this.FoundDir.FormattingEnabled = true;
-            this.FoundDir.Location = new System.Drawing.Point(30, 44);
-            this.FoundDir.Name = "FoundDir";
-            this.FoundDir.Size = new System.Drawing.Size(267, 212);
-            this.FoundDir.TabIndex = 5;
+            this.BaseDir.FormattingEnabled = true;
+            this.BaseDir.Location = new System.Drawing.Point(30, 44);
+            this.BaseDir.Name = "BaseDir";
+            this.BaseDir.Size = new System.Drawing.Size(267, 212);
+            this.BaseDir.TabIndex = 5;
             // 
             // FileCreate
             // 
@@ -1344,7 +1346,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Button CheckNonebutton;
         private System.Windows.Forms.Button CheckAllbutton;
-        private System.Windows.Forms.CheckedListBox OperationsList;
+        private System.Windows.Forms.CheckedListBox OperationsListTest;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox WindowText;
         private System.Windows.Forms.Label label9;
@@ -1389,9 +1391,9 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.CheckedListBox OperCheckList;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.ListBox DegreeDir;
-        private System.Windows.Forms.ListBox ModsDir;
-        private System.Windows.Forms.ListBox FoundDir;
+        private System.Windows.Forms.ListBox ExponentDir;
+        private System.Windows.Forms.ListBox ModulusDir;
+        private System.Windows.Forms.ListBox BaseDir;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox WinMode;
