@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using System.Numerics;
 using System.IO;
 using System.Diagnostics;
+using System.Linq;
 using System.Threading;
 using static DigitsPower.HelpMethods;
 //using System.Security.Cryptography;
@@ -204,6 +205,11 @@ namespace DigitsPower
                 MessageBox.Show("Обраний файл з модулями не підходить для обробки монтгомері!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
+            if (OperCheckList.CheckedItems.Cast<object>().Any(item => (item.ToString().Contains("DBNS") || item.ToString().Contains("NAF")) && !modsDir.Contains("Prime number")))
+            {
+                MessageBox.Show("Для DBNS та NAF методів підходить лише файл з простими модулями!", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
             string choice = binAxis.Text;
             string choicew = $"{Axis1Box.SelectedItem} {Axis2Box.SelectedItem}";
             string choiceb = $"{binAxis_1.SelectedItem} {binAxis_2.SelectedItem} {binAxis_3.SelectedItem}";
@@ -319,8 +325,8 @@ namespace DigitsPower
         /// <param name="e">E.</param>
         private void Calculatebutton_Click(object sender, EventArgs e)
         {
-            AdditionalParameters.A = Int64.Parse(textA.Text);
-            AdditionalParameters.B = Int64.Parse(textB.Text);
+            AdditionalParameters.A = Int32.Parse(textA.Text);
+            AdditionalParameters.B = Int32.Parse(textB.Text);
             AdditionalParameters.montFlag = aMontFlag.Checked;
 
             BigInteger mod = BigInteger.Parse(modText.Text);
@@ -331,7 +337,7 @@ namespace DigitsPower
             double table = 0;
             OperationsResult.Items.Clear();
 
-            bool montCondition = mod % 2 == 0 && montFlagTest.Checked;
+            bool montCondition = mod % 2 == 0 && AdditionalParameters.montFlag;
 
             if (montCondition)
             {
@@ -427,8 +433,8 @@ namespace DigitsPower
 
     public static class AdditionalParameters
     {
-        public static long A = 15;
-        public static long B = 17;
+        public static int A = 15;
+        public static int B = 17;
 
         public static string diapA;
         public static string diapB;

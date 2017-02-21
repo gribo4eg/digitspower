@@ -1643,7 +1643,7 @@ namespace DigitsPower
 
         protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, params BigInteger[] list)
         {
-            PowFunctions.DBNS1RL(found, pow, mod, convert_method, (long)list[0], (long)list[1]);
+            PowFunctions.DBNS1RL(found, pow, mod, convert_method, (int)list[0], (int)list[1]);
         }
     }
     class DBNS1LR : BinaryPowUp
@@ -1660,7 +1660,7 @@ namespace DigitsPower
         }
 
         public override string Name() { return "DBNS1LR"; }
-        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, params BigInteger[] list) { PowFunctions.DBNS1LR(found, pow, mod, convert_method, (long)list[0], (long)list[1]); }
+        protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, params BigInteger[] list) { PowFunctions.DBNS1LR(found, pow, mod, convert_method, (int)list[0], (int)list[1]); }
     }
     #endregion
     #region Window

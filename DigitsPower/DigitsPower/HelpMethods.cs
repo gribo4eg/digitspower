@@ -1,8 +1,9 @@
-п»їusing System;
+using System;
 using System.Collections.Generic;
 using System.Numerics;
 using static DigitsPower.PowFunctions;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using static DigitsPower.HelpMethods;
 namespace DigitsPower
@@ -41,115 +42,231 @@ namespace DigitsPower
         //    return res;
         //}
 
-        public static BigInteger[,] Convert_to_DBNS_1(BigInteger k, long a_max, long b_max)
+        public static List<BigInteger[]> Convert_to_DBNS_1_1(BigInteger k, int a_max, int b_max)
         {
             List<BigInteger[]> mass_k_l = new List<BigInteger[]>();
-            long s = 1;
-            List<long> app;
-            long a = a_max;
-            long b = b_max;
+            int s = 1;
+            List<int> app;
+            int a = a_max;
+            int b = b_max;
             while (k > 0)
             {
-                app = Best_Approximation_1(k, a, b);
+                app = Best_Approximation_1_1(k, a, b);
                 a = app[0];
                 b = app[1];
-                BigInteger z = bif.Pow(2, a) * bif.Pow(3, b);
+                BigInteger z = (BigInteger.One << a) * BigInteger.Pow(3, b);
                 mass_k_l.Add(new BigInteger[3] { s, a, b });
                 if (k < z)
                     s = -s;
 
-                k = bif.Abs(k - z);
+                k = BigInteger.Abs(k - z);
             }
-            BigInteger[,] mass_k = new BigInteger[mass_k_l.Count, 3];
-            for (int j = 0; j < mass_k_l.Count; j++)
-            {
-                mass_k[j, 0] = mass_k_l[j][0];
-                mass_k[j, 1] = mass_k_l[j][1];
-                mass_k[j, 2] = mass_k_l[j][2];
-            }
-            return mass_k;
+
+            return mass_k_l;
         }
 
-        public static BigInteger[,] Convert_to_DBNS_2(BigInteger k, long a_max, long b_max)
+        public static List<BigInteger[]> Convert_to_DBNS_1_2(BigInteger k, int a_max, ref int b_max)
         {
             List<BigInteger[]> mass_k_l = new List<BigInteger[]>();
             BigInteger i = 0;
             BigInteger s = 1;
-            List<long> app;
-            long a = a_max;
-            long b = b_max;
+            List<int> app;
+
+            BigInteger temp = 1;
+            BigInteger three = 3;
+            SortedList<string, BigInteger> PreComputation = new SortedList<string, BigInteger>();
+
+            double log_3 = BigInteger.Log(k, 3);
+
+            if (b_max > log_3)
+                b_max = (int)Math.Floor(log_3);
+
+            for (i = 0; i <= b_max; i++)
+            {
+                PreComputation.Add(ConvToBinary(temp), i);
+                temp *= three;
+            }
+
+            int a = a_max;
+            int b = b_max, b_temp = b, index;
             while (k > 0)
             {
-                i++;
-                app = Best_Approximation_2(k, a, b);
+                log_3 = BigInteger.Log(k, 3);
+                if (b > log_3)
+                    b = (int)Math.Round(log_3);
+
+                for (i = b_temp; i > b; i--)
+                {
+                    index = PreComputation.IndexOfValue(i);
+                    PreComputation.RemoveAt(index);
+                }
+
+                b_temp = b;
+                app = Best_Approximation_1_2(k, PreComputation, a, b);
+
                 a = app[0];
                 b = app[1];
-                var test1 = TwoPow(a);
-                var test2 = bif.Pow(3, b);
-                BigInteger z = (TwoPow(a) * bif.Pow(3, b));
+                BigInteger z = (BigInteger.One << a) * BigInteger.Pow(3, b);
                 mass_k_l.Add(new BigInteger[3] { s, a, b });
                 if (k < z)
                     s = -s;
 
-                k = bif.Abs(k - z);
+                k = BigInteger.Abs(k - z);
             }
 
-            BigInteger[,] mass_k = new BigInteger[mass_k_l.Count, 3];
-            for (int j = 0; j < mass_k_l.Count; j++)
-            {
-                mass_k[j, 0] = mass_k_l[j][0];
-                mass_k[j, 1] = mass_k_l[j][1];
-                mass_k[j, 2] = mass_k_l[j][2];
-            }
-            return mass_k;
+            return mass_k_l;
         }
 
-        public static List<long> Best_Approximation_1(BigInteger k, long a_max, long b_max)
+        public static List<int> Best_Approximation_1_1(BigInteger k, int a_max, int b_max)
         {
-            long a;
-            long b;
-            long min_x = a_max;
-            long y = (long)Math.Round((-min_x) * log_dif_base(3, 2) + bif.log_dif_base(k, 3));
+            int a;
+            int b;
+            int min_x = a_max;
+            double log_3_k = log_dif_base(3, k);
+            double log_3_2 = log_dif_base(3, 2);
+            double temp = -min_x * log_3_2 + log_3_k;
+            double min_temp = temp;
+            int y = (int)Math.Round(temp);
             if (y > b_max)
                 y = b_max;
             else if (y < 0)
                 y = 0;
 
-            double min_delta = Math.Abs((y + min_x * log_dif_base(3, 2) - bif.log_dif_base(k, 3)));
-            for (long x = 0; x < a_max; x++)
+            double min_delta = Math.Abs(y - temp);
+            for (int x = 0; x < a_max; x++)
             {
-                y = (long)Math.Round(-x * log_dif_base(3, 2) + bif.log_dif_base(k, 3));
+                temp = -x * log_3_2 + log_3_k;
+                y = (int)Math.Round(temp);
                 if (y > b_max)
                     y = b_max;
                 else if (y < 0)
                     y = 0;
 
-                double delta = Math.Abs(y + x * log_dif_base(3, 2) - bif.log_dif_base(k, 3));
+                double delta = Math.Abs(y - temp);
                 if (min_delta > delta)
                 {
                     min_x = x;
+                    min_temp = temp;
                     min_delta = delta;
                 }
             }
 
             a = min_x;
-            b = (long)Math.Round(-min_x * log_dif_base(3, 2) + bif.log_dif_base(k, 3));
+            b = (int)Math.Round(min_temp);
             if (b > b_max)
                 b = b_max;
 
-            List<long> r = new List<long>();
+            List<int> r = new List<int>();
             r.Add(a);
             r.Add(b);
             return r;
         }
 
-        public static List<long> Best_Approximation_2(BigInteger k, long a_max, long b_max)
+        public static List<int> Best_Approximation_1_2(BigInteger k, SortedList<string, BigInteger> PreComputation, int a_max, int b_max)
         {
-            long a = 0;
-            long b = 0;
-            long legth_k = get_number_bit(k, 2);
+            int a = 0;
+            int b = 0;
+
+            if (k > 1)
+            {
+                string temp_str = ConvToBinary(k);
+
+                bool fl = false;
+                int index_k;
+                if (!PreComputation.ContainsKey(temp_str))
+                {
+                    PreComputation.Add(temp_str, k);
+                    fl = true;
+                }
+                index_k = PreComputation.IndexOfKey(temp_str);
+
+                int a1, a2;
+                int b1, b2;
+
+                if (index_k > 0)
+                {
+                    b1 = (int)PreComputation.ElementAt(index_k - 1).Value;
+                    a1 = temp_str.Length - PreComputation.ElementAt(index_k - 1).Key.Length;
+                    a1 = change_value(a_max, a1);
+                }
+                else
+                {
+                    b1 = 0;
+                    a1 = change_value(a_max, temp_str.Length);
+                }
+
+                if (index_k < PreComputation.Count - 1)
+                {
+                    b2 = (int)PreComputation.ElementAt(index_k + 1).Value;
+                    a2 = temp_str.Length - PreComputation.ElementAt(index_k + 1).Key.Length;
+                    a2 = change_value(a_max, a2);
+                }
+                else
+                {
+                    b2 = 0;
+                    a2 = change_value(a_max, temp_str.Length);
+                }
+
+
+                int a_dif, b_dif;
+                BigInteger power_a1, power_a2, power_b1, power_b2;
+                if (a1 > a2)
+                {
+                    a_dif = a1 - a2;
+                    power_a2 = BigInteger.One << a2;
+                    power_a1 = power_a2 << a_dif;
+                }
+                else
+                {
+                    a_dif = a2 - a1;
+                    power_a1 = BigInteger.One << a1;
+                    power_a2 = power_a1 << a_dif;
+                }
+
+                if (b1 > b2)
+                {
+                    b_dif = b1 - b2;
+                    power_b2 = BigInteger.Pow(3, b2);
+                    power_b1 = power_b2 << b_dif;
+                }
+                else
+                {
+                    b_dif = b2 - b1;
+                    power_b1 = BigInteger.Pow(3, b1);
+                    power_b2 = power_b1 << b_dif;
+                }
+
+                BigInteger delta_1 = BigInteger.Abs(k - power_a1 * power_b1);
+                BigInteger delta_2 = BigInteger.Abs(k - power_a2 * power_b2);
+
+                if (delta_1 < delta_2)
+                {
+                    a = a1;
+                    b = b1;
+                }
+                else
+                {
+                    a = a2;
+                    b = b2;
+                }
+
+                if (fl)
+                    PreComputation.RemoveAt(index_k);
+            }
+
+            List<int> r = new List<int>();
+            r.Add(a);
+            r.Add(b);
+
+            return r;
+
+
+            //int next = 0;
+
+            /*
+                long legth_k = get_number_bit(k, 2);
             long[,] PreComputation = new long[b_max + 1, 3];
-            long i;
+            //long i;
             for (i = 0; i <= b_max; i++)
             {
                 PreComputation[i, 0] = i;
@@ -247,15 +364,26 @@ namespace DigitsPower
             {
                 a = a + 1;
             }
-            List<long> r = new List<long>();
+
+
+            List<int> r = new List<int>();
             r.Add(a);
             r.Add(b);
-            return r;
+
+            return r;*/
         }
 
-        public static double log_dif_base(long _base, long argument)
+        public static int change_value(int max, int value)
         {
-            return (Math.Log(argument) / Math.Log(_base));
+            if (value <= max)
+                return value;
+            else
+                return max;
+        }
+
+        public static double log_dif_base(BigInteger _base, BigInteger argument)
+        {
+            return (BigInteger.Log(argument) / BigInteger.Log(_base));
         }
 
         public static long get_number_bit(BigInteger value, long _base)
@@ -296,7 +424,7 @@ namespace DigitsPower
 
         public static BigInteger Euclid_2_1(BigInteger mod, BigInteger found)
         {
-            // РЅР°СЃРїСЂР°РІРґС– С†Рµ РјРµС‚РѕРґ 2.4
+            // насправді це метод 2.4
 
             BigInteger u, v, B, D, y, t1, t2, q, d, inv;
             u = mod;
@@ -417,11 +545,11 @@ namespace DigitsPower
             int i = 0;
             while (k >= 1)
             {
-                temp_1 = (Int32)(k & 3); // k & 3 С†Рµ С‚Рµ СЃР°РјРµ, С‰Рѕ k % 4
-                temp_2 = temp_1 & 1;     // k & 1 С†Рµ С‚Рµ СЃР°РјРµ, С‰Рѕ k % 2
+                temp_1 = (Int32)(k & 3); // k & 3 це те саме, що k % 4
+                temp_2 = temp_1 & 1;     // k & 1 це те саме, що k % 2
                 if (temp_2 != 0)
                 {
-                    mas_k.Add((int)(2 - temp_1)); 
+                    mas_k.Add((int)(2 - temp_1));
                     k = k - mas_k[i];
                 }
                 else
@@ -461,7 +589,7 @@ namespace DigitsPower
                 while (v % 2 == 0 && v != 0)
                 {
                     a++;
-                    v /= 2;
+                    v >>= 1;
                 }
                 int b = 0;
                 while (v % 3 == 0 && v != 0)
@@ -489,6 +617,7 @@ namespace DigitsPower
             }
             return x;
         }
+
         public static MyList<int[]> ToDBNS2LR(BigInteger pow)
         {
             MyList<int[]> x = new MyList<int[]>();
@@ -502,7 +631,7 @@ namespace DigitsPower
                 while (v % 2 == 0 && v != 0)
                 {
                     a++;
-                    v = v / 2;
+                    v >>= 1;
                 }
 
                 int b = 0;
@@ -537,8 +666,8 @@ namespace DigitsPower
 
         public static MyList<int> FindLargest1(MyList<int> x, int i, int w)
         {
-            // РІРёРґС–Р»СЏС”РјРѕ РІС–РєРЅРѕ РІ РјР°СЃРёРІС– С… РІС–Рґ РјРѕР»РѕРґС€РѕРіРѕ С–РЅРґРµРєСЃСѓ С– РґРѕ СЃС‚Р°СЂС€РёС… С–РЅРґРµРєСЃС–РІ
-            // РІРёРєРѕСЂРёСЃС‚РѕРІСѓС”РјРѕ РєРѕР»Рё СЂСѓС…Р°С”РјРѕСЃСЊ РІС–Рґ 0 РґРѕ x.Count - 1
+            // виділяємо вікно в масиві х від молодшого індексу і до старших індексів
+            // використовуємо коли рухаємось від 0 до x.Count - 1
 
             int j = i;
             int pow = 1;
@@ -570,8 +699,8 @@ namespace DigitsPower
         }
         public static MyList<int> FindLargest2(MyList<int> x, int i, int w)
         {
-            // РІРёРґС–Р»СЏС”РјРѕ РІС–РєРЅРѕ РІ РјР°СЃРёРІС– С… РІС–Рґ СЃС‚Р°СЂС€РѕРіРѕ С–РЅРґРµРєСЃСѓ С– РґРѕ РјРѕР»РѕРґС€РёС… С–РЅРґРµРєСЃС–РІ
-            // РІРёРєРѕСЂРёСЃС‚РѕРІСѓС”РјРѕ РєРѕР»Рё СЂСѓС…Р°С”РјРѕСЃСЊ РІС–Рґ x.Count - 1 РґРѕ 0
+            // виділяємо вікно в масиві х від старшого індексу і до молодших індексів
+            // використовуємо коли рухаємось від x.Count - 1 до 0
 
             int j = i - w + 1;
             int pow = 1;
@@ -661,7 +790,7 @@ namespace DigitsPower
             var table = new MyList<BigInteger>();
             table.Add(BinaryRL(found, power, mod));
             for (BigInteger i = 0; i < power - 1; i++)
-                table.Add(mul(table[i], found, mod));
+                table.Add(table[i] * found % mod);
             return table;
         }
         public static MyList<BigInteger> SlidingLRTable(BigInteger found, BigInteger mod, BigInteger power, int w)
@@ -669,7 +798,7 @@ namespace DigitsPower
             var table = new MyList<BigInteger>();
             table.Add(BinaryLR(found, power, mod));
             for (BigInteger i = 0; i < power - 1; i++)
-                table.Add(mul(table[i], found, mod));
+                table.Add(table[i] * found % mod);
             return table;
         }
 
@@ -744,10 +873,14 @@ namespace DigitsPower
                         OperationsResult.Items.Add("Add Sub LR\t\t: " + (PowFunctions.AddSubLR(num, pow, mod).ToString())); OperationsResult.Update(); }
                     if (OperationsListTest.CheckedIndices[i] == 18) { OperationsResult.Items.Add("Joye_double_and_add\t: " + (PowFunctions.Joye_double_and_add(num, pow, mod).ToString())); OperationsResult.Update(); }
                     if (OperationsListTest.CheckedIndices[i] == 19) { OperationsResult.Items.Add("MontgomeryLadder\t\t: " + (PowFunctions.MontgomeryLadder(num, pow, mod).ToString())); OperationsResult.Update(); }
-                    if (OperationsListTest.CheckedIndices[i] == 20) { OperationsResult.Items.Add("DBNS1RL 1\t\t: " + (PowFunctions.DBNS1RL(num, pow, mod, true, AdditionalParameters.A, AdditionalParameters.B).ToString())); OperationsResult.Update(); }
-                    if (OperationsListTest.CheckedIndices[i] == 21) { OperationsResult.Items.Add("DBNS1RL 2\t\t: " + (PowFunctions.DBNS1RL(num, pow, mod, false, AdditionalParameters.A, AdditionalParameters.B).ToString())); OperationsResult.Update(); }
-                    if (OperationsListTest.CheckedIndices[i] == 22) { OperationsResult.Items.Add("DBNS1LR 1\t\t: " + (PowFunctions.DBNS1LR(num, pow, mod, true, AdditionalParameters.A, AdditionalParameters.B).ToString())); OperationsResult.Update(); }
-                    if (OperationsListTest.CheckedIndices[i] == 23) { OperationsResult.Items.Add("DBNS1LR 2\t\t: " + (PowFunctions.DBNS1LR(num, pow, mod, false, AdditionalParameters.A, AdditionalParameters.B).ToString())); OperationsResult.Update(); }
+                    if (OperationsListTest.CheckedIndices[i] == 20) { if (nsd != 1) { nsdMethods = true; methodNumber +=" "+ (OperationsListTest.CheckedIndices[i]-1)+".1"; continue; }
+                        OperationsResult.Items.Add("DBNS1RL 1\t\t: " + (PowFunctions.DBNS1RL(num, pow, mod, true, AdditionalParameters.A, AdditionalParameters.B).ToString())); OperationsResult.Update();}
+                    if (OperationsListTest.CheckedIndices[i] == 21) { if (nsd != 1) { nsdMethods = true; methodNumber +=" "+ (OperationsListTest.CheckedIndices[i]-2)+".2"; continue; }
+                        OperationsResult.Items.Add("DBNS1RL 2\t\t: " + (PowFunctions.DBNS1RL(num, pow, mod, false, AdditionalParameters.A, AdditionalParameters.B).ToString())); OperationsResult.Update(); }
+                    if (OperationsListTest.CheckedIndices[i] == 22) { if (nsd != 1) { nsdMethods = true; methodNumber +=" "+ (OperationsListTest.CheckedIndices[i]-2)+".1"; continue; }
+                        OperationsResult.Items.Add("DBNS1LR 1\t\t: " + (PowFunctions.DBNS1LR(num, pow, mod, true, AdditionalParameters.A, AdditionalParameters.B).ToString())); OperationsResult.Update(); }
+                    if (OperationsListTest.CheckedIndices[i] == 23) { if (nsd != 1) { nsdMethods = true; methodNumber +=" "+ (OperationsListTest.CheckedIndices[i]-3)+".2"; continue; }
+                        OperationsResult.Items.Add("DBNS1LR 2\t\t: " + (PowFunctions.DBNS1LR(num, pow, mod, false, AdditionalParameters.A, AdditionalParameters.B).ToString())); OperationsResult.Update(); }
                     if (OperationsListTest.CheckedIndices[i] == 24) { OperationsResult.Items.Add("DBNS2RL\t\t: " + (PowFunctions.BinaryRL(num, pow, mod).ToString())); OperationsResult.Update(); }
                     if (OperationsListTest.CheckedIndices[i] == 25) { OperationsResult.Items.Add("DBNS2LR\t\t: " + (PowFunctions.BinaryLR(num, pow, mod).ToString())); OperationsResult.Update(); }
                     #endregion
@@ -804,10 +937,11 @@ namespace DigitsPower
 
                 if (nsd != 1 && nsdMethods)
                 {
-                    string message = "Р’РІРµРґРµРЅС– Р·РЅР°С‡РµРЅРЅСЏ РѕСЃРЅРѕРІРё С‚Р° РјРѕРґСѓР»СЏ РЅРµ С” РІР·Р°С”РјРЅРѕРїСЂРѕСЃС‚РёРјРё, Р° РґР»СЏ РјРµС‚РѕРґСѓ(-С–РІ) "
-                                     + methodNumber + " РІРѕРЅРё РјР°СЋС‚СЊ Р±СѓС‚Рё РІР·Р°С”РјРЅРѕРїСЂРѕСЃС‚РёРјРё";
+                    string message = "Введені значення основи та модуля не є взаємнопростими, а для методу(-ів) "
+                                     + methodNumber + " вони мають бути взаємнопростими";
                     MessageBox.Show(message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-        }
+            }
     }
 }
+

@@ -1075,132 +1075,297 @@ namespace DigitsPower
             return res;
         }
 
-        public static BigInteger DBNS1RL(BigInteger found, BigInteger pow, BigInteger mod, bool convert_method, long A, long B)
+        public static BigInteger DBNS1RL(BigInteger found, BigInteger pow, BigInteger mod, bool convert_method, int A, int B)
         {
-            BigInteger[,] mas_k;
-            mas_k = convert_method ? Convert_to_DBNS_1(pow, A, B)
-                                   : Convert_to_DBNS_2(pow, A, B);
+            bool mont = AdditionalParameters.montFlag;
+            List<BigInteger[]> mas_k;
+            mas_k = convert_method ? Convert_to_DBNS_1_1(pow, A, B)
+                : Convert_to_DBNS_1_2(pow, A, ref B);
             found = found % mod;
 
-            long lastindex = mas_k.GetLength(0) - 1;
+
+            int lastindex = mas_k.Count - 1;
+            /*
+            BigInteger sum_1 = 0, sum_2 = 1;
+            for (long i = 0; i <= lastindex; i++)
+                sum_1 += mas_k[i, 0] * (BigInteger.One << (int)mas_k[i, 1]) * BigInteger.Pow(3, (int)mas_k[i, 2]);
+
+            for (long i = lastindex; i >= 0; i--)
+                sum_2 = sum_2 * (BigInteger.One << (int)mas_k[i, 1]) * BigInteger.Pow(3, (int)mas_k[i, 2]) + mas_k[i, 0];
+                */
             BigInteger t = found;
             BigInteger res = 1;
+            /*
+            if (sum_1 != pow || sum_2 != pow)
+                res = 1;
+                */
 
-            for (long i = 0; i < mas_k[lastindex, 1]; i++)
-                t = mul(t, t, mod);
-
-
-            for (long i = 0; i < mas_k[lastindex, 2]; i++)
-                t = mul(mul(t, t, mod), t, mod);
-
-            if (mas_k[lastindex, 0] == -1)
-                res = mul(res, Euclid_2_1(mod, t), mod);
-            else if (mas_k[lastindex, 0] == 1)
-                res = mul(res, t, mod);
-
-            for (long i = lastindex - 1; i >= 0; i--)
+            if (mont)
             {
-                BigInteger u = mas_k[i, 1] - mas_k[i + 1, 1];
-                BigInteger v = mas_k[i, 2] - mas_k[i + 1, 2];
-                for (long j = 0; j < u; j++)
-                    t = mul(t, t, mod);
 
-                for (long j = 0; j < v; j++)
-                    t = mul(mul(t, t, mod), t, mod);
+                MyList<BigInteger> parameters = toMontgomeryDomain(ref t, ref res, mod);
+                for (int i = 0; i < mas_k[lastindex][1]; i++)
+                    t = MontgomeryMultDomain(t, t, mod, parameters);
 
-                if (mas_k[i, 0] == -1)
-                    res = mul(res, Euclid_2_1(mod, t), mod);
-                else if (mas_k[i, 0] == 1)
-                    res = mul(res, t, mod);
-            }
-            return res;
-        }
 
-        public static BigInteger DBNS1LR(BigInteger found, BigInteger pow, BigInteger mod, bool convert_method, long A, long B)
-        {
-            BigInteger[,] mas_k;
-            found = found % mod;
+                for (int i = 0; i < mas_k[lastindex][2]; i++)
+                    t = MontgomeryMultDomain(MontgomeryMultDomain(t, t, mod, parameters), t, mod, parameters);
 
-            BigInteger t = found;
-            BigInteger res = 1;
-
-            mas_k = convert_method ? Convert_to_DBNS_1(pow, A, B)
-                                   : Convert_to_DBNS_2(pow, A, B);
-
-            if (mas_k[0, 0] == -1)
-                res = Euclid_2_1(mod, t);
-            else if (mas_k[0, 0] == 1)
-                res = t;
-
-            for (long i = 0; i < mas_k.GetLength(0) - 1; i++)
-            {
-                BigInteger u = mas_k[i, 1] - mas_k[i + 1, 1];
-                BigInteger v = mas_k[i, 2] - mas_k[i + 1, 2];
-                for (long j = 0; j < u; j++)
-                    res = mul(res, res, mod);
-
-                for (long j = 0; j < v; j++)
-                    res = mul(mul(res, res, mod), res, mod);
-
-                if (mas_k[i + 1, 0] < 0)
+                if (mas_k[lastindex][0] == -1)
+                    res = MontgomeryMultDomain(res, MontgomeryInverse(mod, t, parameters), mod, parameters);
+                /*
+                if (BigInteger.GreatestCommonDivisor(mod, t) == 1)
                     res = mul(res, Euclid_2_1(mod, t), mod);
                 else
-                    res = mul(res, t, mod);
+                    res = 1;
+            */
+                else if (mas_k[lastindex][0] == 1)
+                    res = MontgomeryMultDomain(res, t, mod, parameters);
+
+                for (int i = lastindex - 1; i >= 0; i--)
+                {
+                    BigInteger u = mas_k[i][1] - mas_k[i + 1][1];
+                    BigInteger v = mas_k[i][2] - mas_k[i + 1][2];
+                    for (long j = 0; j < u; j++)
+                        t = MontgomeryMultDomain(t, t, mod, parameters);
+
+                    for (int j = 0; j < v; j++)
+                        t = MontgomeryMultDomain(MontgomeryMultDomain(t, t, mod, parameters), t, mod, parameters);
+
+                    if (mas_k[i][0] == -1)
+                        res = MontgomeryMultDomain(res, MontgomeryInverse(mod, t, parameters), mod, parameters);
+                    /*
+                    if (BigInteger.GreatestCommonDivisor(mod, t) == 1)
+                        res = mul(res, Euclid_2_1(mod, t), mod);
+                    else
+                        res = 1;*/
+                    else if (mas_k[i][0] == 1)
+                        res = MontgomeryMultDomain(res, t, mod, parameters);
+                }
+
+                res = outMontgomeryDomain(res, mod, parameters);
             }
+            else
+            {
+                for (int i = 0; i < mas_k[lastindex][1]; i++)
+                    t = t * t % mod;
 
-            for (long i = 0; i < mas_k[mas_k.GetLength(0) - 1, 1]; i++)
-                res = mul(res, res, mod);
 
-            for (long i = 0; i < mas_k[mas_k.GetLength(0) - 1, 2]; i++)
-                res = mul(mul(res, res, mod), res, mod);
+                for (int i = 0; i < mas_k[lastindex][2]; i++)
+                    t = (t * t % mod) * t % mod;
+
+                if (mas_k[lastindex][0] == -1)
+                    res = res * Euclid_2_1(mod, t) % mod;
+                /*
+                if (BigInteger.GreatestCommonDivisor(mod, t) == 1)
+                    res = mul(res, Euclid_2_1(mod, t), mod);
+                else
+                    res = 1;
+            */
+                else if (mas_k[lastindex][0] == 1)
+                    res = res * t % mod;
+
+                for (int i = lastindex - 1; i >= 0; i--)
+                {
+                    BigInteger u = mas_k[i][1] - mas_k[i + 1][1];
+                    BigInteger v = mas_k[i][2] - mas_k[i + 1][2];
+                    for (long j = 0; j < u; j++)
+                        t = t * t % mod;
+
+                    for (int j = 0; j < v; j++)
+                        t = (t * t % mod) * t % mod;
+
+                    if (mas_k[i][0] == -1)
+                        res = res * Euclid_2_1(mod, t) % mod;
+                    /*
+                    if (BigInteger.GreatestCommonDivisor(mod, t) == 1)
+                        res = mul(res, Euclid_2_1(mod, t), mod);
+                    else
+                        res = 1;*/
+                    else if (mas_k[i][0] == 1)
+                        res = res * t % mod;
+                }
+            }
             return res;
         }
+
+
+        public static BigInteger DBNS1LR(BigInteger found, BigInteger pow, BigInteger mod, bool convert_method, int A, int B)
+        {
+            bool mont = AdditionalParameters.montFlag;
+            List<BigInteger[]> mas_k;
+            found = found % mod;
+
+            BigInteger t = found;
+            BigInteger res = 1;
+
+            mas_k = convert_method ? Convert_to_DBNS_1_1(pow, A, B)
+                : Convert_to_DBNS_1_2(pow, A, ref B);
+
+            if (mont)
+            {
+                MyList<BigInteger> parameters = toMontgomeryDomain(ref t, ref res, mod);
+
+                if (mas_k[0][0] == -1)
+                    res = MontgomeryInverse(mod, t, parameters);
+                else if (mas_k[0][0] == 1)
+                    res = t;
+
+                for (int i = 0; i < mas_k.Count - 1; i++)
+                {
+                    BigInteger u = mas_k[i][1] - mas_k[i + 1][1];
+                    BigInteger v = mas_k[i][2] - mas_k[i + 1][2];
+                    for (long j = 0; j < u; j++)
+                        res = MontgomeryMultDomain(res, res, mod, parameters);
+
+                    for (long j = 0; j < v; j++)
+                        res = MontgomeryMultDomain(MontgomeryMultDomain(res, res, mod, parameters), res, mod, parameters);
+
+                    if (mas_k[i + 1][0] < 0)
+                        res = MontgomeryMultDomain(res, MontgomeryInverse(mod, t, parameters), mod, parameters);
+                    else
+                        res = MontgomeryMultDomain(res, t, mod, parameters);
+                }
+
+                for (int i = 0; i < mas_k[mas_k.Count - 1][1]; i++)
+                    res = MontgomeryMultDomain(res, res, mod, parameters);
+
+                for (int i = 0; i < mas_k[mas_k.Count - 1][2]; i++)
+                    res = MontgomeryMultDomain(MontgomeryMultDomain(res, res, mod, parameters), res, mod, parameters);
+
+                res = outMontgomeryDomain(res, mod, parameters);
+            }
+            else
+            {
+                if (mas_k[0][0] == -1)
+                    res = Euclid_2_1(mod, t);
+                else if (mas_k[0][0] == 1)
+                    res = t;
+
+                for (int i = 0; i < mas_k.Count - 1; i++)
+                {
+                    BigInteger u = mas_k[i][1] - mas_k[i + 1][1];
+                    BigInteger v = mas_k[i][2] - mas_k[i + 1][2];
+                    for (long j = 0; j < u; j++)
+                        res = res * res % mod;
+
+                    for (long j = 0; j < v; j++)
+                        res = (res * res % mod) * res % mod;
+
+                    if (mas_k[i + 1][0] < 0)
+                        res = res * Euclid_2_1(mod, t) % mod;
+                    else
+                        res = res * t % mod;
+                }
+
+                for (int i = 0; i < mas_k[mas_k.Count - 1][1]; i++)
+                    res = res * res % mod;
+
+                for (int i = 0; i < mas_k[mas_k.Count - 1][2]; i++)
+                    res = (res * res % mod) * res % mod;
+
+            }
+
+            return res;
+        }
+
 
         public static BigInteger DBNS2RL(BigInteger found, BigInteger pow, BigInteger mod)
         {
+            bool mont = AdditionalParameters.montFlag;
             MyList<int[]> mas_k = ToDBNS2RL(pow);
             found = found % mod;
 
             BigInteger res = 1;
             BigInteger t = found;
 
-            for (int i = 0; i < mas_k.Count; i++)
+            if (mont)
             {
-                for (int j = 0; j < mas_k[i][1]; j++)
-                    t = mul(t, t, mod);
-                for (int j = 0; j < mas_k[i][2]; j++)
-                    t = mul((mul(t, t, mod)), t, mod);
+                MyList<BigInteger> parameters = toMontgomeryDomain(ref t, ref res, mod);
 
-                if (mas_k[i][0] == 1)
-                    res = mul(res, t, mod);
-                else if (mas_k[i][0] == -1)
-                    res = mul(res, Euclid_2_1(t, mod), mod);
+                for (int i = 0; i < mas_k.Count; i++)
+                {
+                    for (int j = 0; j < mas_k[i][1]; j++)
+                        t = MontgomeryMultDomain(t, t, mod, parameters);
+                    for (int j = 0; j < mas_k[i][2]; j++)
+                        t = MontgomeryMultDomain(MontgomeryMultDomain(t, t, mod, parameters), t, mod, parameters);
+
+                    if (mas_k[i][0] == 1)
+                        res = MontgomeryMultDomain(res, t, mod, parameters);
+                    else if (mas_k[i][0] == -1)
+                        res = MontgomeryMultDomain(res, MontgomeryInverse(t, mod, parameters), mod, parameters);
+                }
+
+                res = outMontgomeryDomain(res, mod, parameters);
+            }
+            else
+            {
+                for (int i = 0; i < mas_k.Count; i++)
+                {
+                    for (int j = 0; j < mas_k[i][1]; j++)
+                        t = t * t % mod;
+                    for (int j = 0; j < mas_k[i][2]; j++)
+                        t = (t * t % mod) * t % mod;
+
+                    if (mas_k[i][0] == 1)
+                        res = res * t % mod;
+                    else if (mas_k[i][0] == -1)
+                        res = res * Euclid_2_1(t, mod) % mod;
+                }
             }
             return res;
         }
 
         public static BigInteger DBNS2LR(BigInteger found, BigInteger pow, BigInteger mod)
         {
+            bool mont = AdditionalParameters.montFlag;
             MyList<int[]> mas_k = ToDBNS2LR(pow);
             found = found % mod;
             BigInteger res = found;
 
-            for (int i = mas_k.Count - 1; i > 0; i--)
+            if (mont)
             {
-                for (int j = 0; j < mas_k[i][1]; j++)
-                    res = mul(res, res, mod);
-                for (int j = 0; j < mas_k[i][2]; j++)
-                    res = mul(mul(res,  res, mod), res, mod);
+                MyList<BigInteger> parameters = toMontgomeryDomain(ref found, ref res, mod);
 
-                if (mas_k[i][0] == 1)
-                    res = mul(res, found, mod);
-                else if (mas_k[i][0] == -1)
-                    res = mul(res, Euclid_2_1(found, mod), mod);
+                for (int i = mas_k.Count - 1; i > 0; i--)
+                {
+                    for (int j = 0; j < mas_k[i][1]; j++)
+                        res = MontgomeryMultDomain(res, res, mod, parameters);
+                    for (int j = 0; j < mas_k[i][2]; j++)
+                        res = MontgomeryMultDomain(MontgomeryMultDomain(res, res, mod, parameters), res, mod, parameters);
+
+                    if (mas_k[i][0] == 1)
+                        res = MontgomeryMultDomain(res, found, mod, parameters);
+                    else if (mas_k[i][0] == -1)
+                        res = MontgomeryMultDomain(res, MontgomeryInverse(found, mod, parameters), mod, parameters);
+                }
+                for (int j = 0; j < mas_k[0][1]; j++)
+                    res = MontgomeryMultDomain(res, res, mod, parameters);
+                for (int j = 0; j < mas_k[0][2]; j++)
+                    res = MontgomeryMultDomain(MontgomeryMultDomain(res, res, mod, parameters), res, mod, parameters);
+
+                res = outMontgomeryDomain(res, mod, parameters);
             }
-            for (int j = 0; j < mas_k[0][1]; j++)
-                res = mul(res, res, mod);
-            for (int j = 0; j < mas_k[0][2]; j++)
-                res = mul(mul(res,  res, mod), res, mod);
+            else
+            {
+
+                for (int i = mas_k.Count - 1; i > 0; i--)
+                {
+                    for (int j = 0; j < mas_k[i][1]; j++)
+                        res = res * res % mod;
+                    for (int j = 0; j < mas_k[i][2]; j++)
+                        res = (res * res % mod) * res % mod;
+
+                    if (mas_k[i][0] == 1)
+                        res = res * found % mod;
+                    else if (mas_k[i][0] == -1)
+                        res = res * Euclid_2_1(found, mod) % mod;
+                }
+                for (int j = 0; j < mas_k[0][1]; j++)
+                    res = res * res % mod;
+                for (int j = 0; j < mas_k[0][2]; j++)
+                    res = (res * res % mod) * res % mod;
+            }
             return res;
         }
 
@@ -1576,10 +1741,10 @@ namespace DigitsPower
                 for (int i = 0; i < bins.Count; i++)
                 {
                     for (int k = 0; k < w; k++)
-                        res = mul(res, res, mod);
+                        res = res * res % mod;
 
                     int c = Convert.ToInt32(bins[i], 2);
-                    if (c != 0) res = mul(res, table[c - 1], mod);
+                    if (c != 0) res = res * table[c - 1] % mod;
                 }
             }
             return res;
@@ -1707,7 +1872,7 @@ namespace DigitsPower
 
             table.Add(found);
             for (i = 1; i < w; i++)
-                table.Add(mul(table[i - 1], table[i - 1], mod));
+                table.Add(table[i - 1] * table[i - 1] % mod);
             stw.Stop();
             table_time = stw.Elapsed.TotalMilliseconds;
 
@@ -1716,7 +1881,7 @@ namespace DigitsPower
             powLen = i + 1;
             while (i >= 0)
             {
-                res = mul(res, res, mod);
+                res = res * res % mod;
                 if ('1' == pow_bin[powLen - 1 - (int)i])
                 {
                     if (0 < i && '0' == pow_bin[powLen - (int)i - 1])
@@ -1729,12 +1894,12 @@ namespace DigitsPower
                             t++;
                         }
                         res = BinaryRL(res, 1 << (t - 1), mod);
-                        res = mul(res, table[t - 1], mod);
+                        res = res * table[t - 1] % mod;
                         i = i - t + 1;
                     }
                     else
                     {
-                        res = mul(res, found, mod);
+                        res = res * found % mod;
                     }
                 }
                 --i;
@@ -1766,14 +1931,14 @@ namespace DigitsPower
             powLen = i + 1;
             while (i >= 0)
             {
-                res = mul(res, res, mod);
+                res = res * res % mod;
                 if ('1' == pow_bin[powLen - 1 - (int)i])
                 {
                     t = 1;
                     while (t < w && t < i && '1' == pow_bin[powLen - (int)i + t - 1])
                         t++;
                     res = BinaryRL(res, 1 << (t - 1), mod);
-                    res = mul(res, table[t], mod);
+                    res = res * table[t] % mod;
                     i = i - t + 1;
                 }
 
@@ -1806,7 +1971,7 @@ namespace DigitsPower
             powLen = i + 1;
             while (i >= 0)//>=
             {
-                res = mul(res, res, mod);
+                res = res * res % mod;
                 if ('1' == pow_bin[powLen - i - 1])
                 {
                     if ((i == 0) || (i > 0 && '0' == pow_bin[powLen - i ]))
@@ -1822,17 +1987,17 @@ namespace DigitsPower
                         if (t > 0)
                         {
                             res = BinaryRL(res, 1 << (t - 1), mod);
-                            res = mul(res, table[t - 1], mod);
+                            res = res * table[t - 1] % mod;
                             i = i - t + 1;
                         }
                         else
-                            res = mul(res, table[0], mod);
+                            res = res * table[0] % mod;
 
                     }
                     else
                     {
-                        res = mul(res, res, mod);
-                        res = mul(res, table[1], mod);
+                        res = res * res % mod;
+                        res = res * table[1] % mod;
                         i--;
                     }
 
@@ -1885,13 +2050,13 @@ namespace DigitsPower
                         if (t > 0)
                         {
                             res = BinaryRL(res, 1 << t, mod);
-                            res = mul(res, table2[t - 1], mod);
+                            res = res * table2[t - 1] % mod;
                             i = i - t;
                         }
                         else
                         {
-                            res = mul(res, res, mod);
-                            res = mul(res, table2[0], mod);
+                            res = res * res % mod;
+                            res = res * table2[0] % mod;
                             i--;
                         }
                     }
@@ -1901,13 +2066,13 @@ namespace DigitsPower
                         while (t < w && t < i && '1' == pow_bin[powLen - (int)i + t - 1])
                             t++;
                         res = BinaryRL(res, 1 << t, mod);
-                        res = mul(res, table1[t - 1], mod);
+                        res = res * table1[t - 1] % mod;
                         i = i - t;
                     }
                 }
                 else
                 {
-                    res = mul(res, res, mod);
+                    res = res * res % mod;
                     i--;
                 }
 
@@ -1930,7 +2095,7 @@ namespace DigitsPower
 
             table.Add(found);
             for (i = 1; i < w; i++)
-                table.Add(mul(table[i - 1], table[i - 1], mod));
+                table.Add(table[i - 1] * table[i - 1] % mod);
             stw.Stop();
             table_time = stw.Elapsed.TotalMilliseconds;
 
@@ -1938,7 +2103,7 @@ namespace DigitsPower
             i = (int)(Math.Log((double)pow, 2));
             while (i >= 0)
             {
-                res = mul(res, res, mod);
+                res = res * res % mod;
                 if (1 == ((pow >> i) & 1))
                 {
                     if (0 < i && 0 == ((pow >> (i - 1)) & 1))
@@ -1951,12 +2116,12 @@ namespace DigitsPower
                             t++;
                         }
                         res = BinaryRL(res, 1 << (t - 1), mod);
-                        res = mul(res, table[t - 1], mod);
+                        res = res * table[t - 1] % mod;
                         i = i - t + 1;
                     }
                     else
                     {
-                        res = mul(res, found, mod);
+                        res = res * found % mod;
                         //--i;
                     }
                 }
@@ -1988,14 +2153,14 @@ namespace DigitsPower
             i = (int)(Log((double)pow, 2));
             while (i >= 0)
             {
-                res = mul(res, res, mod);
+                res = res * res % mod;
                 if (1 == ((pow >> i) & 1))
                 {
                     t = 1;
                     while (t < w && t < i && 1 == ((pow >> (i - t)) & 1))
                         t++;
                     res = BinaryRL(res, 1 << (t - 1), mod);
-                    res = mul(res, table[t], mod);
+                    res = res * table[t] % mod;
                     i = i - t + 1;
                 }
 
@@ -2027,7 +2192,7 @@ namespace DigitsPower
             i = (int)(Log((double)pow, 2));
             while (i >= 0)//>=
             {
-                res = mul(res, res, mod);
+                res = res * res % mod;
                 if (1 == ((pow >> i) & 1))
                 {
                     if (0 == ((pow >> (i - 1)) & 1))
@@ -2051,19 +2216,19 @@ namespace DigitsPower
                         if (t > 0)
                         {
                             res = BinaryRL(res, (1 <<(t - 1)), mod);
-                            res = mul(res, table[t - 1], mod);
+                            res = res * table[t - 1] % mod;
                             i = i - t + 1;
                         }
                         else
                         {
-                            res = mul(res, table[0], mod);
+                            res = res * table[0] % mod;
                         }
 
                     }
                     else
                     {
-                        res = mul(res, res, mod);
-                        res = mul(res, table[1], mod);
+                        res = res * res % mod;
+                        res = res * table[1] % mod;
                         i--;
                     }
 
@@ -2124,13 +2289,13 @@ namespace DigitsPower
                         if (t > 0)
                         {
                             res = BinaryRL(res, 1 << t, mod);
-                            res = mul(res, table2[t - 1], mod);
+                            res = res * table2[t - 1] % mod;
                             i = i - t;
                         }
                         else
                         {
-                            res = mul(res, res, mod);
-                            res = mul(res, table2[0], mod);
+                            res = res * res % mod;
+                            res = res * table2[0] % mod;
                             i--;
                         }
                     }
@@ -2140,13 +2305,13 @@ namespace DigitsPower
                         while (t < w && t < i && 1 == ((pow >> (i - t)) & 1))
                             t++;
                         res = BinaryRL(res, 1 << t, mod);
-                        res = mul(res, table1[t - 1], mod);
+                        res = res * table1[t - 1] % mod;
                         i = i - t;
                     }
                 }
                 else
                 {
-                    res = mul(res, res, mod);
+                    res = res * res % mod;
                     i--;
                 }
 
@@ -4706,13 +4871,13 @@ namespace DigitsPower
                 var max = FindLargest2(x, i, w);
 
                 if (max[0] > 0)
-                    res = mul(res, table[(BigInteger)(Abs((decimal)x[i]) / 2)], mod);
+                    res = res * table[(BigInteger)(Abs((decimal)x[i]) / 2)] % mod;
                 else if (max[0] < 0)
-                    res = mul(res, Euclid_2_1(mod, table[(BigInteger)(Abs((decimal)x[i]) / 2)]), mod);
+                    res = res * Euclid_2_1(mod, table[(BigInteger)(Abs((decimal)x[i]) / 2)]) % mod;
 
                 for (int d = 0; d < max[1]; d++)
                     for (int j = 0; j < table.Count; j++)
-                        table[j] = mul(table[j], table[j], mod);
+                        table[j] = table[j] * table[j] % mod;
 
                 i = i - max[1];
             }
