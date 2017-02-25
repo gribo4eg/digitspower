@@ -29,10 +29,10 @@ namespace DigitsPower
 
         protected abstract void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod);
 
-        /*protected void SendStatus()
+        protected void SendStatus()
         {
             (Application.OpenForms[0] as MainForm).ChangeStatus(GetType().Name);
-        }*/
+        }
 
         protected int[] MakeDigits(string[] mas)
         {
@@ -88,7 +88,7 @@ namespace DigitsPower
 
         public virtual void Create_Result()
         {
-
+            SendStatus();
             string path = Directory.GetCurrentDirectory();
             string[] founds = Directory.GetFiles(path + "\\Base\\" + Found);
             string[] degrees = Directory.GetFiles(path + "\\Exponent\\" + Degree);
@@ -128,6 +128,8 @@ namespace DigitsPower
                     }
                     break;
             }
+
+            SendStatus();
         }
 
         protected double Watch(string Found_file, string Degree_file, string Mod_file)
@@ -199,6 +201,11 @@ namespace DigitsPower
         public abstract string Name();
 
         protected abstract void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, params BigInteger[] list);
+
+        protected void SendStatus()
+        {
+            (Application.OpenForms[0] as MainForm).ChangeStatus(Name());
+        }
 
         protected int[] MakeDigits(string[] mas)
         {
@@ -369,7 +376,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write(Two.Split('\\')[0] + "\\" + (order ? "b_max" : "a_max") + ";");
+                            sw.Write(Two.Split('\\')[0] + "\\" + (order ? "b_max" : "a_max") + ";");//mistake?
 
                             for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
                             {
@@ -469,7 +476,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "a_max" : "b_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
@@ -519,7 +526,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "a_max" : "b_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                             {
@@ -569,7 +576,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");//mistake?
 
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
@@ -596,7 +603,7 @@ namespace DigitsPower
 
         public virtual void Create_Result()
         {
-
+            SendStatus();
             string path = Directory.GetCurrentDirectory();
             string[] founds = Directory.GetFiles(path + "\\Base\\" + Found);
             string[] degrees = Directory.GetFiles(path + "\\Exponent\\" + Degree);
@@ -912,7 +919,7 @@ namespace DigitsPower
                     }
                     break;
             }
-
+            SendStatus();
         }
 
         protected double Watch(string Found_file, string Degree_file, string Mod_file, BigInteger amax, BigInteger bmax)

@@ -304,20 +304,27 @@ namespace DigitsPower
             
         }
 
-        /*public void ChangeStatus(string method)
+        public void ChangeStatus(string method)
         {
             if(ResultsButton.Enabled)
             {
-                ResultsButton.Enabled = false;
-                statusLabel.Text = "Status: Calculating "+method;
+                ResultsButton.Invoke(new Action(() => ResultsButton.Enabled = false));
+                statusLabel.Invoke(new Action<string>((text) =>
+                    statusLabel.Text = "Status: Calculating " + text), method);
             }
             else
             {
-                ResultsButton.Enabled = true;
-                statusLabel.Text = "Status: Finish!";
+                ResultsButton.Invoke(new Action(() => ResultsButton.Enabled = true));
+                statusLabel.Invoke(new Action(() =>
+                    statusLabel.Text = "Status: Finished!"));
             }
-        }*/
+        }
 
+        private void ChangeButtonStatus()
+        {
+            bool state = ResultsButton.Enabled;
+            ResultsButton.Invoke(new Action(() => ResultsButton.Enabled = !state));
+        }
         /// <summary>
         /// Calculatebuttons the click.
         /// </summary>
