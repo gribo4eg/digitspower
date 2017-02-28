@@ -376,7 +376,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write(Two.Split('\\')[0] + "\\" + (order ? "b_max" : "a_max") + ";");//mistake?
+                            sw.Write(Two.Split('\\')[0] + "\\" + (order ? "a_max" : "b_max") + ";");
 
                             for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
                             {
@@ -476,7 +476,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "a_max" : "b_max") + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
@@ -526,7 +526,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "a_max" : "b_max") + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                             {
@@ -576,7 +576,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");//mistake?
+                            sw.Write((order ? "a_max" : "b_max") + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
@@ -996,10 +996,10 @@ namespace DigitsPower
 
         protected abstract void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, int w, out double TableTime);
 
-        /*protected void SendStatus()
+        protected void SendStatus()
         {
             (Application.OpenForms[0] as MainForm).ChangeStatus(GetType().Name);
-        }*/
+        }
 
         private int[] MakeDigits(string[] mas)
         {
@@ -1313,7 +1313,7 @@ namespace DigitsPower
 
         public void Create_Result()
         {
-
+            SendStatus();
             string path = Directory.GetCurrentDirectory();
 
             string[] founds = Directory.GetFiles(path + "\\Base\\" + Found);
@@ -1393,11 +1393,12 @@ namespace DigitsPower
                     MessageBox.Show("Wrong parametrs", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
-
+            SendStatus();
         }
 
         public void Create_Result(string found, string degree, string mod, string by, string window, bool table)
         {
+            SendStatus();
             string path = Directory.GetCurrentDirectory();
 
             string[] founds = Directory.GetFiles(path + "\\Base\\" + found);
@@ -1478,6 +1479,7 @@ namespace DigitsPower
                     MessageBox.Show("Wrong parametrs", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
+            SendStatus();
         }
 
         protected double Watch(string Found_file, string Degree_file, string Mod_file, int w, out double table_time)
@@ -1637,16 +1639,12 @@ namespace DigitsPower
     {
         bool convert_method;
 
-        public DBNS1RL(string found, string degree, string mod, string by, string a_max, string b_max) : base(found, degree, mod, by, a_max, b_max)
-        {
-            convert_method = true;
-        }
         public DBNS1RL(string found, string degree, string mod, string by, bool choice, string a_max, string b_max) : base(found, degree, mod, by, a_max, b_max)
         {
             convert_method = choice;
         }
 
-        public override string Name() { return "DBNS1RL"; }
+        public override string Name() { return convert_method ? "DBNS 1.1 RL" : "DBNS 1.2 RL"; }
 
         protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, params BigInteger[] list)
         {
@@ -1657,16 +1655,12 @@ namespace DigitsPower
     {
         bool convert_method;
 
-        public DBNS1LR(string found, string degree, string mod, string by, string a_max, string b_max) : base(found, degree, mod, by, a_max, b_max)
-        {
-            convert_method = true;
-        }
         public DBNS1LR(string found, string degree, string mod, string by, bool choice, string a_max, string b_max) : base(found, degree, mod, by, a_max, b_max)
         {
             convert_method = choice;
         }
 
-        public override string Name() { return "DBNS1LR"; }
+        public override string Name() { return convert_method ? "DBNS 1.1 LR" : "DBNS 1.2 LR"; }
         protected override void LoopFunc(BigInteger found, BigInteger pow, BigInteger mod, params BigInteger[] list) { PowFunctions.DBNS1LR(found, pow, mod, convert_method, (int)list[0], (int)list[1]); }
     }
     #endregion

@@ -306,18 +306,9 @@ namespace DigitsPower
 
         public void ChangeStatus(string method)
         {
-            if(ResultsButton.Enabled)
-            {
-                ResultsButton.Invoke(new Action(() => ResultsButton.Enabled = false));
-                statusLabel.Invoke(new Action<string>((text) =>
-                    statusLabel.Text = "Status: Calculating " + text), method);
-            }
-            else
-            {
-                ResultsButton.Invoke(new Action(() => ResultsButton.Enabled = true));
-                statusLabel.Invoke(new Action(() =>
-                    statusLabel.Text = "Status: Finished!"));
-            }
+            string status = ResultsButton.Enabled ? "Status: Calculating " + method : "Status: Finished!";
+            ChangeLabelStatus(status);
+            ChangeButtonStatus();
         }
 
         private void ChangeButtonStatus()
@@ -325,6 +316,13 @@ namespace DigitsPower
             bool state = ResultsButton.Enabled;
             ResultsButton.Invoke(new Action(() => ResultsButton.Enabled = !state));
         }
+
+        private void ChangeLabelStatus(string status)
+        {
+            statusLabel.Invoke(new Action<string>((text) =>
+                statusLabel.Text = text), status);
+        }
+
         /// <summary>
         /// Calculatebuttons the click.
         /// </summary>
