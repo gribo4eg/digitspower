@@ -304,8 +304,16 @@ namespace DigitsPower
             
         }
 
-        public void ChangeStatus(string method)
+        public void ChangeStatus(string name)
         {
+
+            string method = "";
+            foreach (var checkedItem in OperCheckList.CheckedItems)
+            {
+                if (!checkedItem.ToString().Contains(name)) continue;
+                method = checkedItem.ToString();
+                break;
+            }
             string status = ResultsButton.Enabled ? "Status: Calculating " + method : "Status: Finished!";
             ChangeLabelStatus(status);
             ChangeButtonStatus();

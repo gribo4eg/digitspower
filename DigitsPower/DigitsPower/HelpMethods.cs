@@ -858,6 +858,13 @@ namespace DigitsPower
             bool nsdMethods = false;
             string methodNumber = "";
 
+            List<String> indexes = new List<string>();
+            foreach (var index in OperCheckList.CheckedItems)
+            {
+                indexes.Add(index.ToString());
+                OperCheckList.Items.Contains((object)index);
+            }
+
             for (int i = 0; i < OperationsListTest.CheckedIndices.Count; i++)
                 {
                     #region Binary
