@@ -376,7 +376,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write(Two.Split('\\')[0] + "\\" + (order ? "a1_max" : "b1_max") + ";");
+                            sw.Write(Two.Split('\\')[0] + "\\" + (order ? "b1_max" : "a1_max") + ";");
 
                             for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
                             {
@@ -476,7 +476,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "a1_max" : "b1_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "b2_max" : "a2_max") + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
@@ -526,7 +526,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "a1_max" : "b1_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "b3_max" : "a3_max") + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                             {
@@ -576,7 +576,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "a1_max" : "b1_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "b4_max" : "a4_max") + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
