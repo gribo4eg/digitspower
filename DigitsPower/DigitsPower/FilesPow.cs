@@ -209,7 +209,7 @@ namespace DigitsPower
 
         protected int[] MakeDigits(string[] mas)
         {
-            int[] mas_i = new int[mas.Length]; ;
+            int[] mas_i = new int[mas.Length];
 
             for (int i = 0; i < mas.Length; i++)
             {
@@ -262,21 +262,21 @@ namespace DigitsPower
             {
                 var x = aMax;
                 aMax = bMax;
-                bMax = aMax;
+                bMax = x;
             }
             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
             {
-                amax_di = Directory.CreateDirectory(di + "\\" + aMax[amax_len]);
+                amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] +" "+ aMax[amax_len]);
                 for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
                 {
-                    bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + bMax[bmax_len]);
+                    bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + Choice[1] +" "+ bMax[bmax_len]);
                     for (int f_len = 0; f_len < one.Length; f_len++)
                     {
-                        FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + One.Split('\\')[0] + "_" + one_i[f_len] + ".csv", FileMode.Create, FileAccess.Write);
+                        FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Two.Split('\\')[0] + "_" + two_i[f_len] + ".csv", FileMode.Create, FileAccess.Write);
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write(Two.Split('\\')[0] + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write(One.Split('\\')[0] + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
@@ -845,10 +845,10 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenAB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenAB(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Exponent":
-                                    GenAB(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenAB(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Modulus":
                                     GenAB(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);

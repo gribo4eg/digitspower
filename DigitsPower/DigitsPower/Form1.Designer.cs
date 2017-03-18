@@ -48,9 +48,19 @@
             this.NumberText = new System.Windows.Forms.TextBox();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.FilePow = new System.Windows.Forms.TabPage();
+            this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.binAxis_3 = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.binAxis_2 = new System.Windows.Forms.ComboBox();
+            this.binAxis_1 = new System.Windows.Forms.ComboBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.textBmax = new System.Windows.Forms.TextBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.textAmax = new System.Windows.Forms.TextBox();
             this.statusLabel = new System.Windows.Forms.Label();
             this.aMontFlag = new System.Windows.Forms.CheckBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
             this.label15 = new System.Windows.Forms.Label();
             this.binAxis = new System.Windows.Forms.ComboBox();
@@ -117,22 +127,12 @@
             this.textB = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.textA = new System.Windows.Forms.TextBox();
-            this.groupBox14 = new System.Windows.Forms.GroupBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.binAxis_3 = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.binAxis_2 = new System.Windows.Forms.ComboBox();
-            this.binAxis_1 = new System.Windows.Forms.ComboBox();
-            this.label28 = new System.Windows.Forms.Label();
-            this.textBmax = new System.Windows.Forms.TextBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.textAmax = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.FilePow.SuspendLayout();
+            this.groupBox14.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox11.SuspendLayout();
             this.groupBox10.SuspendLayout();
@@ -145,7 +145,6 @@
             this.groupBox8.SuspendLayout();
             this.Pow.SuspendLayout();
             this.groupBox13.SuspendLayout();
-            this.groupBox14.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -386,7 +385,6 @@
             this.FilePow.Controls.Add(this.groupBox14);
             this.FilePow.Controls.Add(this.statusLabel);
             this.FilePow.Controls.Add(this.aMontFlag);
-            this.FilePow.Controls.Add(this.label24);
             this.FilePow.Controls.Add(this.groupBox12);
             this.FilePow.Controls.Add(this.groupBox11);
             this.FilePow.Controls.Add(this.ResultsButton);
@@ -401,6 +399,131 @@
             this.FilePow.ToolTipText = "Fuuu";
             this.FilePow.UseVisualStyleBackColor = true;
             // 
+            // groupBox14
+            // 
+            this.groupBox14.Controls.Add(this.label34);
+            this.groupBox14.Controls.Add(this.binAxis_3);
+            this.groupBox14.Controls.Add(this.label14);
+            this.groupBox14.Controls.Add(this.label33);
+            this.groupBox14.Controls.Add(this.binAxis_2);
+            this.groupBox14.Controls.Add(this.binAxis_1);
+            this.groupBox14.Controls.Add(this.label28);
+            this.groupBox14.Controls.Add(this.textBmax);
+            this.groupBox14.Controls.Add(this.label29);
+            this.groupBox14.Controls.Add(this.textAmax);
+            this.groupBox14.Location = new System.Drawing.Point(12, 71);
+            this.groupBox14.Name = "groupBox14";
+            this.groupBox14.Size = new System.Drawing.Size(304, 159);
+            this.groupBox14.TabIndex = 35;
+            this.groupBox14.TabStop = false;
+            this.groupBox14.Text = "Parametrs for 19, 20";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(33, 77);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(88, 13);
+            this.label34.TabIndex = 43;
+            this.label34.Text = "Third axis (Files) :";
+            // 
+            // binAxis_3
+            // 
+            this.binAxis_3.FormattingEnabled = true;
+            this.binAxis_3.Items.AddRange(new object[] {
+            "Base",
+            "Exponent",
+            "Modulus",
+            "aMax",
+            "bMax"});
+            this.binAxis_3.Location = new System.Drawing.Point(129, 74);
+            this.binAxis_3.Name = "binAxis_3";
+            this.binAxis_3.Size = new System.Drawing.Size(158, 21);
+            this.binAxis_3.TabIndex = 42;
+            this.binAxis_3.Text = "Modulus";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(17, 22);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(103, 13);
+            this.label14.TabIndex = 40;
+            this.label14.Text = "First axis (Catalogs) :";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(3, 49);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(121, 13);
+            this.label33.TabIndex = 41;
+            this.label33.Text = "Second axis (Catalogs) :";
+            // 
+            // binAxis_2
+            // 
+            this.binAxis_2.FormattingEnabled = true;
+            this.binAxis_2.Items.AddRange(new object[] {
+            "Base",
+            "Exponent",
+            "Modulus",
+            "aMax",
+            "bMax"});
+            this.binAxis_2.Location = new System.Drawing.Point(129, 46);
+            this.binAxis_2.Name = "binAxis_2";
+            this.binAxis_2.Size = new System.Drawing.Size(158, 21);
+            this.binAxis_2.TabIndex = 39;
+            this.binAxis_2.Text = "Exponent";
+            // 
+            // binAxis_1
+            // 
+            this.binAxis_1.FormattingEnabled = true;
+            this.binAxis_1.Items.AddRange(new object[] {
+            "Base",
+            "Exponent",
+            "Modulus",
+            "aMax",
+            "bMax"});
+            this.binAxis_1.Location = new System.Drawing.Point(129, 19);
+            this.binAxis_1.Name = "binAxis_1";
+            this.binAxis_1.Size = new System.Drawing.Size(158, 21);
+            this.binAxis_1.TabIndex = 37;
+            this.binAxis_1.Text = "Base";
+            // 
+            // label28
+            // 
+            this.label28.AutoSize = true;
+            this.label28.Location = new System.Drawing.Point(79, 104);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(44, 13);
+            this.label28.TabIndex = 18;
+            this.label28.Text = "a_max :";
+            // 
+            // textBmax
+            // 
+            this.textBmax.Location = new System.Drawing.Point(129, 127);
+            this.textBmax.Name = "textBmax";
+            this.textBmax.Size = new System.Drawing.Size(158, 20);
+            this.textBmax.TabIndex = 17;
+            this.textBmax.Text = "7-17";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Location = new System.Drawing.Point(79, 130);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(44, 13);
+            this.label29.TabIndex = 16;
+            this.label29.Text = "b_max :";
+            // 
+            // textAmax
+            // 
+            this.textAmax.Location = new System.Drawing.Point(129, 101);
+            this.textAmax.Name = "textAmax";
+            this.textAmax.Size = new System.Drawing.Size(158, 20);
+            this.textAmax.TabIndex = 15;
+            this.textAmax.Text = "5-15";
+            // 
             // statusLabel
             // 
             this.statusLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -414,22 +537,13 @@
             // aMontFlag
             // 
             this.aMontFlag.AutoSize = true;
-            this.aMontFlag.Location = new System.Drawing.Point(787, 207);
+            this.aMontFlag.Location = new System.Drawing.Point(724, 201);
             this.aMontFlag.Name = "aMontFlag";
             this.aMontFlag.Size = new System.Drawing.Size(131, 17);
             this.aMontFlag.TabIndex = 31;
             this.aMontFlag.Text = "Montgomery reduction";
             this.aMontFlag.UseVisualStyleBackColor = true;
             this.aMontFlag.CheckedChanged += new System.EventHandler(this.aMontFlag_CheckedChanged);
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(669, 208);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(116, 13);
-            this.label24.TabIndex = 33;
-            this.label24.Text = "(Results in miliseconds)";
             // 
             // groupBox12
             // 
@@ -573,7 +687,7 @@
             this.ResultsButton.Name = "ResultsButton";
             this.ResultsButton.Size = new System.Drawing.Size(348, 23);
             this.ResultsButton.TabIndex = 22;
-            this.ResultsButton.Text = "Calculate";
+            this.ResultsButton.Text = "Calculate (Results in miliseconds)";
             this.ResultsButton.UseVisualStyleBackColor = false;
             this.ResultsButton.Click += new System.EventHandler(this.ResultsButton_Click);
             // 
@@ -1172,131 +1286,6 @@
             this.textA.TabIndex = 15;
             this.textA.Text = "15";
             // 
-            // groupBox14
-            // 
-            this.groupBox14.Controls.Add(this.label34);
-            this.groupBox14.Controls.Add(this.binAxis_3);
-            this.groupBox14.Controls.Add(this.label14);
-            this.groupBox14.Controls.Add(this.label33);
-            this.groupBox14.Controls.Add(this.binAxis_2);
-            this.groupBox14.Controls.Add(this.binAxis_1);
-            this.groupBox14.Controls.Add(this.label28);
-            this.groupBox14.Controls.Add(this.textBmax);
-            this.groupBox14.Controls.Add(this.label29);
-            this.groupBox14.Controls.Add(this.textAmax);
-            this.groupBox14.Location = new System.Drawing.Point(12, 71);
-            this.groupBox14.Name = "groupBox14";
-            this.groupBox14.Size = new System.Drawing.Size(304, 159);
-            this.groupBox14.TabIndex = 35;
-            this.groupBox14.TabStop = false;
-            this.groupBox14.Text = "Parametrs for 19, 20";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(33, 77);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(88, 13);
-            this.label34.TabIndex = 43;
-            this.label34.Text = "Third axis (Files) :";
-            // 
-            // binAxis_3
-            // 
-            this.binAxis_3.FormattingEnabled = true;
-            this.binAxis_3.Items.AddRange(new object[] {
-            "Base",
-            "Exponent",
-            "Modulus",
-            "aMax",
-            "bMax"});
-            this.binAxis_3.Location = new System.Drawing.Point(129, 74);
-            this.binAxis_3.Name = "binAxis_3";
-            this.binAxis_3.Size = new System.Drawing.Size(158, 21);
-            this.binAxis_3.TabIndex = 42;
-            this.binAxis_3.Text = "Modulus";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(17, 22);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(103, 13);
-            this.label14.TabIndex = 40;
-            this.label14.Text = "First axis (Catalogs) :";
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(3, 49);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(121, 13);
-            this.label33.TabIndex = 41;
-            this.label33.Text = "Second axis (Catalogs) :";
-            // 
-            // binAxis_2
-            // 
-            this.binAxis_2.FormattingEnabled = true;
-            this.binAxis_2.Items.AddRange(new object[] {
-            "Base",
-            "Exponent",
-            "Modulus",
-            "aMax",
-            "bMax"});
-            this.binAxis_2.Location = new System.Drawing.Point(129, 46);
-            this.binAxis_2.Name = "binAxis_2";
-            this.binAxis_2.Size = new System.Drawing.Size(158, 21);
-            this.binAxis_2.TabIndex = 39;
-            this.binAxis_2.Text = "Exponent";
-            // 
-            // binAxis_1
-            // 
-            this.binAxis_1.FormattingEnabled = true;
-            this.binAxis_1.Items.AddRange(new object[] {
-            "Base",
-            "Exponent",
-            "Modulus",
-            "aMax",
-            "bMax"});
-            this.binAxis_1.Location = new System.Drawing.Point(129, 19);
-            this.binAxis_1.Name = "binAxis_1";
-            this.binAxis_1.Size = new System.Drawing.Size(158, 21);
-            this.binAxis_1.TabIndex = 37;
-            this.binAxis_1.Text = "Base";
-            // 
-            // label28
-            // 
-            this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(79, 104);
-            this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(44, 13);
-            this.label28.TabIndex = 18;
-            this.label28.Text = "a_max :";
-            // 
-            // textBmax
-            // 
-            this.textBmax.Location = new System.Drawing.Point(129, 127);
-            this.textBmax.Name = "textBmax";
-            this.textBmax.Size = new System.Drawing.Size(158, 20);
-            this.textBmax.TabIndex = 17;
-            this.textBmax.Text = "7-17";
-            // 
-            // label29
-            // 
-            this.label29.AutoSize = true;
-            this.label29.Location = new System.Drawing.Point(79, 130);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(44, 13);
-            this.label29.TabIndex = 16;
-            this.label29.Text = "b_max :";
-            // 
-            // textAmax
-            // 
-            this.textAmax.Location = new System.Drawing.Point(129, 101);
-            this.textAmax.Name = "textAmax";
-            this.textAmax.Size = new System.Drawing.Size(158, 20);
-            this.textAmax.TabIndex = 15;
-            this.textAmax.Text = "5-15";
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1312,6 +1301,8 @@
             this.tabControl1.ResumeLayout(false);
             this.FilePow.ResumeLayout(false);
             this.FilePow.PerformLayout();
+            this.groupBox14.ResumeLayout(false);
+            this.groupBox14.PerformLayout();
             this.groupBox12.ResumeLayout(false);
             this.groupBox12.PerformLayout();
             this.groupBox11.ResumeLayout(false);
@@ -1333,8 +1324,6 @@
             this.Pow.ResumeLayout(false);
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
-            this.groupBox14.ResumeLayout(false);
-            this.groupBox14.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1419,7 +1408,6 @@
         private System.Windows.Forms.TextBox textA;
         private System.Windows.Forms.ComboBox binAxis;
         private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox comboBox2;
