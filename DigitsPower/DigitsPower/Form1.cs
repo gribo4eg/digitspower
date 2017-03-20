@@ -130,7 +130,7 @@ namespace DigitsPower
             var lenght = GenFunctions.ReadString(len);
             try
             {
-                var di = Directory.CreateDirectory($"{path}\\{dir}\\{type}{lenght[0]}_{lenght[lenght.Count - 1]}_{count}({radix})#{DateTime.Now.ToLocalTime().ToString().Replace(':', '-')}");
+                var di = Directory.CreateDirectory($"{path}\\{dir}\\{type}{len.Replace('-','_')}_{count}({radix})#{DateTime.Now.ToLocalTime().ToString().Replace(':', '-')}");
                 FileStream fin;
                 for (int j = 0; j < lenght.Count; j++)
                 {
