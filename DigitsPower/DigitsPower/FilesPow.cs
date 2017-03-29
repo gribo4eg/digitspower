@@ -1,7 +1,8 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Windows.Forms;
 using System.Numerics;
 
@@ -222,7 +223,7 @@ namespace DigitsPower
 
         private string AddZeros(string num, string maxNum)
         {
-            while (num.Length != maxNum.Length)
+            while (num.Length < maxNum.Length)
             {
                 num = num.Insert(0, "0");
             }
@@ -275,11 +276,11 @@ namespace DigitsPower
             }
             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
             {
-                amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] +" "+ AddZeros(aMax[amax_len].ToString(), aMax.Count.ToString()));
+                amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] +" "+ AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
                 //amax_di = Directory.CreateDirectory(di + "\\" + aMax[amax_len]);
                 for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
                 {
-                    bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + Choice[1] +" "+ AddZeros(bMax[bmax_len].ToString(), bMax.Count.ToString()));
+                    bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + Choice[1] +" "+ AddZeros(bMax[bmax_len].ToString(), bMax.Max().ToString()));
                     //bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + bMax[bmax_len]);
 
                     for (int f_len = 0; f_len < one.Length; f_len++)
@@ -330,7 +331,7 @@ namespace DigitsPower
             }
             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
             {
-                amax_di = Directory.CreateDirectory(di + "\\" + AddZeros(aMax[amax_len].ToString(), aMax.Count.ToString()));
+                amax_di = Directory.CreateDirectory(di + "\\" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
                 for (int f_len = 0; f_len < one.Length; f_len++)
                 {
                     bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + One.Split('\\')[0] + "_" + one_i[f_len]);
@@ -380,7 +381,7 @@ namespace DigitsPower
             }
             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
             {
-                amax_di = Directory.CreateDirectory(di + "\\" + AddZeros(aMax[amax_len].ToString(), aMax.Count.ToString()));
+                amax_di = Directory.CreateDirectory(di + "\\" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
                 for (int f_len = 0; f_len < one.Length; f_len++)
                 {
                     bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + One.Split('\\')[0] + "_" + one_i[f_len]);
