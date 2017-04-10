@@ -283,9 +283,9 @@ namespace DigitsPower
                     bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + Choice[1] +" "+ AddZeros(bMax[bmax_len].ToString(), bMax.Max().ToString()));
                     //bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + bMax[bmax_len]);
 
-                    for (int d_len = 0; d_len < two.Length; d_len++)
+                    for (int f_len = 0; f_len < one.Length; f_len++)
                     {
-                        FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Two.Split('\\')[0] + "_" + two_i[d_len] + ".csv", FileMode.Create, FileAccess.Write);
+                        FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Two.Split('\\')[0] + "_" + one_i[f_len] + ".csv", FileMode.Create, FileAccess.Write);
                         //FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + One.Split('\\')[0] + "_" + two_i[f_len] + ".csv", FileMode.Create, FileAccess.Write);
 
                         using (StreamWriter sw = new StreamWriter(fin))
@@ -298,9 +298,9 @@ namespace DigitsPower
                                 sw.Write(three_i[m_len] + ";");
                             }
                             sw.WriteLine();
-                            for (int f_len = 0; f_len < one.Length; f_len++)
+                            for (int d_len = 0; d_len < two.Length; d_len++)
                             {
-                                sw.Write(one_i[f_len] + ";");
+                                sw.Write(two_i[d_len] + ";");
                                 for (int m_len = 0; m_len < three.Length; m_len++)
                                 {
                                     sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
