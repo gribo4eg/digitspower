@@ -285,7 +285,7 @@ namespace DigitsPower
 
                     for (int f_len = 0; f_len < one.Length; f_len++)
                     {
-                        FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Two.Split('\\')[0] + "_" + one_i[f_len] + ".csv", FileMode.Create, FileAccess.Write);
+                        FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Two.Split('\\')[0] + "_" + AddZeros(one_i[f_len].ToString(), one_i.Max().ToString()) + ".csv", FileMode.Create, FileAccess.Write);
                         //FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + One.Split('\\')[0] + "_" + two_i[f_len] + ".csv", FileMode.Create, FileAccess.Write);
 
                         using (StreamWriter sw = new StreamWriter(fin))
