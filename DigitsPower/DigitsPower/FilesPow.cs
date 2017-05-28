@@ -577,17 +577,17 @@ namespace DigitsPower
             {
                 var x = aMax;
                 aMax = bMax;
-                bMax = aMax;
+                bMax = x;//bMax = aMax
             }
             for (int f_len = 0; f_len < one.Length; f_len++)
             {
-                one_dir = Directory.CreateDirectory(di + "\\" + One.Split('\\')[0] + "_" + one_i[f_len]);
+                one_dir = Directory.CreateDirectory(di + "\\" + One.Split('\\')[0] + "_" + AddZeros(one_i[f_len].ToString(), one_i.Max().ToString()));
                 for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                 {
-                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + aMax[amax_len]);
+                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
                     for (int d_len = 0; d_len < two.Length; d_len++)
                     {
-                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Two.Split('\\')[0] + "_" + two_i[d_len] + ".csv", FileMode.Create, FileAccess.Write);
+                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Two.Split('\\')[0] + "_" + AddZeros(two_i[d_len].ToString(), two_i.Max().ToString()) + ".csv", FileMode.Create, FileAccess.Write);
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
@@ -741,7 +741,7 @@ namespace DigitsPower
                                     Gen_A_B_(degrees, founds, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//Gen_A_B_
                                     break;
                                 case "Modulus":
-                                    Gen_A_B_(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//degrees mods founds
                                     break;
                                 case "aMax":
                                     Gen_AB(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
