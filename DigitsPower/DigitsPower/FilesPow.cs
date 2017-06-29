@@ -377,7 +377,7 @@ namespace DigitsPower
             {
                 var x = aMax;
                 aMax = bMax;
-                bMax = aMax;
+                bMax = x;
             }
             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
             {
@@ -910,7 +910,7 @@ namespace DigitsPower
                                     GenA__B(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Exponent":
-                                    GenA__B(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
                                     GenA_B_(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
