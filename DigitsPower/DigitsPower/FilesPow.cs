@@ -381,7 +381,7 @@ namespace DigitsPower
             }
             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
             {
-                amax_di = Directory.CreateDirectory(di + "\\" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
+                amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
                 for (int f_len = 0; f_len < one.Length; f_len++)
                 {
                     bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + One.Split('\\')[0] + "_" + one_i[f_len]);
