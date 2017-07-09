@@ -268,12 +268,14 @@ namespace DigitsPower
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
             DirectoryInfo amax_di, bmax_di;
+            /*
             if (!order)
             {
                 var x = aMax;
                 aMax = bMax;
                 bMax = x;
             }
+            */
             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
             {
                 amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] +" "+ AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
@@ -323,12 +325,14 @@ namespace DigitsPower
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
             DirectoryInfo amax_di, bmax_di;
+            /*
             if (!order)
             {
                 var x = aMax;
                 aMax = bMax;
                 bMax = x;
             }
+            */
             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
             {
                 amax_di = Directory.CreateDirectory(di + "\\" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
@@ -373,12 +377,14 @@ namespace DigitsPower
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
             DirectoryInfo amax_di, bmax_di;
+            /*
             if (!order)
             {
                 var x = aMax;
                 aMax = bMax;
                 bMax = x;
             }
+            */
             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
             {
                 amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
@@ -423,12 +429,14 @@ namespace DigitsPower
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
             DirectoryInfo amax_di, one_dir;
+            /*
             if (!order)
             {
                 var x = aMax;
                 aMax = bMax;
                 bMax = aMax; 
             }
+            */
             for (int f_len = 0; f_len < one.Length; f_len++)
             {
                 one_dir = Directory.CreateDirectory(di + "\\" + One.Split('\\')[0] + "_" + one_i[f_len]);
@@ -473,12 +481,14 @@ namespace DigitsPower
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
             DirectoryInfo one_dir, two_dir;
+            /*
             if (!order)
             {
                 var x = aMax;
                 aMax = bMax;
                 bMax = aMax;
             }
+            */
             for (int f_len = 0; f_len < one.Length; f_len++)
             {
                 one_dir = Directory.CreateDirectory(di + "\\" + One.Split('\\')[0] + "_" + one_i[f_len]);
@@ -523,12 +533,14 @@ namespace DigitsPower
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
             DirectoryInfo one_dir, two_dir;
+            /*
             if (!order)
             {
                 var x = aMax;
                 aMax = bMax;
                 bMax = aMax;
             }
+            */
             for (int f_len = 0; f_len < one.Length; f_len++)
             {
                 one_dir = Directory.CreateDirectory(di + "\\" + One.Split('\\')[0] + "_" + one_i[f_len]);
@@ -573,12 +585,14 @@ namespace DigitsPower
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
             DirectoryInfo amax_di, one_dir;
+            /*
             if (!order)
             {
                 var x = aMax;
                 aMax = bMax;
                 bMax = x;//bMax = aMax
             }
+            */
             for (int f_len = 0; f_len < one.Length; f_len++)
             {
                 one_dir = Directory.CreateDirectory(di + "\\" + One.Split('\\')[0] + "_" + AddZeros(one_i[f_len].ToString(), one_i.Max().ToString()));
