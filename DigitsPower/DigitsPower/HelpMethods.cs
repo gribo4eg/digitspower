@@ -948,7 +948,93 @@ namespace DigitsPower
                                      + methodNumber + " вони мають бути взаємнопростими";
                     MessageBox.Show(message, "Warning", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+        }
+
+        private void ShowTests(int count)
+        {
+            string passed = "PASSED";
+            string notPassed = "NOT PASSED";
+            try
+            {
+                for (int i = 0; i < count; i++)
+                {
+                    BigInteger mod = GenFunctions.random_max(8);
+                    BigInteger pow = GenFunctions.random_max(8);
+                    BigInteger num = GenFunctions.random_max(8);
+                    double table = 0;
+                    int window = 3;
+
+                    BigInteger nsd = NSD(mod, num % mod);
+
+                    BigInteger compare = BigInteger.ModPow(num, pow, mod);
+
+                    OperationsResult.Items.Add("\nTest №"+(i+1)+"; Base: " + num + "; Exponent: " + pow + "; Modulus: " + mod + ";\n"); OperationsResult.Update();
+                    
+                    OperationsResult.Items.Add("Binary RL\t\t:" +(compare == PowFunctions.BinaryRL(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Binary LR\t\t:" + (compare == PowFunctions.BinaryLR(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                    if (nsd == 1)
+                    {
+                        OperationsResult.Items.Add("NAF Binary RL\t\t:" + (compare == PowFunctions.NAFBinaryRL(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                        OperationsResult.Items.Add("NAF Binary LR\t\t:" +(compare == PowFunctions.NAFBinaryLR(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                        OperationsResult.Items.Add("Add Sub RL\t\t:" + (compare == PowFunctions.AddSubRL(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                        OperationsResult.Items.Add("Add Sub LR\t\t:" + (compare == PowFunctions.AddSubLR(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                        OperationsResult.Items.Add("DBNS1RL 1\t\t:" + (compare == PowFunctions.DBNS1RL(num, pow, mod, true, AdditionalParameters.A, AdditionalParameters.B) ? passed : notPassed)); OperationsResult.Update();
+                        OperationsResult.Items.Add("DBNS1RL 2\t\t:" + (compare == PowFunctions.DBNS1RL(num, pow, mod, false, AdditionalParameters.A, AdditionalParameters.B) ? passed : notPassed)); OperationsResult.Update();
+                        //OperationsResult.Items.Add("DBNS1LR 1\t\t:" + (compare == PowFunctions.DBNS1LR(num, pow, mod, true, AdditionalParameters.A, AdditionalParameters.B) ? passed : notPassed)); OperationsResult.Update();
+                        //OperationsResult.Items.Add("DBNS1LR 2\t\t:" + (compare == PowFunctions.DBNS1LR(num, pow, mod, false, AdditionalParameters.A, AdditionalParameters.B) ? passed : notPassed)); OperationsResult.Update();
+                        OperationsResult.Items.Add("NAF Sliding RL\t\t:" + (compare == PowFunctions.NAFSlidingRL(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                        OperationsResult.Items.Add("NAF Sliding LR\t\t:" + (compare == PowFunctions.NAFSlidingLR(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                        OperationsResult.Items.Add("wNAF RL\t\t:" + (compare == PowFunctions.NAFWindowRL(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                        OperationsResult.Items.Add("wNAF LR\t\t:" + (compare == PowFunctions.NAFWindowLR(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    }
+                    OperationsResult.Items.Add("Joye_double_and_add\t:" + (compare == PowFunctions.Joye_double_and_add(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("MontgomeryLadder\t\t:" + (compare == PowFunctions.MontgomeryLadder(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("DBNS2RL\t\t:" + (compare == PowFunctions.BinaryRL(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("DBNS2LR\t\t:" + (compare == PowFunctions.BinaryLR(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Window RL\t\t:" + (compare == PowFunctions.WindowRL(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Window RL Dic\t\t:" + (compare == PowFunctions.WindowRL_Dic(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Window LR\t\t:" + (compare == PowFunctions.WindowLR(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Window LR Dic\t\t:" + (compare == PowFunctions.WindowLR_Dic(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Sliding RL\t\t:" + (compare == PowFunctions.SlidingRL(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Sliding RL Dic\t\t:" + (compare == PowFunctions.SlidingRL_Dic(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Sliding LR\t\t:" + (compare == PowFunctions.SlidingLR(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Sliding LR Dic\t\t:" + (compare == PowFunctions.SlidingLR_Dic(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+
+                    OperationsResult.Items.Add("ModWindow LR1\t\t:" + (compare == PowFunctions.WindowLRMod1(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR2\t\t:" + (compare == PowFunctions.WindowLRMod2(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR3\t\t:" + (compare == PowFunctions.WindowLRMod3(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR\t\t:" + (compare == PowFunctions.WindowLRMod(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR1(shift)\t:" + (compare == PowFunctions.WindowLRMod1_Shift(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR2(shift)\t:" + (compare == PowFunctions.WindowLRMod2_Shift(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR3(shift)\t:" + (compare == PowFunctions.WindowLRMod3_Shift(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR (shift)\t:" + (compare == PowFunctions.WindowLRMod_Shift(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR1(upgrade)\t:" + (compare == PowFunctions.WindowLRMod1_Upgrade(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR2(upgrade)\t:" + (compare == PowFunctions.WindowLRMod2_Upgrade(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR3(upgrade)\t:" + (compare == PowFunctions.WindowLRMod3_Upgrade(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR (upgrade)\t:" + (compare == PowFunctions.WindowLRMod_Upgrade(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR1(NoBinary)\t:" + (compare == PowFunctions.WindowLRMod1_Upgrade(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR2(NoBinary)\t:" + (compare == PowFunctions.WindowLRMod2_NoBinary(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR3(NoBinary)\t:" + (compare == PowFunctions.WindowLRMod3_NoBinary(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR (NoBinary)\t:" + (compare == PowFunctions.WindowLRMod_NoBinary(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR1(Final)\t:" + (compare == PowFunctions.WindowLRMod1_Upgrade(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR2(Final)\t:" + (compare == PowFunctions.WindowLRMod2_Final(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR3(Final)\t:" + (compare == PowFunctions.WindowLRMod3_Final(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("ModWindow LR (Final)\t:" + (compare == PowFunctions.WindowLRMod_Final(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Sliding Prime with_11_11\t:" + (compare == PowFunctions.Sliding_Prime(num, pow, mod, window, out table, true) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Sliding Prime\t\t:" + (compare == PowFunctions.Sliding_Prime(num, pow, mod, window, out table, false) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Adaptive\t\t\t:" + (compare == PowFunctions.Adaptive(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Bonus1\t\t\t:" + (compare == PowFunctions.Bonus1(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Bonus2\t\t\t:" + (compare == PowFunctions.Bonus2(num, pow, mod) ? passed : notPassed)); OperationsResult.Update();
+                    OperationsResult.Items.Add("Bonus Window\t\t:" + (compare == PowFunctions.Bonus(num, pow, mod, window, out table) ? passed : notPassed)); OperationsResult.Update();
+                }
+
+                MessageBox.Show("Test finished", "Message!", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            catch (Exception e)
+            {
+                MessageBox.Show(e.Message, "Warning!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
 

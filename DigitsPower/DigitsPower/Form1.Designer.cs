@@ -122,6 +122,10 @@
             this.ModLenght = new System.Windows.Forms.TextBox();
             this.ModCount = new System.Windows.Forms.TextBox();
             this.Pow = new System.Windows.Forms.TabPage();
+            this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.testCounter = new System.Windows.Forms.TextBox();
+            this.testButton = new System.Windows.Forms.Button();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
             this.label30 = new System.Windows.Forms.Label();
             this.textB = new System.Windows.Forms.TextBox();
@@ -144,6 +148,7 @@
             this.groupBox2.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.Pow.SuspendLayout();
+            this.groupBox15.SuspendLayout();
             this.groupBox13.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -274,7 +279,7 @@
             this.groupBox3.Controls.Add(this.NumberText);
             this.groupBox3.Location = new System.Drawing.Point(6, 12);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(487, 163);
+            this.groupBox3.Size = new System.Drawing.Size(304, 163);
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Parametrs";
@@ -282,7 +287,7 @@
             // montFlagTest
             // 
             this.montFlagTest.AutoSize = true;
-            this.montFlagTest.Location = new System.Drawing.Point(311, 138);
+            this.montFlagTest.Location = new System.Drawing.Point(164, 134);
             this.montFlagTest.Name = "montFlagTest";
             this.montFlagTest.Size = new System.Drawing.Size(131, 17);
             this.montFlagTest.TabIndex = 32;
@@ -292,16 +297,16 @@
             // 
             // WindowText
             // 
-            this.WindowText.Location = new System.Drawing.Point(159, 88);
+            this.WindowText.Location = new System.Drawing.Point(72, 85);
             this.WindowText.Name = "WindowText";
-            this.WindowText.Size = new System.Drawing.Size(305, 20);
+            this.WindowText.Size = new System.Drawing.Size(221, 20);
             this.WindowText.TabIndex = 15;
             this.WindowText.Text = "2";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(103, 91);
+            this.label9.Location = new System.Drawing.Point(17, 88);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(49, 13);
             this.label9.TabIndex = 14;
@@ -309,16 +314,16 @@
             // 
             // PowerText
             // 
-            this.PowerText.Location = new System.Drawing.Point(159, 64);
+            this.PowerText.Location = new System.Drawing.Point(72, 61);
             this.PowerText.Name = "PowerText";
-            this.PowerText.Size = new System.Drawing.Size(305, 20);
+            this.PowerText.Size = new System.Drawing.Size(221, 20);
             this.PowerText.TabIndex = 10;
             this.PowerText.Text = "5";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(97, 67);
+            this.label5.Location = new System.Drawing.Point(10, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(55, 13);
             this.label5.TabIndex = 11;
@@ -328,7 +333,7 @@
             // 
             this.Calculatebutton.Location = new System.Drawing.Point(19, 134);
             this.Calculatebutton.Name = "Calculatebutton";
-            this.Calculatebutton.Size = new System.Drawing.Size(274, 23);
+            this.Calculatebutton.Size = new System.Drawing.Size(139, 23);
             this.Calculatebutton.TabIndex = 9;
             this.Calculatebutton.Text = "Calculate";
             this.Calculatebutton.UseVisualStyleBackColor = true;
@@ -337,7 +342,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(102, 16);
+            this.label6.Location = new System.Drawing.Point(16, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(50, 13);
             this.label6.TabIndex = 5;
@@ -345,16 +350,16 @@
             // 
             // modText
             // 
-            this.modText.Location = new System.Drawing.Point(159, 15);
+            this.modText.Location = new System.Drawing.Point(72, 15);
             this.modText.Name = "modText";
-            this.modText.Size = new System.Drawing.Size(304, 20);
+            this.modText.Size = new System.Drawing.Size(221, 20);
             this.modText.TabIndex = 6;
             this.modText.Text = "67";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(117, 41);
+            this.label7.Location = new System.Drawing.Point(31, 41);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(34, 13);
             this.label7.TabIndex = 7;
@@ -363,9 +368,9 @@
             // 
             // NumberText
             // 
-            this.NumberText.Location = new System.Drawing.Point(159, 38);
+            this.NumberText.Location = new System.Drawing.Point(72, 38);
             this.NumberText.Name = "NumberText";
-            this.NumberText.Size = new System.Drawing.Size(305, 20);
+            this.NumberText.Size = new System.Drawing.Size(221, 20);
             this.NumberText.TabIndex = 8;
             this.NumberText.Text = "2";
             // 
@@ -1227,6 +1232,7 @@
             // 
             // Pow
             // 
+            this.Pow.Controls.Add(this.groupBox15);
             this.Pow.Controls.Add(this.groupBox13);
             this.Pow.Controls.Add(this.groupBox3);
             this.Pow.Controls.Add(this.groupBox4);
@@ -1238,6 +1244,45 @@
             this.Pow.TabIndex = 0;
             this.Pow.Text = "Test";
             this.Pow.UseVisualStyleBackColor = true;
+            // 
+            // groupBox15
+            // 
+            this.groupBox15.Controls.Add(this.label24);
+            this.groupBox15.Controls.Add(this.testCounter);
+            this.groupBox15.Controls.Add(this.testButton);
+            this.groupBox15.Location = new System.Drawing.Point(316, 12);
+            this.groupBox15.Name = "groupBox15";
+            this.groupBox15.Size = new System.Drawing.Size(188, 163);
+            this.groupBox15.TabIndex = 33;
+            this.groupBox15.TabStop = false;
+            this.groupBox15.Text = "Test";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(6, 22);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(75, 13);
+            this.label24.TabIndex = 10;
+            this.label24.Text = "Count of tests:";
+            // 
+            // testCounter
+            // 
+            this.testCounter.Location = new System.Drawing.Point(87, 19);
+            this.testCounter.Name = "testCounter";
+            this.testCounter.Size = new System.Drawing.Size(95, 20);
+            this.testCounter.TabIndex = 11;
+            this.testCounter.Text = "10";
+            // 
+            // testButton
+            // 
+            this.testButton.Location = new System.Drawing.Point(19, 134);
+            this.testButton.Name = "testButton";
+            this.testButton.Size = new System.Drawing.Size(139, 23);
+            this.testButton.TabIndex = 9;
+            this.testButton.Text = "Start test";
+            this.testButton.UseVisualStyleBackColor = true;
+            this.testButton.Click += new System.EventHandler(this.testButton_Click);
             // 
             // groupBox13
             // 
@@ -1322,6 +1367,8 @@
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
             this.Pow.ResumeLayout(false);
+            this.groupBox15.ResumeLayout(false);
+            this.groupBox15.PerformLayout();
             this.groupBox13.ResumeLayout(false);
             this.groupBox13.PerformLayout();
             this.ResumeLayout(false);
@@ -1428,5 +1475,9 @@
         private System.Windows.Forms.TextBox textBmax;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.TextBox textAmax;
+        private System.Windows.Forms.GroupBox groupBox15;
+        private System.Windows.Forms.Button testButton;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox testCounter;
     }
 }

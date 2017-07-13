@@ -346,7 +346,6 @@ namespace DigitsPower
             BigInteger pow = BigInteger.Parse(PowerText.Text);
             int window = Int32.Parse(WindowText.Text);
             BigInteger num = BigInteger.Parse(NumberText.Text);
-            List<string> s = new List<string>();
             double table = 0;
             OperationsResult.Items.Clear();
 
@@ -416,6 +415,16 @@ namespace DigitsPower
 
         #endregion
 
+        private void testButton_Click(object sender, EventArgs e)
+        {
+            AdditionalParameters.A = Int32.Parse(textA.Text);
+            AdditionalParameters.B = Int32.Parse(textB.Text);
+            AdditionalParameters.montFlag = aMontFlag.Checked;
+            OperationsResult.Items.Clear();
+            int counter = Int32.Parse(testCounter.Text);
+            ShowTests(counter);
+        }
+
         private void TableWith_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -430,6 +439,7 @@ namespace DigitsPower
         {
             montFlagTest.Checked = aMontFlag.Checked;
         }
+
     }
 
     public class FuncParam

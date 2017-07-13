@@ -598,7 +598,7 @@ namespace DigitsPower
                 one_dir = Directory.CreateDirectory(di + "\\" + One.Split('\\')[0] + "_" + AddZeros(one_i[f_len].ToString(), one_i.Max().ToString()));
                 for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                 {
-                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
+                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + "a_max_"+ AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
                     for (int d_len = 0; d_len < two.Length; d_len++)
                     {
                         FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Two.Split('\\')[0] + "_" + AddZeros(two_i[d_len].ToString(), two_i.Max().ToString()) + ".csv", FileMode.Create, FileAccess.Write);
