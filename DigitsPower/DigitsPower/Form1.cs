@@ -425,7 +425,8 @@ namespace DigitsPower
             int window = Int32.Parse(windowForTest.Text);
             double table = Double.Parse(tableForTest.Text);
             List<int> n = GenFunctions.ReadString(nForTest.Text);
-            ShowTests(n, counter, window, table);
+            if (OperationsListTest.CheckedIndices.Count > 0)
+                ShowTests(n, counter, window, table);
         }
 
         private void TableWith_CheckedChanged(object sender, EventArgs e)
