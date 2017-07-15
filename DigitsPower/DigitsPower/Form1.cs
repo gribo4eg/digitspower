@@ -422,7 +422,10 @@ namespace DigitsPower
             AdditionalParameters.montFlag = aMontFlag.Checked;
             OperationsResult.Items.Clear();
             int counter = Int32.Parse(testCounter.Text);
-            ShowTests(counter);
+            int window = Int32.Parse(windowForTest.Text);
+            double table = Double.Parse(tableForTest.Text);
+            List<int> n = GenFunctions.ReadString(nForTest.Text);
+            ShowTests(n, counter, window, table);
         }
 
         private void TableWith_CheckedChanged(object sender, EventArgs e)
@@ -439,7 +442,6 @@ namespace DigitsPower
         {
             montFlagTest.Checked = aMontFlag.Checked;
         }
-
     }
 
     public class FuncParam

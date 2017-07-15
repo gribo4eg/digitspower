@@ -36,6 +36,7 @@
             this.CheckAllbutton = new System.Windows.Forms.Button();
             this.OperationsListTest = new System.Windows.Forms.CheckedListBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label38 = new System.Windows.Forms.Label();
             this.montFlagTest = new System.Windows.Forms.CheckBox();
             this.WindowText = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
@@ -123,6 +124,13 @@
             this.ModCount = new System.Windows.Forms.TextBox();
             this.Pow = new System.Windows.Forms.TabPage();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
+            this.nForTest = new System.Windows.Forms.TextBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.tableForTest = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.windowForTest = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.brokenMeth = new System.Windows.Forms.CheckBox();
             this.label24 = new System.Windows.Forms.Label();
             this.testCounter = new System.Windows.Forms.TextBox();
             this.testButton = new System.Windows.Forms.Button();
@@ -267,6 +275,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label38);
             this.groupBox3.Controls.Add(this.montFlagTest);
             this.groupBox3.Controls.Add(this.WindowText);
             this.groupBox3.Controls.Add(this.label9);
@@ -283,6 +292,15 @@
             this.groupBox3.TabIndex = 19;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Parametrs";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Location = new System.Drawing.Point(17, 108);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(136, 13);
+            this.label38.TabIndex = 33;
+            this.label38.Text = "Window: 3-6,9-12,23-44,49";
             // 
             // montFlagTest
             // 
@@ -1247,15 +1265,84 @@
             // 
             // groupBox15
             // 
+            this.groupBox15.Controls.Add(this.nForTest);
+            this.groupBox15.Controls.Add(this.label37);
+            this.groupBox15.Controls.Add(this.tableForTest);
+            this.groupBox15.Controls.Add(this.label36);
+            this.groupBox15.Controls.Add(this.windowForTest);
+            this.groupBox15.Controls.Add(this.label35);
+            this.groupBox15.Controls.Add(this.brokenMeth);
             this.groupBox15.Controls.Add(this.label24);
             this.groupBox15.Controls.Add(this.testCounter);
             this.groupBox15.Controls.Add(this.testButton);
             this.groupBox15.Location = new System.Drawing.Point(316, 12);
             this.groupBox15.Name = "groupBox15";
-            this.groupBox15.Size = new System.Drawing.Size(188, 163);
+            this.groupBox15.Size = new System.Drawing.Size(188, 175);
             this.groupBox15.TabIndex = 33;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Test";
+            // 
+            // nForTest
+            // 
+            this.nForTest.Location = new System.Drawing.Point(87, 45);
+            this.nForTest.Name = "nForTest";
+            this.nForTest.Size = new System.Drawing.Size(95, 20);
+            this.nForTest.TabIndex = 21;
+            this.nForTest.Text = "2-8";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(65, 48);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(16, 13);
+            this.label37.TabIndex = 20;
+            this.label37.Text = "n:";
+            // 
+            // tableForTest
+            // 
+            this.tableForTest.Location = new System.Drawing.Point(87, 97);
+            this.tableForTest.Name = "tableForTest";
+            this.tableForTest.Size = new System.Drawing.Size(95, 20);
+            this.tableForTest.TabIndex = 19;
+            this.tableForTest.Text = "0";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(44, 100);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(37, 13);
+            this.label36.TabIndex = 18;
+            this.label36.Text = "Table:";
+            // 
+            // windowForTest
+            // 
+            this.windowForTest.Location = new System.Drawing.Point(87, 71);
+            this.windowForTest.Name = "windowForTest";
+            this.windowForTest.Size = new System.Drawing.Size(95, 20);
+            this.windowForTest.TabIndex = 17;
+            this.windowForTest.Text = "2";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(32, 74);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(49, 13);
+            this.label35.TabIndex = 16;
+            this.label35.Text = "Window:";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // brokenMeth
+            // 
+            this.brokenMeth.AutoSize = true;
+            this.brokenMeth.Location = new System.Drawing.Point(9, 123);
+            this.brokenMeth.Name = "brokenMeth";
+            this.brokenMeth.Size = new System.Drawing.Size(154, 17);
+            this.brokenMeth.TabIndex = 12;
+            this.brokenMeth.Text = "Show only broken methods";
+            this.brokenMeth.UseVisualStyleBackColor = true;
             // 
             // label24
             // 
@@ -1276,7 +1363,7 @@
             // 
             // testButton
             // 
-            this.testButton.Location = new System.Drawing.Point(19, 134);
+            this.testButton.Location = new System.Drawing.Point(24, 146);
             this.testButton.Name = "testButton";
             this.testButton.Size = new System.Drawing.Size(139, 23);
             this.testButton.TabIndex = 9;
@@ -1479,5 +1566,13 @@
         private System.Windows.Forms.Button testButton;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox testCounter;
+        private System.Windows.Forms.CheckBox brokenMeth;
+        private System.Windows.Forms.TextBox tableForTest;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox windowForTest;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox nForTest;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
     }
 }
