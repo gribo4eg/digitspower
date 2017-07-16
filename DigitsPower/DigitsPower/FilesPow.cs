@@ -553,7 +553,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "b3_max" : "a3_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "a_max" : "b_max") + "\\" + "b_max" + ";");
 
                             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                             {
@@ -663,13 +663,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Exponent":
-                                    Gen___AB(founds, mods, degrees , di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen___AB(founds, degrees, mods , di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "aMax":
-                                    Gen__AB_(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -680,10 +680,10 @@ namespace DigitsPower
                                     Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);//Gen_A_B_
                                     break;
                                 case "Modulus":
-                                    Gen_A_B_(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen_AB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -694,10 +694,10 @@ namespace DigitsPower
                                     Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//Gen_A_B_
                                     break;
                                 case "Modulus":
-                                    Gen_A_B_(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    Gen_AB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -710,13 +710,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Modulus":
-                                    Gen___AB(degrees, founds, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen___AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "aMax":
-                                    Gen__AB_(degrees, founds, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(degrees, founds, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -724,13 +724,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen___AB(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen___AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "aMax":
-                                    Gen__AB_(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -738,13 +738,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen_A_B_(degrees, founds, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);//Gen_A_B_
+                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);//Gen_A_B_
                                     break;
                                 case "Modulus":
-                                    Gen_A_B_(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen_AB(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -752,13 +752,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen_A_B_(degrees, founds, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//Gen_A_B_
+                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//Gen_A_B_
                                     break;
                                 case "Modulus":
                                     Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//degrees mods founds
                                     break;
                                 case "aMax":
-                                    Gen_AB(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -771,13 +771,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Exponent":
-                                    Gen___AB(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen___AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "aMax":
-                                    Gen__AB_(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -785,13 +785,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen___AB(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen___AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "aMax":
-                                    Gen__AB_(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -799,13 +799,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen_A_B_(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);//Gen_A_B_
+                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);//Gen_A_B_
                                     break;
                                 case "Exponent":
-                                    Gen_A_B_(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen_AB(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -813,13 +813,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen_A_B_(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//Gen_A_B_
+                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//Gen_A_B_
                                     break;
                                 case "Exponent":
-                                    Gen_A_B_(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    Gen_AB(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -835,10 +835,10 @@ namespace DigitsPower
                                     GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Modulus":
-                                    GenA__B(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    GenAB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -846,13 +846,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenA__B(degrees, founds, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Modulus":
-                                    GenA__B(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    GenA_B_(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -860,13 +860,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenA__B(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Exponent":
-                                    GenA__B(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    GenA_B_(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -874,13 +874,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenAB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Exponent":
                                     GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Modulus":
-                                    GenAB(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -896,10 +896,10 @@ namespace DigitsPower
                                     GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Modulus":
-                                    GenA__B(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    GenAB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -907,13 +907,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenA__B(degrees, founds, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Modulus":
-                                    GenA__B(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    GenA_B_(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -921,13 +921,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenA__B(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Exponent":
                                     GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    GenA_B_(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -935,13 +935,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenAB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Exponent":
-                                    GenAB(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Modulus":
-                                    GenAB(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
