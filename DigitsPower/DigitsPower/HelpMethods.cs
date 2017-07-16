@@ -1031,15 +1031,15 @@ namespace DigitsPower
                             if (OperationsListTest.CheckedIndices[j] == 20)
                                 if (compare == PowFunctions.DBNS1RL(num, pow, mod, true, AdditionalParameters.A, AdditionalParameters.B)) { if (!notShow) OperationsResult.Items.Add("DBNS1RL 1\t\t:" + passed); }
                                 else OperationsResult.Items.Add("DBNS1RL 1\t\t:" + notPassed); OperationsResult.Update();
-                            //if (OperationsListTest.CheckedIndices[j] == 21)
-                                //if (compare == PowFunctions.DBNS1RL(num, pow, mod, false, AdditionalParameters.A, AdditionalParameters.B)) { if (!notShow) OperationsResult.Items.Add("DBNS1RL 2\t\t:" + passed); }
-                                //else OperationsResult.Items.Add("DBNS1RL 2\t\t:" + notPassed); OperationsResult.Update();
+                            if (OperationsListTest.CheckedIndices[j] == 21)
+                                if (compare == PowFunctions.DBNS1RL(num, pow, mod, false, AdditionalParameters.A, AdditionalParameters.B)) { if (!notShow) OperationsResult.Items.Add("DBNS1RL 2\t\t:" + passed); }
+                                else OperationsResult.Items.Add("DBNS1RL 2\t\t:" + notPassed); OperationsResult.Update();
                             if (OperationsListTest.CheckedIndices[j] == 22)
                                 if (compare == PowFunctions.DBNS1LR(num, pow, mod, true, AdditionalParameters.A, AdditionalParameters.B)) { if (!notShow) OperationsResult.Items.Add("DBNS1LR 1\t\t:" + passed); }
                                 else OperationsResult.Items.Add("DBNS1LR 1\t\t:" + notPassed); OperationsResult.Update();
-                            //if (OperationsListTest.CheckedIndices[j] == 23)
-                                //if (compare == PowFunctions.DBNS1LR(num, pow, mod, false, AdditionalParameters.A, AdditionalParameters.B)) { if (!notShow) OperationsResult.Items.Add("DBNS1LR 2\t\t:" + passed); }
-                                //else OperationsResult.Items.Add("DBNS1LR 2\t\t:" + notPassed); OperationsResult.Update();
+                            if (OperationsListTest.CheckedIndices[j] == 23)
+                                if (compare == PowFunctions.DBNS1LR(num, pow, mod, false, AdditionalParameters.A, AdditionalParameters.B)) { if (!notShow) OperationsResult.Items.Add("DBNS1LR 2\t\t:" + passed); }
+                                else OperationsResult.Items.Add("DBNS1LR 2\t\t:" + notPassed); OperationsResult.Update();
                             
                         }
                         if (OperationsListTest.CheckedIndices[j] == 18)
