@@ -397,7 +397,7 @@ namespace DigitsPower
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write(Two.Split('\\')[0] + "\\" + (order ? "b1_max" : "a1_max") + ";");
+                            sw.Write(Two.Split('\\')[0] + "\\" + (order ? "b_max" : "a_max") + ";");
 
                             for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
                             {
@@ -491,17 +491,17 @@ namespace DigitsPower
             */
             for (int f_len = 0; f_len < one.Length; f_len++)
             {
-                one_dir = Directory.CreateDirectory(di + "\\" + One.Split('\\')[0] + "_" + one_i[f_len]);
+                one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + one_i[f_len]);
                 for (int d_len = 0; d_len < two.Length; d_len++)
                 {
-                    two_dir = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Two.Split('\\')[0] + "_" + two_i[d_len]);
+                    two_dir = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + two_i[d_len]);
                     for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                     {
-                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + two_dir.Name + "\\" + aMax[amax_len] + ".csv", FileMode.Create, FileAccess.Write);
+                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + two_dir.Name + "\\" + Choice[2] + "_" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()) + ".csv", FileMode.Create, FileAccess.Write);
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "b2_max" : "a2_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
@@ -598,14 +598,14 @@ namespace DigitsPower
                 one_dir = Directory.CreateDirectory(di + "\\" + One.Split('\\')[0] + "_" + AddZeros(one_i[f_len].ToString(), one_i.Max().ToString()));
                 for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                 {
-                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + "a_max_"+ AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
+                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + "aMax_"+ AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
                     for (int d_len = 0; d_len < two.Length; d_len++)
                     {
                         FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Two.Split('\\')[0] + "_" + AddZeros(two_i[d_len].ToString(), two_i.Max().ToString()) + ".csv", FileMode.Create, FileAccess.Write);
 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "b4_max" : "a4_max") + "\\" + Three.Split('\\')[0] + ";");
+                            sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
 
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
