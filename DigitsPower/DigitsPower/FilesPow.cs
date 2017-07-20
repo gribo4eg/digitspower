@@ -267,177 +267,174 @@ namespace DigitsPower
         }
 
         protected virtual void GenAB(string[] one, string[] two, string[] three, string di, string One, string Two, string Three,  bool order = true)
-        {
-            string path = Directory.GetCurrentDirectory();
-            int[] one_i = MakeDigits(one);
-            int[] two_i = MakeDigits(two);
-            int[] three_i = MakeDigits(three);
-            DirectoryInfo amax_di, bmax_di;
-            /*
-            if (!order)
-            {
-                var x = aMax;
-                aMax = bMax;
-                bMax = x;
-            }
-            */
-            for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
-            {
-                amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] +"_"+ AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
-                for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
-                {
-                    bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + Choice[1] +"_"+ AddZeros(bMax[bmax_len].ToString(), bMax.Max().ToString()));
-
-                    for (int f_len = 0; f_len < one.Length; f_len++)
-                    {
-                        FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Choice[2] + "_" + AddZeros(one_i[f_len].ToString(), one_i.Max().ToString()) + ".csv", FileMode.Create, FileAccess.Write);
-
-                        using (StreamWriter sw = new StreamWriter(fin))
-                        {
-                            sw.Write(One.Split('\\')[0] + "\\" + Three.Split('\\')[0] + ";");
-
-                            for (int m_len = 0; m_len < three.Length; m_len++)
-                            {
-                                sw.Write(three_i[m_len] + ";");
-                            }
-                            sw.WriteLine();
-                            for (int d_len = 0; d_len < two.Length; d_len++)
-                            {
-                                sw.Write(two_i[d_len] + ";");
-                                for (int m_len = 0; m_len < three.Length; m_len++)
-                                {
-                                    sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
-                                                   path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
-                                                   path + "\\" + Three + "\\" + three_i[m_len] + ".txt", aMax[amax_len], bMax[bmax_len]) + ";");
-                                }
-                                sw.WriteLine();
-                            }
-                        }
-                        fin.Close();
-                    }
-                }
-            }
-        }
-
-        protected virtual void GenA_B_(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
-        {
-            string path = Directory.GetCurrentDirectory();
-            int[] one_i = MakeDigits(one);
-            int[] two_i = MakeDigits(two);
-            int[] three_i = MakeDigits(three);
-            DirectoryInfo amax_di, bmax_di;
-            /*
-            if (!order)
-            {
-                var x = aMax;
-                aMax = bMax;
-                bMax = x;
-            }
-            */
-            for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
-            {
-                amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
-                for (int f_len = 0; f_len < one.Length; f_len++)
-                {
-                    bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + Choice[1] + "_" + AddZeros(one_i[f_len], one_i.Max()));
-                    for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
-                    {
-                        FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Choice[2] + "_" + AddZeros(bMax[bmax_len], bMax.Max())  + ".csv", FileMode.Create, FileAccess.Write);
-
-                        using (StreamWriter sw = new StreamWriter(fin))
-                        {
-                            sw.Write(Two.Split('\\')[0] + "\\" + Three.Split('\\')[0] + ";");
-
-                            for (int m_len = 0; m_len < three.Length; m_len++)
-                            {
-                                sw.Write(three_i[m_len] + ";");
-                            }
-                            sw.WriteLine();
-                            for (int d_len = 0; d_len < two.Length; d_len++)
-                            {
-                                sw.Write(two_i[d_len] + ";");
-                                for (int m_len = 0; m_len < three.Length; m_len++)
-                                {
-                                    sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
-                                                   path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
-                                                   path + "\\" + Three + "\\" + three_i[m_len] + ".txt", aMax[amax_len], bMax[bmax_len]) + ";");
-                                }
-                                sw.WriteLine();
-                            }
-                        }
-                        fin.Close();
-                    }
-                }
-            }
-        }
-
-        protected virtual void GenA__B(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
-        {
-            string path = Directory.GetCurrentDirectory();
-            int[] one_i = MakeDigits(one);
-            int[] two_i = MakeDigits(two);
-            int[] three_i = MakeDigits(three);
-            DirectoryInfo amax_di, bmax_di;
-            /*
-            if (!order)
-            {
-                var x = aMax;
-                aMax = bMax;
-                bMax = x;
-            }
-            */
-            for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
-            {
-                amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
-                for (int f_len = 0; f_len < one.Length; f_len++)
-                {
-                    bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + Choice[1] + "_" + AddZeros(one_i[f_len], one_i.Max()));
-                    for (int m_len = 0; m_len < three.Length; m_len++)
-                    {
-                        FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Choice[2] + "_" + AddZeros(three_i[m_len], three_i.Max()) + ".csv", FileMode.Create, FileAccess.Write);
-
-                        using (StreamWriter sw = new StreamWriter(fin))
-                        {
-                            sw.Write(Two.Split('\\')[0] + "\\" + (order ? "b_max" : "a_max") + ";");
-
-                            for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
-                            {
-                                sw.Write(bMax[bmax_len] + ";");
-                            }
-                            sw.WriteLine();
-                            for (int d_len = 0; d_len < two.Length; d_len++)
-                            {
-                                sw.Write(two_i[d_len] + ";");
-                                for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
-                                {
-                                    sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
-                                                   path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
-                                                   path + "\\" + Three + "\\" + three_i[m_len] + ".txt", aMax[amax_len], bMax[bmax_len]) + ";");
-                                }
-                                sw.WriteLine();
-                            }
-                        }
-                        fin.Close();
-                    }
-                }
-            }
-        }
-
-        protected virtual void Gen_AB(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+         {
+             string path = Directory.GetCurrentDirectory();
+             int[] one_i = MakeDigits(one);
+             int[] two_i = MakeDigits(two);
+             int[] three_i = MakeDigits(three);
+             DirectoryInfo amax_di, bmax_di;
+             if (!order)
+             {
+                 var x = aMax;
+                 aMax = bMax;
+                 bMax = x;
+             }
+             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+             {
+                 amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(aMax[amax_len], aMax.Max()));
+                 for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
+                 {
+                     bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + Choice[1] + "_" + AddZeros(bMax[bmax_len], bMax.Max()));
+                     for (int f_len = 0; f_len < one.Length; f_len++)
+                     {
+                         FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Choice[2] + "_" + AddZeros(one_i[f_len], one_i.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+ 
+                       using (StreamWriter sw = new StreamWriter(fin))
+                       {
+                           sw.Write(Two.Split('\\')[0] + "\\" + Three.Split('\\')[0] + ";");
+ 
+                           for (int m_len = 0; m_len < three.Length; m_len++)
+                           {
+                               sw.Write(three_i[m_len] + ";");
+                           }
+                           sw.WriteLine();
+                           for (int d_len = 0; d_len < two.Length; d_len++)
+                           {
+                               sw.Write(two_i[d_len] + ";");
+                               for (int m_len = 0; m_len < three.Length; m_len++)
+                               {
+                                   sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                order ? aMax[amax_len] : bMax[bmax_len], 
+                                                order ? bMax[bmax_len] : aMax[amax_len]) + ";");
+                               }
+                               sw.WriteLine();
+                           }
+                       }
+                       fin.Close();
+                     }
+                 }
+             }
+         }
+ 
+         protected virtual void GenA_B_(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+         {
+             string path = Directory.GetCurrentDirectory();
+             int[] one_i = MakeDigits(one);
+             int[] two_i = MakeDigits(two);
+             int[] three_i = MakeDigits(three);
+             DirectoryInfo amax_di, bmax_di;
+             if (!order)
+             {
+                 var x = aMax;
+                 aMax = bMax;
+                 bMax = x;
+             }
+             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+             {
+                 amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(aMax[amax_len], aMax.Max()));
+                 for (int f_len = 0; f_len < one.Length; f_len++)
+                 {
+                     bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + Choice[1] + "_" + AddZeros(one_i[f_len], one_i.Max()));
+                     for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
+                     {
+                         FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Choice[2] + "_" + AddZeros(bMax[bmax_len], bMax.Max())  + ".csv", FileMode.Create, FileAccess.Write);
+ 
+                         using (StreamWriter sw = new StreamWriter(fin))
+                         {
+                             sw.Write(Two.Split('\\')[0] + "\\" + Three.Split('\\')[0] + ";");
+ 
+                             for (int m_len = 0; m_len < three.Length; m_len++)
+                             {
+                                 sw.Write(three_i[m_len] + ";");
+                             }
+                             sw.WriteLine();
+                             for (int d_len = 0; d_len < two.Length; d_len++)
+                             {
+                                 sw.Write(two_i[d_len] + ";");
+                                 for (int m_len = 0; m_len < three.Length; m_len++)
+                                 {
+                                     sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                  path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                  path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                  order ? aMax[amax_len] : bMax[bmax_len], 
+                                                  order ? bMax[bmax_len] : aMax[amax_len]) + ";");
+                                 }
+                                 sw.WriteLine();
+                             }
+                         }
+                         fin.Close();
+                     }
+                 }
+             }
+         }
+ 
+         protected virtual void GenA__B(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+         {
+             string path = Directory.GetCurrentDirectory();
+             int[] one_i = MakeDigits(one);
+             int[] two_i = MakeDigits(two);
+             int[] three_i = MakeDigits(three);
+             DirectoryInfo amax_di, bmax_di;
+             if (!order)
+             {
+                 var x = aMax;
+                 aMax = bMax;
+                 bMax = x;
+             }
+             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+             {
+                 amax_di = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(aMax[amax_len], aMax.Max()));
+                 for (int f_len = 0; f_len < one.Length; f_len++)
+                 {
+                     bmax_di = Directory.CreateDirectory(di + "\\" + amax_di.Name + "\\" + Choice[1] + "_" + AddZeros(one_i[f_len], one_i.Max()));
+                     for (int m_len = 0; m_len < three.Length; m_len++)
+                     {
+                         FileStream fin = new FileStream(di + "\\" + amax_di.Name + "\\" + bmax_di.Name + "\\" + Choice[2] + "_" + AddZeros(three_i[m_len], three_i.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+ 
+                         using (StreamWriter sw = new StreamWriter(fin))
+                         {
+                             sw.Write(Two.Split('\\')[0] + "\\" + (order ? "b_max" : "a_max") + ";");
+ 
+                             for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
+                             {
+                                 sw.Write(bMax[bmax_len] + ";");
+                             }
+                             sw.WriteLine();
+                             for (int d_len = 0; d_len < two.Length; d_len++)
+                             {
+                                 sw.Write(two_i[d_len] + ";");
+                                 for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
+                                 {
+                                     sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                  path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                  path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                  order ? aMax[amax_len] : bMax[bmax_len], 
+                                                  order ? bMax[bmax_len] : aMax[amax_len]) + ";");
+                                 }
+                                 sw.WriteLine();
+                             }
+                         }
+                         fin.Close();
+                     }
+                 }
+             }
+         }
+        
+        protected virtual void BaseMaxMaxGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
         {
             string path = Directory.GetCurrentDirectory();
             int[] one_i = MakeDigits(one);
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
             DirectoryInfo amax_di, one_dir;
-            /*
             if (!order)
             {
                 var x = aMax;
                 aMax = bMax;
-                bMax = aMax; 
+                bMax = x; 
             }
-            */
             for (int f_len = 0; f_len < one.Length; f_len++)
             {
                 one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(one_i[f_len], one_i.Max()));
@@ -447,11 +444,11 @@ namespace DigitsPower
                     for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
                     {
                         FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Choice[2] + "_" + AddZeros(bMax[bmax_len], bMax.Max()) + ".csv", FileMode.Create, FileAccess.Write);
-
+ 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
                             sw.Write(Two.Split('\\')[0] + "\\" + Three.Split('\\')[0] + ";");
-
+                            
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
                                 sw.Write(three_i[m_len] + ";");
@@ -463,8 +460,10 @@ namespace DigitsPower
                                 for (int m_len = 0; m_len < three.Length; m_len++)
                                 {
                                     sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
-                                                   path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
-                                                   path + "\\" + Three + "\\" + three_i[m_len] + ".txt", aMax[amax_len], bMax[bmax_len]) + ";");
+                                                 path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                 path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                 order ? aMax[amax_len] : bMax[bmax_len], 
+                                                 order ? bMax[bmax_len] : aMax[amax_len]) + ";");
                                 }
                                 sw.WriteLine();
                             }
@@ -474,49 +473,262 @@ namespace DigitsPower
                 }
             }
         }
+ 
+         protected virtual void BaseExpMaxGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+         {
+             string path = Directory.GetCurrentDirectory();
+             int[] one_i = MakeDigits(one);
+             int[] two_i = MakeDigits(two);
+             int[] three_i = MakeDigits(three);
+             DirectoryInfo one_dir, two_dir;
+             if (!order)
+             {
+                 var x = aMax;
+                 aMax = bMax;
+                 bMax = x;
+             }
+             for (int f_len = 0; f_len < one.Length; f_len++)
+             {
+                 one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(one_i[f_len], one_i.Max()));
+                 for (int d_len = 0; d_len < two.Length; d_len++)
+                 {
+                     two_dir = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(two_i[d_len], two_i.Max()));
+                     for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+                     {
+                         FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + two_dir.Name + "\\" + Choice[2] + "_" + AddZeros(aMax[amax_len], aMax.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+ 
+                         using (StreamWriter sw = new StreamWriter(fin))
+                         {
+                             sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
+ 
+                             for (int m_len = 0; m_len < three.Length; m_len++)
+                             {
+                                 sw.Write(three_i[m_len] + ";");
+                             }
+                             sw.WriteLine();
+                             for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
+                             {
+                                 sw.Write(bMax[bmax_len] + ";");
+                                 for (int m_len = 0; m_len < three.Length; m_len++)
+                                 {
+                                     sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                  path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                  path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                  order ? aMax[amax_len] : bMax[bmax_len], 
+                                                  order ? bMax[bmax_len] : aMax[amax_len]) + ";");
+                                 }
+                                 sw.WriteLine();
+                             }
+                         }
+                         fin.Close();
+                     }
+                 }
+             }
+         }
+ 
+         protected virtual void BaseExpModGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+         {
+             string path = Directory.GetCurrentDirectory();
+             int[] one_i = MakeDigits(one);
+             int[] two_i = MakeDigits(two);
+             int[] three_i = MakeDigits(three);
+             DirectoryInfo one_dir, two_dir;
+             if (!order)
+             {
+                 var x = two_i;
+                 two_i = three_i;
+                 three_i = x;
 
-        protected virtual void Gen__AB_(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+                 var y = Two;
+                 Two = Three;
+                 Three = y;
+             }
+             for (int f_len = 0; f_len < one.Length; f_len++)
+             {
+                 one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(one_i[f_len], one_i.Max()));
+                 for (int d_len = 0; d_len < two.Length; d_len++)
+                 {
+                     two_dir = Directory.CreateDirectory(di + "\\" + one_dir.Name +  "\\" + Choice[1] + "_" + AddZeros(two_i[d_len], two_i.Max()));
+                     for  (int m_len = 0; m_len < three.Length; m_len++)
+                     {
+                         FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + two_dir.Name + "\\" + Choice[2] + "_" + AddZeros(three_i[m_len], three_i.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+ 
+                         using (StreamWriter sw = new StreamWriter(fin))
+                         {
+                             sw.Write("b_max" + "\\" + "a_max;");
+ 
+                             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+                             {
+                                 sw.Write(aMax[amax_len] + ";");
+                             }
+                             sw.WriteLine();
+                             for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
+                             {
+                                 sw.Write(bMax[bmax_len] + ";");
+                                 for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+                                 {
+                                     sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                  path + "\\" + 
+                                                  (order ? Two + "\\" + two_i[d_len] : Three + "\\" + three_i[m_len]) + ".txt",
+                                                  path + "\\" + 
+                                                  (order ? Three + "\\" + three_i[m_len] : Two + "\\" + two_i[d_len]) + ".txt", 
+                                                  aMax[amax_len], bMax[bmax_len]) + ";");
+                                 }
+                                 sw.WriteLine();
+                             }
+                         }
+                         fin.Close();
+                     }
+                 }
+             }
+         }
+        
+        protected virtual void BaseModMaxGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+         {
+             string path = Directory.GetCurrentDirectory();
+             int[] one_i = MakeDigits(one);
+             int[] two_i = MakeDigits(two);
+             int[] three_i = MakeDigits(three);
+             DirectoryInfo one_dir, two_dir;
+             if (!order)
+             {
+                 var x = aMax;
+                 aMax = bMax;
+                 bMax = x;
+             }
+             for (int f_len = 0; f_len < one.Length; f_len++)
+             {
+                 one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(one_i[f_len], one_i.Max()));
+                 for (int m_len = 0; m_len < three.Length; m_len++)
+                 {
+                     two_dir = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(three_i[m_len], three_i.Max()));
+                     for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+                     {
+                         FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + two_dir.Name + "\\" + Choice[2] + "_" + AddZeros(aMax[amax_len], aMax.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+ 
+                         using (StreamWriter sw = new StreamWriter(fin))
+                         {
+                             sw.Write((order ? "b_max" : "a_max") + "\\" + Two.Split('\\')[0] + ";");
+ 
+                             for (int d_len = 0; d_len < two.Length; d_len++)
+                             {
+                                 sw.Write(two_i[d_len] + ";");
+                             }
+                             sw.WriteLine();
+                             for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
+                             {
+                                 sw.Write(bMax[bmax_len] + ";");
+                                 for (int d_len = 0; d_len < two.Length; d_len++)
+                                 {
+                                     sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                  path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                  path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                  order ? aMax[amax_len] : bMax[bmax_len], 
+                                                  order ? bMax[bmax_len] : aMax[amax_len]) + ";");
+                                 }
+                                 sw.WriteLine();
+                             }
+                         }
+                         fin.Close();
+                     }
+                 }
+             }
+         }
+        
+        protected virtual void BaseMaxExpGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
         {
             string path = Directory.GetCurrentDirectory();
             int[] one_i = MakeDigits(one);
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
-            DirectoryInfo one_dir, two_dir;
-            /*
+            DirectoryInfo amax_di, one_dir;
             if (!order)
             {
-                var x = aMax;
+               var x = aMax;
                 aMax = bMax;
-                bMax = aMax;
+                bMax = x;
             }
-            */
             for (int f_len = 0; f_len < one.Length; f_len++)
             {
                 one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(one_i[f_len], one_i.Max()));
-                for (int d_len = 0; d_len < two.Length; d_len++)
+                for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                 {
-                    two_dir = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(two_i[d_len], two_i.Max()));
-                    for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(aMax[amax_len], aMax.Max()));
+                    for (int d_len = 0; d_len < two.Length; d_len++)
                     {
-                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + two_dir.Name + "\\" + Choice[2] + "_" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()) + ".csv", FileMode.Create, FileAccess.Write);
-
+                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Choice[2] + "_" + AddZeros(two_i[d_len], two_i.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+ 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
                             sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
-
+                            
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
                                 sw.Write(three_i[m_len] + ";");
                             }
                             sw.WriteLine();
-                            for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
+                            for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
                             {
                                 sw.Write(bMax[bmax_len] + ";");
                                 for (int m_len = 0; m_len < three.Length; m_len++)
                                 {
                                     sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
-                                                   path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
-                                                   path + "\\" + Three + "\\" + three_i[m_len] + ".txt", aMax[amax_len], bMax[bmax_len]) + ";");
+                                                 path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                 path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                 order ? aMax[amax_len] : bMax[bmax_len], 
+                                                 order ? bMax[bmax_len] : aMax[amax_len]) + ";");
+                                }
+                                sw.WriteLine();
+                            }
+                        }
+                        fin.Close();
+                    }
+                }
+            }
+        }
+        
+        protected virtual void BaseMaxModGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+        {
+            string path = Directory.GetCurrentDirectory();
+            int[] one_i = MakeDigits(one);
+            int[] two_i = MakeDigits(two);
+            int[] three_i = MakeDigits(three);
+            DirectoryInfo amax_di, one_dir;
+            if (!order)
+            {
+                var x = aMax;
+                aMax = bMax;
+                bMax = x;
+            }
+            for (int f_len = 0; f_len < one.Length; f_len++)
+            {
+                one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(one_i[f_len], one_i.Max()));
+                for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+                {
+                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(aMax[amax_len], aMax.Max()));
+                    for (int m_len = 0; m_len < three.Length; m_len++)
+                    {
+                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Choice[2] + "_" + AddZeros(three_i[m_len], three_i.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+ 
+                        using (StreamWriter sw = new StreamWriter(fin))
+                        {
+                            sw.Write((order ? "b_max" : "a_max") + "\\" + Two.Split('\\')[0] + ";");
+ 
+                            for (int d_len = 0; d_len < two.Length; d_len++)
+                            {
+                                sw.Write(two_i[d_len] + ";");
+                            }
+                            sw.WriteLine();
+                            for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
+                            {
+                                sw.Write(bMax[bmax_len] + ";");
+                                for (int d_len = 0; d_len < two.Length; d_len++)
+                                {
+                                    sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                  path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                  path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                  order ? aMax[amax_len] : bMax[bmax_len], 
+                                                  order ? bMax[bmax_len] : aMax[amax_len]) + ";");
                                 }
                                 sw.WriteLine();
                             }
@@ -527,35 +739,37 @@ namespace DigitsPower
             }
         }
 
-        protected virtual void Gen___AB(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+        protected virtual void ExpBaseModGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
         {
             string path = Directory.GetCurrentDirectory();
             int[] one_i = MakeDigits(one);
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
             DirectoryInfo one_dir, two_dir;
-            /*
             if (!order)
             {
-                var x = aMax;
-                aMax = bMax;
-                bMax = aMax;
+                var x = one_i;
+                one_i = three_i;
+                three_i = x;
+                
+                var y = One;
+                One = Three;
+                Three = y;
             }
-            */
-            for (int f_len = 0; f_len < one.Length; f_len++)
+            for (int d_len = 0; d_len < two.Length; d_len++)
             {
-                one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(one_i[f_len], one_i.Max()));
-                for (int d_len = 0; d_len < two.Length; d_len++)
+                one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(two_i[d_len], two_i.Max()));
+                for (int f_len = 0; f_len < one.Length; f_len++)
                 {
-                    two_dir = Directory.CreateDirectory(di + "\\" + one_dir.Name +  "\\" + Choice[1] + "_" + AddZeros(two_i[d_len], two_i.Max()));
+                    two_dir = Directory.CreateDirectory(di + "\\" + one_dir.Name +  "\\" + Choice[1] + "_" + AddZeros(one_i[f_len], one_i.Max()));
                     for  (int m_len = 0; m_len < three.Length; m_len++)
                     {
                         FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + two_dir.Name + "\\" + Choice[2] + "_" + AddZeros(three_i[m_len], three_i.Max()) + ".csv", FileMode.Create, FileAccess.Write);
-
+ 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
-                            sw.Write((order ? "a_max" : "b_max") + "\\" + "b_max" + ";");
-
+                            sw.Write("b_max" + "\\" + "a_max;");
+ 
                             for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                             {
                                 sw.Write(aMax[amax_len] + ";");
@@ -566,9 +780,12 @@ namespace DigitsPower
                                 sw.Write(bMax[bmax_len] + ";");
                                 for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                                 {
-                                    sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
-                                                   path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
-                                                   path + "\\" + Three + "\\" + three_i[m_len] + ".txt", aMax[amax_len], bMax[bmax_len]) + ";");
+                                    sw.Write(Watch(path + "\\" + 
+                                                   (order ? One + "\\" + one_i[f_len] : Three + "\\" + three_i[m_len]) + ".txt",
+                                                 path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                 path + "\\" + 
+                                                 (order ? Three + "\\" + three_i[m_len] : One + "\\" + one_i[f_len]) + ".txt", 
+                                                 aMax[amax_len], bMax[bmax_len]) + ";");
                                 }
                                 sw.WriteLine();
                             }
@@ -578,36 +795,138 @@ namespace DigitsPower
                 }
             }
         }
+        
+        protected virtual void ExpBaseMax(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+        {
+            string path = Directory.GetCurrentDirectory();
+            int[] one_i = MakeDigits(one);
+            int[] two_i = MakeDigits(two);
+            int[] three_i = MakeDigits(three);
+            DirectoryInfo one_dir, two_dir;
+            if (!order)
+            {
+                var x = aMax;
+                aMax = bMax;
+                bMax = x;
+            }
+            for (int d_len = 0; d_len < two.Length; d_len++)
+            {
+                one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(two_i[d_len], two_i.Max()));
+                for (int f_len = 0; f_len < one.Length; f_len++)
+                {
+                    two_dir = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(one_i[f_len], one_i.Max()));
+                    for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+                    {
+                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + two_dir.Name + "\\" + Choice[2] + "_" + AddZeros(aMax[amax_len], aMax.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+                        
+                        using (StreamWriter sw = new StreamWriter(fin))
+                        {
+                            sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
 
-        protected virtual void Gen_A_B_(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+                            for (int m_len = 0; m_len < three.Length; m_len++)
+                            {
+                                sw.Write(three_i[m_len] + ";");
+                            }
+                            sw.WriteLine();
+                            for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
+                            {
+                                sw.Write(bMax[bmax_len] + ";");
+                                for (int m_len = 0; m_len < three.Length; m_len++)
+                                {
+                                    sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                 path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                 path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                 order ? aMax[amax_len] : bMax[bmax_len], 
+                                                 order ? bMax[bmax_len] : aMax[amax_len]) + ";");
+                                }
+                                sw.WriteLine();
+                            }
+                        }
+                        fin.Close();
+                    }
+                }
+            }
+        }
+        
+        protected virtual void ExpModMaxGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+        {
+            string path = Directory.GetCurrentDirectory();
+            int[] one_i = MakeDigits(one);
+            int[] two_i = MakeDigits(two);
+            int[] three_i = MakeDigits(three);
+            DirectoryInfo one_dir, two_dir;
+            if (!order)
+            {
+                var x = aMax;
+                aMax = bMax;
+                bMax = x;
+            }
+            for (int d_len = 0; d_len < two.Length; d_len++)
+            {
+                one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(two_i[d_len], two_i.Max()));
+                for (int m_len = 0; m_len < three.Length; m_len++)
+                {
+                    two_dir = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(three_i[m_len], three_i.Max()));
+                    for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+                    {
+                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + two_dir.Name + "\\" + Choice[2] + "_" + AddZeros(aMax[amax_len], aMax.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+                        
+                        using (StreamWriter sw = new StreamWriter(fin))
+                        {
+                            sw.Write((order ? "b_max" : "a_max") + "\\" + One.Split('\\')[0] + ";");
+ 
+                            for (int f_len = 0; f_len < one.Length; f_len++)
+                            {
+                                sw.Write(one_i[f_len] + ";");
+                            }
+                            sw.WriteLine();
+                            for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
+                            {
+                                sw.Write(bMax[bmax_len] + ";");
+                                for (int f_len = 0; f_len < one.Length; f_len++)
+                                {
+                                    sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                  path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                  path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                  order ? aMax[amax_len] : bMax[bmax_len], 
+                                                  order ? bMax[bmax_len] : aMax[amax_len]) + ";");
+                                }
+                                sw.WriteLine();
+                            }
+                        }
+                        fin.Close();
+                    }
+                }
+            }
+        }
+        
+        protected virtual void ExpMaxBaseGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
         {
             string path = Directory.GetCurrentDirectory();
             int[] one_i = MakeDigits(one);
             int[] two_i = MakeDigits(two);
             int[] three_i = MakeDigits(three);
             DirectoryInfo amax_di, one_dir;
-            /*
             if (!order)
             {
-                var x = aMax;
+               var x = aMax;
                 aMax = bMax;
-                bMax = x;//bMax = aMax
+                bMax = x;
             }
-            */
-            for (int f_len = 0; f_len < one.Length; f_len++)
+            for (int d_len = 0; d_len < two.Length; d_len++)
             {
-                one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(one_i[f_len].ToString(), one_i.Max().ToString()));
+                one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(two_i[d_len], two_i.Max()) );
                 for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
                 {
-                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(aMax[amax_len].ToString(), aMax.Max().ToString()));
-                    for (int d_len = 0; d_len < two.Length; d_len++)
+                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(aMax[amax_len], aMax.Max()));
+                    for (int f_len = 0; f_len < one.Length; f_len++)
                     {
-                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Choice[2] + "_" + AddZeros(two_i[d_len].ToString(), two_i.Max().ToString()) + ".csv", FileMode.Create, FileAccess.Write);
-
+                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Choice[2] + "_" + AddZeros(one_i[f_len], one_i.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+ 
                         using (StreamWriter sw = new StreamWriter(fin))
                         {
                             sw.Write((order ? "b_max" : "a_max") + "\\" + Three.Split('\\')[0] + ";");
-
+                            
                             for (int m_len = 0; m_len < three.Length; m_len++)
                             {
                                 sw.Write(three_i[m_len] + ";");
@@ -619,8 +938,10 @@ namespace DigitsPower
                                 for (int m_len = 0; m_len < three.Length; m_len++)
                                 {
                                     sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
-                                                   path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
-                                                   path + "\\" + Three + "\\" + three_i[m_len] + ".txt", aMax[amax_len], bMax[bmax_len]) + ";");
+                                                 path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                 path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                 order ? aMax[amax_len] : bMax[bmax_len], 
+                                                 order ? bMax[bmax_len] : aMax[amax_len]) + ";");
                                 }
                                 sw.WriteLine();
                             }
@@ -630,7 +951,111 @@ namespace DigitsPower
                 }
             }
         }
-
+        
+        protected virtual void ExpMaxModGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+        {
+            string path = Directory.GetCurrentDirectory();
+            int[] one_i = MakeDigits(one);
+            int[] two_i = MakeDigits(two);
+            int[] three_i = MakeDigits(three);
+            DirectoryInfo amax_di, one_dir;
+            if (!order)
+            {
+                var x = aMax;
+                aMax = bMax;
+                bMax = x;
+            }
+            for (int d_len = 0; d_len < two.Length; d_len++)
+            {
+                one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(two_i[d_len], two_i.Max()));
+                for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+                {
+                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(aMax[amax_len], aMax.Max()));
+                    for (int m_len = 0; m_len < three.Length; m_len++)
+                    {
+                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Choice[2] + "_" + AddZeros(three_i[m_len], three_i.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+ 
+                        using (StreamWriter sw = new StreamWriter(fin))
+                        {
+                            sw.Write((order ? "b_max" : "a_max") + "\\" + One.Split('\\')[0] + ";");
+ 
+                            for (int f_len = 0; f_len < one.Length; f_len++)
+                            {
+                                sw.Write(two_i[d_len] + ";");
+                            }
+                            sw.WriteLine();
+                            for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++) 
+                            {
+                                sw.Write(bMax[bmax_len] + ";");
+                                for (int f_len = 0; f_len < one.Length; f_len++)
+                                {
+                                    sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                  path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                  path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                  order ? aMax[amax_len] : bMax[bmax_len], 
+                                                  order ? bMax[bmax_len] : aMax[amax_len]) + ";");
+                                }
+                                sw.WriteLine();
+                            }
+                        }
+                        fin.Close();
+                    }
+                }
+            }
+        }
+        
+        protected virtual void ExpMaxMaxGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
+        {
+            string path = Directory.GetCurrentDirectory();
+            int[] one_i = MakeDigits(one);
+            int[] two_i = MakeDigits(two);
+            int[] three_i = MakeDigits(three);
+            DirectoryInfo amax_di, one_dir;
+            if (!order)
+            {
+                var x = aMax;
+                aMax = bMax;
+                bMax = x; 
+            }
+            for (int d_len = 0; d_len < two.Length; d_len++)
+            {
+                one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(two_i[d_len], two_i.Max()));
+                for (int amax_len = 0; amax_len < aMax.Count; amax_len++)
+                {
+                    amax_di = Directory.CreateDirectory(di + "\\" + one_dir.Name + "\\" + Choice[1] + "_" + AddZeros(aMax[amax_len], aMax.Max()));
+                    for (int bmax_len = 0; bmax_len < bMax.Count; bmax_len++)
+                    {
+                        FileStream fin = new FileStream(di + "\\" + one_dir.Name + "\\" + amax_di.Name + "\\" + Choice[2] + "_" + AddZeros(bMax[bmax_len], bMax.Max()) + ".csv", FileMode.Create, FileAccess.Write);
+ 
+                        using (StreamWriter sw = new StreamWriter(fin))
+                        {
+                            sw.Write(One.Split('\\')[0] + "\\" + Three.Split('\\')[0] + ";");
+                            
+                            for (int m_len = 0; m_len < three.Length; m_len++)
+                            {
+                                sw.Write(three_i[m_len] + ";");
+                            }
+                            sw.WriteLine();
+                            for (int f_len = 0; f_len < one.Length; f_len++)
+                            {
+                                sw.Write(one_i[f_len] + ";");
+                                for (int m_len = 0; m_len < three.Length; m_len++)
+                                {
+                                    sw.Write(Watch(path + "\\" + One + "\\" + one_i[f_len] + ".txt",
+                                                 path + "\\" + Two + "\\" + two_i[d_len] + ".txt",
+                                                 path + "\\" + Three + "\\" + three_i[m_len] + ".txt", 
+                                                 order ? aMax[amax_len] : bMax[bmax_len], 
+                                                 order ? bMax[bmax_len] : aMax[amax_len]) + ";");
+                                }
+                                sw.WriteLine();
+                            }
+                        }
+                        fin.Close();
+                    }
+                }
+            }
+        }
+ 
         public virtual void Create_Result()
         {
             SendStatus();
@@ -638,7 +1063,7 @@ namespace DigitsPower
             string[] founds = Directory.GetFiles(path + "\\Base\\" + Found);
             string[] degrees = Directory.GetFiles(path + "\\Exponent\\" + Degree);
             string[] mods = Directory.GetFiles(path + "\\Modulus\\" + Mod);
-
+ 
             DirectoryInfo di = CD(Choice, Found, Degree, Mod);
             var di_short = "Results\\" + di.Name;
             switch (Choice[0])
@@ -650,13 +1075,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Modulus":
-                                    Gen___AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    BaseExpModGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "aMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    BaseExpMaxGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    BaseExpMaxGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -664,13 +1089,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Exponent":
-                                    Gen___AB(founds, degrees, mods , di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    BaseExpModGen(founds, mods, degrees , di_short, "Base\\" + Found, "Modulus\\" + Mod, "Exponent\\" + Degree, false);
                                     break;
                                 case "aMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    BaseModMaxGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    BaseModMaxGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -678,13 +1103,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Exponent":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);//Gen_A_B_
+                                    BaseMaxExpGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Modulus":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    BaseMaxModGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    BaseMaxMaxGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -692,13 +1117,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Exponent":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//Gen_A_B_
+                                    BaseMaxExpGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Modulus":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    BaseMaxModGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    BaseMaxMaxGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -711,13 +1136,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Modulus":
-                                    Gen___AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    ExpBaseModGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "aMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    ExpBaseMax(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    ExpBaseMax(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -725,13 +1150,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen___AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    ExpBaseModGen(mods, degrees, founds, di_short, "Modulus\\" + Mod, "Exponent\\" + Degree, "Base\\" + Found, false);
                                     break;
                                 case "aMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    ExpModMaxGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    ExpModMaxGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -739,13 +1164,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);//Gen_A_B_
+                                    ExpMaxBaseGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Modulus":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    ExpMaxModGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    ExpMaxMaxGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -753,13 +1178,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//Gen_A_B_
+                                    ExpMaxBaseGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Modulus":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//degrees mods founds
+                                    ExpMaxModGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    ExpMaxMaxGen(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -772,13 +1197,11 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Exponent":
-                                    Gen___AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    
                                     break;
                                 case "aMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -786,13 +1209,11 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen___AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    
                                     break;
                                 case "aMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen__AB_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -800,13 +1221,10 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);//Gen_A_B_
                                     break;
                                 case "Exponent":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -814,13 +1232,10 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);//Gen_A_B_
                                     break;
                                 case "Exponent":
-                                    Gen_A_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    Gen_AB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -836,10 +1251,10 @@ namespace DigitsPower
                                     GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Modulus":
-                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA__B(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenAB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -847,13 +1262,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA__B(degrees, founds, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Modulus":
-                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA__B(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    GenA_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA_B_(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -861,13 +1276,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA__B(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Exponent":
-                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA__B(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "bMax":
-                                    GenA_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenA_B_(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -875,13 +1290,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenAB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Exponent":
-                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenAB(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                                 case "Modulus":
-                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
+                                    GenAB(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod);
                                     break;
                             }
                             break;
@@ -897,10 +1312,10 @@ namespace DigitsPower
                                     GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Modulus":
-                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA__B(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenAB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -908,13 +1323,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA__B(degrees, founds, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Modulus":
-                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA__B(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    GenA_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA_B_(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -922,13 +1337,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA__B(mods, founds, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Exponent":
-                                    GenA__B(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA__B(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "aMax":
-                                    GenA_B_(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenA_B_(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
@@ -936,13 +1351,13 @@ namespace DigitsPower
                             switch (Choice[2])
                             {
                                 case "Base":
-                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenAB(founds, mods, degrees, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Exponent":
-                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenAB(degrees, mods, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                                 case "Modulus":
-                                    GenAB(founds, degrees, mods, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
+                                    GenAB(mods, degrees, founds, di_short, "Base\\" + Found, "Exponent\\" + Degree, "Modulus\\" + Mod, false);
                                     break;
                             }
                             break;
