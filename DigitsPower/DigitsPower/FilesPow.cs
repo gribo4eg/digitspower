@@ -531,20 +531,20 @@ namespace DigitsPower
          protected virtual void BaseExpModGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
          {
              string path = Directory.GetCurrentDirectory();
-             int[] one_i = MakeDigits(one);
-             int[] two_i = MakeDigits(two);
-             int[] three_i = MakeDigits(three);
              DirectoryInfo one_dir, two_dir;
              if (!order)
              {
-                 var x = two_i;
-                 two_i = three_i;
-                 three_i = x;
+                 var x = two;
+                 two = three;
+                 three = x;
 
                  var y = Two;
                  Two = Three;
                  Three = y;
              }
+             int[] one_i = MakeDigits(one);
+             int[] two_i = MakeDigits(two);
+             int[] three_i = MakeDigits(three);
              for (int f_len = 0; f_len < one.Length; f_len++)
              {
                  one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(one_i[f_len], one_i.Max()));
@@ -744,20 +744,20 @@ namespace DigitsPower
         protected virtual void ExpBaseModGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
         {
             string path = Directory.GetCurrentDirectory();
-            int[] one_i = MakeDigits(one);
-            int[] two_i = MakeDigits(two);
-            int[] three_i = MakeDigits(three);
             DirectoryInfo one_dir, two_dir;
             if (!order)
             {
-                var x = one_i;
-                one_i = three_i;
-                three_i = x;
+                var x = one;
+                one = three;
+                three = x;
                 
                 var y = One;
                 One = Three;
                 Three = y;
             }
+            int[] one_i = MakeDigits(one);
+            int[] two_i = MakeDigits(two);
+            int[] three_i = MakeDigits(three);
             for (int d_len = 0; d_len < two.Length; d_len++)
             {
                 one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(two_i[d_len], two_i.Max()));
@@ -1061,20 +1061,20 @@ namespace DigitsPower
         protected virtual void ModBaseExpGen(string[] one, string[] two, string[] three, string di, string One, string Two, string Three, bool order = true)
         {
             string path = Directory.GetCurrentDirectory();
-            int[] one_i = MakeDigits(one);
-            int[] two_i = MakeDigits(two);
-            int[] three_i = MakeDigits(three);
             DirectoryInfo one_dir, two_dir;
             if (!order)
             {
-                var x = one_i;
-                one_i = two_i;
-                two_i = x;
+                var x = one;
+                one = two;
+                two = x;
                 
                 var y = One;
                 One = Two;
                 Two = y;
             }
+            int[] one_i = MakeDigits(one);
+            int[] two_i = MakeDigits(two);
+            int[] three_i = MakeDigits(three);
             for  (int m_len = 0; m_len < three.Length; m_len++)
             {
                 one_dir = Directory.CreateDirectory(di + "\\" + Choice[0] + "_" + AddZeros(three_i[m_len], three_i.Max()));
