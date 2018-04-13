@@ -26,7 +26,7 @@ function [val, index] = addition_chain_genetic(v, fit, popSize, genNum)
 
 end
 
-
+% done?
 function out = InitialPopulation(popSize, numberGenes)
     out = randi([0 1],popSize,numberGenes);
 %     out = [ ];
