@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdditionalChainFinder.cs" />
     <Compile Include="bigintegerfuncs.cs" />
     <Compile Include="FilesPow.cs" />
     <Compile Include="Form1.cs">

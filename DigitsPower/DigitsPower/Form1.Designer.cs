@@ -139,6 +139,7 @@
             this.textB = new System.Windows.Forms.TextBox();
             this.label31 = new System.Windows.Forms.Label();
             this.textA = new System.Windows.Forms.TextBox();
+            this.ChainFinder = new System.Windows.Forms.TabPage();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -397,6 +398,7 @@
             this.tabControl1.Controls.Add(this.FilePow);
             this.tabControl1.Controls.Add(this.FileCreate);
             this.tabControl1.Controls.Add(this.Pow);
+            this.tabControl1.Controls.Add(this.ChainFinder);
             this.tabControl1.Location = new System.Drawing.Point(12, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -1418,6 +1420,17 @@
             this.textA.TabIndex = 15;
             this.textA.Text = "15";
             // 
+            // ChainFinder
+            // 
+            this.ChainFinder.Location = new System.Drawing.Point(4, 22);
+            this.ChainFinder.Name = "ChainFinder";
+            this.ChainFinder.Padding = new System.Windows.Forms.Padding(3);
+            this.ChainFinder.Size = new System.Drawing.Size(932, 518);
+            this.ChainFinder.TabIndex = 3;
+            this.ChainFinder.Text = "Chain Finder";
+            this.ChainFinder.UseVisualStyleBackColor = true;
+            this.ChainFinder.Click += new System.EventHandler(this.tabPage1_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1574,5 +1587,6 @@
         private System.Windows.Forms.TextBox nForTest;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.TabPage ChainFinder;
     }
 }
