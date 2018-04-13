@@ -443,6 +443,11 @@ namespace DigitsPower
         {
             montFlagTest.Checked = aMontFlag.Checked;
         }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
     public class FuncParam
