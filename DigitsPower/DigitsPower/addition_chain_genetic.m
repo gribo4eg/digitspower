@@ -31,7 +31,7 @@ function out = InitialPopulation(popSize, numberGenes)
     out = randi([0 1],popSize,numberGenes);
 %     out = [ ];
 end
-
+% done?
 function parents = select(pop, SelectionProbabilities)
     size_population = size(pop);
     parents = zeros(2,size_population(1),size_population(2));
@@ -92,7 +92,7 @@ function pop = mutate(pop, mutationDegree, mutationRate)
         end
     end       
 end
-
+% done?
 function fitness = evaluate(population, v)
     size_population = size(population);
     fitness = zeros(1,size_population(1));
@@ -100,7 +100,7 @@ function fitness = evaluate(population, v)
         fitness(i) = evaluate_ind(population(i,:), v, size_population(2));
     end
 end
-
+% done?
 function fitness = evaluate_ind(s, v, n)
     largePenalty = inf;
     fitness = 0;
@@ -114,7 +114,7 @@ function fitness = evaluate_ind(s, v, n)
         end
     end
 end
-
+% done?
 function out = check_fitness(fitness, value)
     out = false;
     fitness_size = size(fitness);
@@ -125,7 +125,7 @@ function out = check_fitness(fitness, value)
         end
     end
 end
-
+% done?
 function out = isInclude(s,v)
     out = true;
     size_v = size(v);
@@ -136,7 +136,7 @@ function out = isInclude(s,v)
         end        
     end    
 end
-
+% done?
 function out = isSumOfPrevous(s, i)
     out = false;
     for j = 1:i-1
