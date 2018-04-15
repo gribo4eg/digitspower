@@ -31,9 +31,13 @@ namespace DigitsPower
             while (!result_check_fitness && generation <= genNum)
             {
                 int[][][] parents = select(population, SelectionProbabilities);
+                population = reproduce(parents, 50, 0.745);
+                fitness = evaluate(population, v);
+                result_check_fitness = check_fitness(fitness, fit);
+                ++generation;
             }
-
-            return new[]{1,2,3,4};
+            
+            return min(fitness);
         }
         
         static int[][] InitialPopulation (int popSize, int numberGenes)
@@ -74,23 +78,52 @@ namespace DigitsPower
             var result = zeros(parents_size[1], parents_size[2]);
             for (int i = 0; i < parents_size[1]; i++)
             {
-                // TODO add crossover_2 usage here
+                result[i] = crossover_2(parents[0][i], parents[1][i]);
             }
+
+            result = mutate(result, mutationDegree, mutationRate);
             
-            return new int[2][];
+            return result;
         }
 
-        static int[] crossover_2(int[][] parent_1, int[][] parent_2)
+        static int[] crossover_2(int[] parent_1, int[] parent_2)
         {
             var parent_size = size(parent_1);
-            var point_1 = randi(new[] {1, parent_size[2] - 1}, 1, 1);
-            var point_2 = randi(new[] {1, parent_size[2] - 1}, 1, 1);
-            if (point_1[0][0] < point_2[0][0])
+            var point_1 = randi(new[] {1, parent_size[1] - 1}, 1, 1)[0][0];
+            var point_2 = randi(new[] {1, parent_size[1] - 1}, 1, 1)[0][0];
+
+            if (point_1 < point_2)
             {
-                // TODO add 'cat' matlab function
+                return parent_2.Take(point_1)
+                    .Concat(parent_1.Skip(point_1).Take(point_2 - point_1 + 1)
+                        .Concat(parent_2.Skip(point_2).Take(parent_size[1] - point_2 + 1))).ToArray();
             }
             
-            return new int[2];
+            return parent_2.Take(point_2).Concat(parent_1.Skip(point_2).Take(point_1 - point_2 + 1)
+                    .Concat(parent_2.Skip(point_1).Take(parent_size[1] - point_1 + 1))).ToArray();
+            
+        }
+
+        static int[][] mutate(int[][] pop, int mutationDegree, double mutationRate)
+        {
+            var size_population = size(pop);
+            if (Convert.ToBoolean(mutationRate) && Convert.ToBoolean(mutationDegree))
+            {
+                for (int i = 0; i < size_population[0]; i++)
+                {
+                    double n = rand();
+                    if (n <= mutationRate)
+                    {
+                        for (int j = 0; j < mutationDegree; j++)
+                        {
+                            var gene = randi(new[] {1, size_population[1]}, 1, 1)[0][0];
+                            pop[i][gene] = (pop[i][gene] + 1) % 2;
+                        }
+                    }
+                }
+            }
+
+            return pop;
         }
 
         static int[] evaluate (int[][] population, int[] v)
@@ -173,6 +206,13 @@ namespace DigitsPower
             }
 
             return out_v;
+        }
+
+        static int[] min(int[] array)
+        {
+            int min = array.Min();
+            int index = Array.IndexOf(array, min);
+            return new[] {min, index};
         }
         
         static int[][] randi (int[] interval, int n, int m)
